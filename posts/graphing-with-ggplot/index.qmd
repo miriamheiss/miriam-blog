@@ -1,0 +1,7 @@
+---
+title: "Post With Code"
+author: "Harlow Malloc"
+date: "2022-07-29"
+# categories: [news, code, analysis]
+# image: "image.jpg"
+---
