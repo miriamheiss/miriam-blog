@@ -4,6 +4,7 @@ project:
 website:
   title: "Miriam's blog"
   navbar:
+    background: secondary
     right:
       - about.qmd
       - icon: github
@@ -15,8 +16,5 @@ format:
     css: styles.css
     highlight-style: espresso
     toc: true
-    code-fold: show
-    code-tools: true
-
-
-
+    title-block-banner-color: "#ffffff"
+  
