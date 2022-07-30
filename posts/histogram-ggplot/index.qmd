@@ -116,9 +116,9 @@ ggplot(data = nobel,
 
 ### Changing the Fill Colors (3)
 
-Here is one last way to change the fill colors in a Histogram. We will need to load another Library at the top, called [**`MetBrewer`**](https://github.com/BlakeRMills/MetBrewer). This has many color palettes from art at the MET. Let's load it in!
+Here is one last way to change the fill colors in a Histogram. We will need to load another Library at the top, called [**MetBrewer**](https://github.com/BlakeRMills/MetBrewer). This has many color palettes from art at the MET. Let's load it in!
 
-```{r}
+```{r library_met}
 library(MetBrewer)
 ```
 
@@ -131,7 +131,9 @@ ggplot(data = nobel,
   scale_fill_manual(values = met.brewer("Signac", 6)) + 
   geom_histogram(color = "white")
 ```
+
 I used "Signac", but there are a lot more options. Just make sure you choose one with enough colors for your legend.
+
 ## Labeling
 
 This graph looks nice so far: 
