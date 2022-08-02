@@ -169,10 +169,12 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      fill = continent)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5)) +
+  scale_fill_manual(values = met.brewer("Lakota", 5),
+                    guide = guide_legend(override.aes = list(size = 5))) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
-  scale_size_continuous(labels = comma) +
+  scale_size_continuous(labels = comma,
+                        guide = guide_legend(override.aes = list(shape = 19, color = "black"))) +
   theme_bw()
 ```
 ## Labels
