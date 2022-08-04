@@ -78,8 +78,9 @@ ggplot(data = gapminder,
                      size = pop,
                      color = continent)) + 
   geom_point(alpha = 0.3) +
-scale_color_manual(values = met.brewer("Lakota", 5))
+  scale_color_manual(values = met.brewer("Lakota", 5))
 ```
+
 ## Scales
 
 Let's load in the package [**scales**](https://scales.r-lib.org/).
@@ -106,8 +107,9 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      color = continent)) + 
   geom_point() +
-scale_color_manual(values = met.brewer("Lakota", 5))
+  scale_color_manual(values = met.brewer("Lakota", 5))
 ```
+
 That looks a lot neater and cleaner than it did before! Let's add some more scales!
 
 ## Logarithms
@@ -121,11 +123,13 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      color = continent)) + 
   geom_point() +
-scale_color_manual(values = met.brewer("Lakota", 5)) +
+  scale_color_manual(values = met.brewer("Lakota", 5)) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000))
 ```
+
 ## More Scales
+
 Now let's change the population legend from that ugly NUMBERe+NUMBER, and change it to nicer looking numbers that we can actually read! We do that by adding `scale_size_continuous(labels = comma)` to the code. That will make the size legend have numbers with commas in them.
 
 ```{r pop_change}
@@ -135,11 +139,12 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      color = continent)) + 
   geom_point() +
-scale_color_manual(values = met.brewer("Lakota", 5)) +
+  scale_color_manual(values = met.brewer("Lakota", 5)) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma)
 ```
+
 ## Fixing overplotting without `alpha`
 
 There is still overplotting in this graph! I don't want to change the `alpha`, because I like the opacity. That is easily fixable with adding just a few things to our code! 
@@ -155,11 +160,12 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      fill = continent)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5)) +
+  scale_fill_manual(values = met.brewer("Lakota", 5)) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma)
 ```
+
 I am going to change my theme to `theme_bw`, but I will not cover themes completely in depth. Themes can help change the feel of a graph.
 
 ```{r theme}
@@ -169,12 +175,13 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      fill = continent)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5)) +
+  scale_fill_manual(values = met.brewer("Lakota", 5)) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma)+ 
   theme_bw()
 ```
+
 ## Labels
 
 I am not going to cover the function `labs()` fully, but it is another layer you can add to your plot to add a title, subtitle, caption, legend title, and labels for the x and y axes.
@@ -186,11 +193,11 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      fill = continent)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5)) +
+  scale_fill_manual(values = met.brewer("Lakota", 5)) +
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma) +
-theme_bw() +
+  theme_bw() +
   labs(title = "Gdp and Life Expectancy in 142 countries",
        subtitle = "Most of Africa is sick and poor,\nwhile Europe is thriving and rich",
        x = "Gdp Per Capita",
@@ -200,6 +207,7 @@ theme_bw() +
 ```
 
 ## Size of Scales
+
 Wait a minute! Now we can't see the population guide! We can change that by adding just a couple things to our code. First, we are going to make the legend for the continents just a little bit bigger, so it's easier to see. We will also make the `scale_size_continuous` color be black.
 
 ```{r continent_size}
@@ -209,19 +217,44 @@ ggplot(data = gapminder_2007,
                      size = pop,
                      fill = continent)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5), 
-                  guide = guide_legend(override.aes = list(size = 5))) + 
+  scale_fill_manual(values = met.brewer("Lakota", 5), 
+                    guide = guide_legend(override.aes = list(size = 5))) + 
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma,
                         guide = guide_legend(override.aes = list(shape = 19, color = "black"))) +
-theme_bw() +
+  theme_bw() +
   labs(title = "Gdp and Life Expectancy in 142 countries",
        subtitle = "Most of Africa is sick and poor,\nwhile Europe is thriving and rich",
        x = "Gdp Per Capita",
        y = "Life Expectancy",
        fill = "Continent",
        size = "Population")
+```
+
+```{r invisible_chunk, include = FALSE}
+life_expectancy <- ggplot(data = gapminder_2007,
+                          mapping = aes(x = gdpPercap,
+                                        y = lifeExp,
+                                        size = pop,
+                                        fill = continent)) + 
+  geom_point(shape = 21, color = "white") +
+  scale_fill_manual(values = met.brewer("Lakota", 5), 
+                    guide = guide_legend(override.aes = list(size = 5))) + 
+  scale_x_log10(labels = label_dollar(accuracy = 1),
+                breaks = c(400, 4000, 40000)) +
+  scale_size_continuous(labels = comma,
+                        guide = guide_legend(override.aes = list(shape = 19, color = "black"))) +
+  theme_bw() +
+  labs(title = "Gdp and Life Expectancy in 142 countries",
+       subtitle = "Most of Africa is sick and poor,\nwhile Europe is thriving and rich",
+       x = "Gdp Per Capita",
+       y = "Life Expectancy",
+       fill = "Continent",
+       size = "Population")
+
+ggsave("life_expectancy.png", life_expectancy,
+       width = 6, height = 4)
 ```
 
 
@@ -231,19 +264,19 @@ Now, we need to save the graph to an object. Let's call that object `cool_plotly
 
 ```{r plotly_things}
 cool_plotly_graph <- ggplot(data = gapminder_2007,
-       mapping = aes(x = gdpPercap,
-                     y = lifeExp,
-                     size = pop,
-                     fill = continent, 
-                     text = country)) + 
+                            mapping = aes(x = gdpPercap,
+                                          y = lifeExp,
+                                          size = pop,
+                                          fill = continent, 
+                                          text = country)) + 
   geom_point(shape = 21, color = "white") +
-scale_fill_manual(values = met.brewer("Lakota", 5), 
-                  guide = guide_legend(override.aes = list(size = 5))) + 
+  scale_fill_manual(values = met.brewer("Lakota", 5), 
+                    guide = guide_legend(override.aes = list(size = 5))) + 
   scale_x_log10(labels = label_dollar(accuracy = 1),
                 breaks = c(400, 4000, 40000)) +
   scale_size_continuous(labels = comma,
                         guide = guide_legend(override.aes = list(shape = 19, color = "black"))) +
-theme_bw() +
+  theme_bw() +
   labs(title = "Gdp and Life Expectancy in 142 countries",
        subtitle = "Most of Africa is sick and poor,\nwhile Europe is thriving and rich",
        x = "Gdp Per Capita",
@@ -258,9 +291,6 @@ Now that we've saved it to an object, we need to add the `ggplotly()` to the cod
 ggplotly(cool_plotly_graph, tooltip = "text")
 ```
 
-`ggplotly` does not support subtitles or size legends, so that is why they disappeared
+`ggplotly` does not support subtitles or multiple legends, so that is why they disappeared. 
 
-
-  
-
-
+That's how you make a basic interactive plot using `ggplotly()`!
