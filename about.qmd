@@ -7,8 +7,6 @@ about:
     - icon: github
       text: Github
       href: https://github.com/miriamheiss
-      text: RPubs
-      href: https://rpubs.com/miriamheiss
 ---
 
 Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, melt'n'pour soap, and occasionally baking things. [I also play the organ](https://www.youtube.com/watch?v=iKHIrsbubJ8) (that's from 2020!). This is my very first website!
