@@ -5,10 +5,12 @@ website:
   title: "Miriam's blog"
   navbar:
     background: secondary
-    right:
+    left:
       - about.qmd
+      - final-project/index.qmd
       - icon: github
         href: https://github.com/miriamheiss/miriam-blog
+     
 
 format:
   html:

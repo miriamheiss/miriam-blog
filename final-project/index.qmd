@@ -1,0 +1,57 @@
+---
+title: "Final Project"
+subtitle: "Taylor Swift and J.S. Bach compared"
+author: "Miriam Heiss"
+#date: "2022-08-04"
+categories:
+#image:  
+sidebar: false
+toc: false
+format:
+  html:
+    code-fold: show
+    code-tools: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries, echo = FALSE, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(spotifyr)
+library(patchwork)
+library(plotly)
+```
+
+```{r variables, echo = FALSE}
+bach_id <- read_rds("bach_id.rds") # V
+ts_id <- read_rds("ts_id.rds") # V
+bach_albums_clean <- read_rds("bach_albums.rds") # V
+ts_albums_clean <- read_rds("ts_albums.rds") # V
+bach_audio <- readRDS("bach_audio.rds") # D
+ts_audio_raw <- readRDS("ts_audio.rds") # D
+ts_audio_clean <- readRDS("ts_clean_audio.rds") # D
+bach_audio_clean <- readRDS("bach_clean_audio.rds") # D
+```
+
+```{r plots_energy, echo = FALSE, fig.width = 9, out.width="110%"}
+bach_energy<- readRDS("bach_energy_plot.rds")
+ts_energy<- readRDS("ts_energy_plot.rds")
+ts_energy + bach_energy
+```
+
+```{r plots_valence, echo = FALSE, out.width="100%", fig.width = 9, fig.height = 9}
+bach_valence <- readRDS("bach_tempo_plot.rds")
+ts_valence <- readRDS("ts_tempo_plot.rds")
+ts_valence + bach_valence
+```
+
+::: {.column-page-inset}
+
+```{r plots_length, echo = FALSE, out.width="100%", fig.width = 9}
+bach_length <- readRDS("bach_length_plot.rds")
+ts_length<- readRDS("ts_length_plot.rds")
+ts_length + bach_length
+```
+:::
