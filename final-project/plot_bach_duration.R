@@ -5,7 +5,7 @@ bach_duration <- bach_audio %>%
                        x = album_name,
                        color = album_name))+
   geom_hline(yintercept = 5)+
-  geom_hline(yintercept = 1)+
+  geom_hline(yintercept = 3)+
   geom_point()+
   scale_color_manual(values = c("lightpink3",
                                 "paleturquoise4",

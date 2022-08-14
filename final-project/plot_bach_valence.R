@@ -14,6 +14,7 @@ bach_tempo <- bach_audio_clean %>%
   labs(title = "Valence by Tempo (J. S. Bach)",
        x = "Tempo",
        y = "Valence",
-       color = "Album")
-  
+       color = "Album") +
+  scale_y_continuous(expand = c(0, 0))
+
 write_rds(bach_tempo, "bach_tempo_plot.rds")

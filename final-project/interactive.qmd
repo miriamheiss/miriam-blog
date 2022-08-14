@@ -1,0 +1,53 @@
+---
+title: "Interactive Plots"
+#date: "2022-08-04"
+categories:
+#image:  
+sidebar: false
+toc: false
+format:
+  html:
+    code-fold: show
+    code-tools: false
+---
+
+## Energy
+### Taylor Swift
+ 
+The graph below shows the level of energy in Taylor Swift's songs. The most energetic albums are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. The interactive plot shows the song name. Most songs lie between 0.50 and 0.75. She also tends to stick to major keys that are not sharp or flat, like C major, D major, F major, and G major.
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, out.width = "90%", fig.width = 9}
+library(tidyverse)
+library(plotly)
+
+ts_audio_clean <- readRDS("ts_clean_audio.rds") # D
+ts_albums_clean <- read_rds("ts_albums.rds") # V
+
+ts_graph <- ggplot(data = ts_audio_clean,
+       mapping = aes(x = key_mode,
+                     y = energy,
+                     color = album_name, 
+                     text = track_name))+ 
+  geom_hline(yintercept = 0.5)+
+  geom_point(size = 2)+ 
+  scale_color_manual(values = c("deepskyblue2",
+                                "lightsalmon4",
+                                "goldenrod",
+                                "seashell4",
+                                "palevioletred1",
+                                "darkred",
+                                "grey20",
+                                "orchid4",
+                                "palegreen4"))+ 
+  labs(title = "Energy by Key (Taylor Swift)",
+       y = "Energy",
+       x = "Key", 
+       color = "Album")+ 
+  #annotate(geom = "label", x = "A#", y = 0, label = "Low")+ 
+  #annotate(geom = "label", x = "A#", y = 1, label = "High")+ 
+  theme_linedraw(base_size = 12)+ 
+  theme(legend.position = "right", axis.text.x = element_text(angle = 90))
+
+ggplotly(ts_graph, tooltip = "text")
+```
+

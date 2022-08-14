@@ -7,9 +7,23 @@ website:
     background: secondary
     left:
       - about.qmd
-      - final-project/index.qmd
+      - sidebar:final-project
       - icon: github
-        href: https://github.com/miriamheiss/miriam-blog         
+        href: https://github.com/miriamheiss/miriam-blog
+  
+  sidebar:
+    - id: final-project
+      title: "Final project"
+      style: "docked"
+      background: light
+      collapse-level: 3
+      contents: 
+        - final-project/index.qmd
+        - final-project/sources.qmd 
+        - final-project/interactive.qmd
+        
+    - title: "Empty space lol"
+    
 
 format:
   html:
