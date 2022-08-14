@@ -35,21 +35,29 @@ ts_audio_clean <- readRDS("ts_clean_audio.rds") # D
 bach_audio_clean <- readRDS("bach_clean_audio.rds") # D
 ```
 
-```{r plots_energy, echo = FALSE, fig.width = 9, out.width="110%"}
-bach_energy<- readRDS("bach_energy_plot.rds")
-ts_energy<- readRDS("ts_energy_plot.rds")
+
+::: {.column-page-inset}
+
+```{r plots_energy, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 9}
+bach_energy<- readRDS("~/Documents/Projects/miriam-blog/final-project/bach_energy_plot.rds")
+ts_energy<- readRDS("~/Documents/Projects/miriam-blog/final-project/ts_energy_plot.rds")
 ts_energy + bach_energy
 ```
+:::
 
-```{r plots_valence, echo = FALSE, out.width="100%", fig.width = 9, fig.height = 9}
+::: {.column-page-inset}
+
+```{r plots_valence, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 9}
 bach_valence <- readRDS("bach_tempo_plot.rds")
 ts_valence <- readRDS("ts_tempo_plot.rds")
 ts_valence + bach_valence
 ```
+:::
+
 
 ::: {.column-page-inset}
 
-```{r plots_length, echo = FALSE, out.width="100%", fig.width = 9}
+```{r plots_length, echo = FALSE, out.width = "100%", fig.width = 9, fig.height = 6}
 bach_length <- readRDS("bach_length_plot.rds")
 ts_length<- readRDS("ts_length_plot.rds")
 ts_length + bach_length

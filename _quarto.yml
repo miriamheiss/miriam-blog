@@ -9,8 +9,7 @@ website:
       - about.qmd
       - final-project/index.qmd
       - icon: github
-        href: https://github.com/miriamheiss/miriam-blog
-     
+        href: https://github.com/miriamheiss/miriam-blog         
 
 format:
   html:
