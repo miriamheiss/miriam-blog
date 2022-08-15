@@ -1,4 +1,4 @@
-ts_graph<- ggplot(data = ts_audio_clean,
+ts_graph<- ggplot(data = ts_cleaned,
                   mapping = aes(x = key_mode,
                                 y = energy,
                                 color = album_name, 
@@ -25,7 +25,6 @@ ts_graph<- ggplot(data = ts_audio_clean,
   theme_linedraw(base_size = 12)+ 
   theme(axis.text.x = element_text(angle = 90), legend.position = "bottom")
 
-#ggplotly(ts_graph, tooltip = "text") this is optional for final project lol
 
-write_rds(ts_graph, "~/Documents/Projects/miriam-blog/final-project/ts_energy_plot.rds")
+write_rds(ts_graph, "data/ts_energy_plot.rds")
 

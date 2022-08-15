@@ -15,12 +15,16 @@ website:
     - id: final-project
       title: "Final project"
       style: "docked"
-      background: light
-      collapse-level: 3
+      background: "#ffffff"
+      collapse-level: 5
       contents: 
         - final-project/index.qmd
-        - final-project/sources.qmd 
+        - final-project/length.qmd
+        - final-project/tempo.qmd
         - final-project/interactive.qmd
+        - final-project/sources.qmd 
+        
+        
         
     - title: "Empty space lol"
     

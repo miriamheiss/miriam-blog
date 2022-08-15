@@ -1,4 +1,4 @@
-ts_tempo <- ts_audio_clean %>%   
+ts_tempo <- ts_cleaned %>%   
   ggplot(mapping = aes(x = tempo,
                        y = valence))+ 
   geom_point(aes( color = album_name),size = 2.5)+ 
@@ -21,4 +21,5 @@ ts_tempo <- ts_audio_clean %>%
        y = "Valence",
        color = "Album")
 
-write_rds(ts_tempo, "ts_tempo_plot.rds")
+write_rds(ts_tempo, "data/ts_tempo_plot.rds")
+

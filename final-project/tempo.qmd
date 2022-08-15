@@ -1,0 +1,24 @@
+---
+title: "Valence (Happiness) by Tempo"
+sidebar: true
+toc: false
+format:
+  html:
+    code-fold: show
+    code-tools: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+::: {.column-page-inset}
+
+```{r plots_valence, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 9, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(patchwork)
+bach_valence <- readRDS("data/bach_tempo_plot.rds")
+ts_valence <- readRDS("data/ts_tempo_plot.rds")
+ts_valence + bach_valence
+```
+:::

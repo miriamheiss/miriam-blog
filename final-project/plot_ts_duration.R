@@ -1,5 +1,5 @@
-ts_duration <- ts_audio_raw %>% 
-  filter(album_name %in% ts_albums_clean) %>% 
+ts_duration <- ts_cleaned %>% 
+  filter(album_name %in% ts_albums) %>% 
   select(duration_ms, album_name) %>% 
   mutate(minutes = duration_ms / 1000 / 60) %>% 
   ggplot(mapping = aes(y = minutes,
@@ -26,5 +26,5 @@ ts_duration <- ts_audio_raw %>%
        y = "Length (Minutes)",
        x = NULL)
 
-write_rds(ts_duration, "ts_length_plot.rds")
+write_rds(ts_duration, "data/ts_length_plot.rds")
 ts_duration

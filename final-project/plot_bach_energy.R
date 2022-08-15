@@ -1,13 +1,14 @@
-bach_graph <- bach_audio_clean %>%  
+bach_graph <- bach_cleaned %>%  
   ggplot(mapping = aes(x = key_mode, 
                        y = energy, 
                        color = album_name, 
                        text = track_name))+ 
   geom_hline(yintercept = 0.5)+
-  geom_point(size = 2.5, alpha = 0.75) + 
-  scale_color_manual(values = c("lightpink3",
-                                "paleturquoise4",
-                                "thistle4"),
+  geom_point(size = 2) + 
+  scale_color_manual(values = c("#dbac00",
+                                "#3e8996",
+                                "#913e96",
+                                "#de81a0"),
                      guide = guide_legend(ncol = 2, 
                                           title.position = "top"))+
    scale_y_continuous(breaks = c(0.0, 0.25, 0.50, 0.75, 1.00)) + 
@@ -17,9 +18,10 @@ bach_graph <- bach_audio_clean %>%
   labs(title = "Energy by Key (J. S. Bach)", 
        x = "Key", 
        y = "Energy",
-       color = "Album")+ 
+       color = "Album",
+       caption = "Source: Spotify")+ 
   annotate(geom = "label", x = "A# minor", y = 0, label = "Low")+ 
   annotate(geom = "label", x = "A# minor", y = 1, label = "High")
 
-write_rds(bach_graph, "bach_energy_plot.rds")
+write_rds(bach_graph, "data/bach_energy_plot.rds")
 

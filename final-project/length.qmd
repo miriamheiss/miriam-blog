@@ -1,0 +1,27 @@
+---
+title: "Length of Songs"
+sidebar: true
+toc: false
+format:
+  html:
+    code-fold: show
+    code-tools: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+The graph below shows the length of songs by Taylor Swift and Bach. As you can see, a lot of classical pieces are not the average [three minutes, thirty seconds](https://www.vox.com/2014/8/18/6003271/why-are-songs-3-minutes-long), most being much shorter. But music is [getting shorter](https://michaeltauberg.medium.com/music-and-our-attention-spans-are-getting-shorter-8be37b5c2d67), so wouldn't that make classical music more popular? Not necessarily! The energy of Classical music is much lower, and more people would rather listen to a more energetic song. A lot of factors go into music, so you can't decide if classical music is boring or not on just one factor. 
+
+::: {.column-page-inset}
+
+```{r plots_length, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 6, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(patchwork)
+bach_length <- readRDS("data/bach_length_plot.rds")
+ts_length<- readRDS("data/ts_length_plot.rds")
+ts_length + bach_length
+```
+:::

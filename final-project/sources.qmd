@@ -3,7 +3,7 @@ title: "Sources"
 #date: "2022-08-04"
 categories:
 #image:  
-sidebar: false
+sidebar: true
 toc: false
 format:
   html:
