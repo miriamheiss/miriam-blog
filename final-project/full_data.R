@@ -298,7 +298,10 @@ bach_duration <- bach_cleaned %>%
        y = "Length (Minutes)",
        x = NULL,
        caption = "Source: Spotify")+ 
-  annotate(geom = "label", x = 1, y = 1.5, label = "Average Length (Bach)", fill = "darkblue", color = "white")
+  annotate(geom = "label", x = 1.08, y = 1.5, 
+           label = "Average Length\n(Bach)", 
+           fill = "darkblue", 
+           color = "white")
 
 write_rds(bach_duration, "data/bach_length_plot.rds")
 

@@ -1,5 +1,5 @@
 ---
-title: "Final Project"
+title: "Is Classical Music Boring?"
 subtitle: "Taylor Swift and J.S. Bach compared"
 author: "Miriam Heiss"
 sidebar: true
