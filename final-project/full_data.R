@@ -233,15 +233,17 @@ write_rds(bach_tempo, "data/bach_tempo_plot.rds")
 # Length----
 ## Ts----
 
+mean_ts <- mean(ts_audio_clean$duration_ms) / 1000 / 60
+ 
 ts_duration <- ts_cleaned %>% 
   filter(album_name %in% ts_albums) %>% 
   select(duration_ms, album_name) %>% 
   mutate(minutes = duration_ms / 1000 / 60) %>% 
   ggplot(mapping = aes(y = minutes,
                        x = album_name,
-                       color = album_name))+ 
-  geom_hline(yintercept = 5)+
-  geom_hline(yintercept = 3.5, color = "brown2", size = 0.75)+
+                       color = album_name))+
+  geom_hline(yintercept = 3.5, color = "brown2", size = 0.75, linetype = "dashed")+
+  geom_hline(yintercept = mean_ts, color = "cadetblue", size = 0.75)+
   geom_point()+ 
   scale_color_manual(values = c("deepskyblue2",
                                 "lightsalmon4",
@@ -260,22 +262,28 @@ ts_duration <- ts_cleaned %>%
        subtitle = "Most songs are between 3 and 5 minutes",
        y = "Length (Minutes)",
        x = NULL)+
-  annotate(geom = "segment", x = 3.5, xend = 2.75, y = 1.5, yend = 3.5,
-          arrow = arrow(angle = 15, length = unit(0.5, "lines")))+
-  annotate(geom = "label", x = 4, y = 1.5, label = "Average Song Length")
+  annotate(geom = "segment", x = 3.5, xend = 3.5, y = 1.5, yend = 3.5,
+          arrow = arrow(length = unit(0.5, "lines")))+
+  annotate(geom = "label", x = 4, y = 1.5, label = "Average Length of Songs (2022)")+
+  annotate(geom = "segment", x = 4.5, xend = 4.5, y = 6.5, yend = 4,
+           arrow = arrow(angle = 15, length = unit(0.5, "lines")))+
+  annotate(geom = "label", x = 5, y = 6.5, label = "Average Length (Taylor Swift)", fill = "cadetblue", color = "white")
+  
 
 write_rds(ts_duration, "data/ts_length_plot.rds")
 
 ## Bach----
+
+bach_mean <- mean(bach_audio_clean$duration_ms) / 1000 / 60
 
 bach_duration <- bach_cleaned %>% 
   filter(album_name %in% bach_albums) %>%
   mutate(minutes = duration_ms / 1000 / 60) %>% 
   ggplot(mapping = aes(y = minutes,
                        x = album_name,
-                       color = album_name))+
-  geom_hline(yintercept = 5)+
-  geom_hline(yintercept = 3.5, color = "brown2", size = 0.75)+
+                       color = album_name)) +
+  geom_hline(yintercept = 3.5, color = "brown2", size = 0.75, linetype = "dashed")+
+  geom_hline(yintercept = bach_mean, color = "darkblue", size = 0.75)+
   geom_point()+
   scale_color_manual(values = c("lightpink3",
                                 "paleturquoise4",
@@ -284,12 +292,13 @@ bach_duration <- bach_cleaned %>%
   scale_y_continuous(breaks = c(1, 3, 2, 4, 5, 6, 7, 8, 9, 10)) + 
   coord_cartesian(ylim = c(1, 10)) + 
   theme_linedraw(base_size = 12)+ 
-  theme(legend.position = "none", axis.text.x = element_text(angle = 90))+ 
+  theme(legend.position = "none", axis.text.x = element_text(angle = 90, hjust = 1))+ 
   labs(title = "Play Time (Bach) in minutes",
        subtitle = "Most pieces are between 1 and 3 minutes",
        y = "Length (Minutes)",
        x = NULL,
-       caption = "Source: Spotify")
+       caption = "Source: Spotify")+ 
+  annotate(geom = "label", x = 1, y = 1.5, label = "Average Length (Bach)", fill = "darkblue", color = "white")
 
 write_rds(bach_duration, "data/bach_length_plot.rds")
 
@@ -360,3 +369,5 @@ bach_graph <- bach_audio_clean %>%
        color = "Album")
 
 ggplotly(bach_graph, tooltip = "text")
+
+
