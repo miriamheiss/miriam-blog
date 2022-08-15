@@ -42,6 +42,7 @@ ts_energy + bach_energy
 ```
 :::
 
+The plot above shows the energy level by key. Most of Taylor Swift's songs are above 0.50, and most of Bach's are below. The most common keys for Bach are G major, E major, B minor, and D major, while the most common keys for Taylor Swift are C major, D major, G major, D major, and F major. The most energetic albums for Taylor Swift are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. For Bach, the most energetic albums are ***Innovations: Bach***, and ***J. S. Bach: Cantatas***. The least energetic album is ***Bach on Porthan Organ***. The correlation between the x and the y is that more major keys have higher energy. You can find the interactive plot [here](https://www.miriamheiss.com/final-project/interactive.html), that way you can see the name of the song.
 
 
 

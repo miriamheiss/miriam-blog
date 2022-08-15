@@ -257,7 +257,7 @@ ts_duration <- ts_cleaned %>%
   scale_y_continuous(breaks = c(1, 3, 2, 4, 5, 6, 7, 8, 9, 10)) + 
   coord_cartesian(ylim = c(1, 10)) + 
   theme_linedraw(base_size = 12)+
-  theme(axis.text.x = element_text(angle = 90), legend.position = "none")+ 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "none")+ 
   labs(title = "Play Time (Taylor Swift) in minutes",
        subtitle = "Most songs are between 3 and 5 minutes",
        y = "Length (Minutes)",
