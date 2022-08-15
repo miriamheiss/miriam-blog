@@ -19,3 +19,7 @@ The resources I used for this project:
 
  -  [Quarto Guide](https://quarto.org/docs/guide/)
  -  [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/)
+ -  [Preceptor's Primer for Data Science](https://ppbds.github.io/primer/index.html)
+ 
+ Contact Me:
+ Email: memerheiss@gmail.com
