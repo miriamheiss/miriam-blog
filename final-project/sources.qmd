@@ -21,5 +21,15 @@ The resources I used for this project:
  -  [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/)
  -  [Preceptor's Primer for Data Science](https://ppbds.github.io/primer/index.html)
  
- Contact Me:
+The project should show: 
+
+- Classical music is not boring
+  - On average, it goes faster than Taylor Swift
+  - It is happier (on average)
+  
+- Music is music!
+  - Both Taylor Swift and Bach have the same elements, tempo, energy, key
+  - All music (Contemporary and Classical) is the same!
+ 
+Contact Me:
 memerheiss@gmail.com

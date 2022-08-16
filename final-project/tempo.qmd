@@ -11,8 +11,17 @@ format:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+:::{.callout-tip}
+## Terms you should know
+- BPM
+  - Beats Per Minute 
+- Tempo
+  - How fast the song goes
+- Valence
+  - How happy the song is
+:::
 
-
+These graphs show the correlation between tempo and valence. Bach usually stays below 175 bpm and is relatively happy. There is a lot of over plotting at the very top of Bach's plot, and it does not follow the curve very much. Taylor Swift does follow the curve. Her tempo and valence go up, down, up, down, following the curve. For her, there is a correlation, for Bach, there is not. They do have similarities in their points, though. Both are going on the noticeable downward curve for valence after 175 bpm.
 
 ::: {.column-page-inset}
 
