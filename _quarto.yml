@@ -16,13 +16,14 @@ website:
       title: "Bach and Taylor Swift Project"
       style: "docked"
       background: "#ffffff"
-      collapse-level: 5
+      collapse-level: 6
       contents: 
         - final-project/index.qmd
         - final-project/energy.qmd
         - final-project/tempo.qmd
         - final-project/interactive.qmd
         - final-project/sources.qmd 
+        - final-project/conclusion.qmd
         
         
         

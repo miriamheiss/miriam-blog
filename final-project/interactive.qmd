@@ -100,8 +100,3 @@ ggplotly(bach_graph, tooltip = "text")
 ```
 
 
-## Song Length
-### Taylor Swift
-
-
-
