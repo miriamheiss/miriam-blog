@@ -299,7 +299,7 @@ bach_duration <- bach_cleaned %>%
        y = "Length (Minutes)",
        x = NULL,
        caption = "Source: Spotify")+ 
-  annotate(geom = "label", x = 1.08, y = 1.5, 
+  annotate(geom = "label", x = 1.1, y = 1.5, 
            label = "Average Length\n(Bach)", 
            fill = "darkblue", 
            color = "white")
