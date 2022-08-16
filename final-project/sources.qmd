@@ -11,17 +11,17 @@ format:
     code-tools: false
 ---
 
-The data I used for this project:
+### The data I used for this project:
 
  -  [Spotifyr](https://www.rdocumentation.org/packages/spotifyr/versions/2.1.1)
 
-The resources I used for this project:
+### The resources I used for this project:
 
  -  [Quarto Guide](https://quarto.org/docs/guide/)
  -  [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/)
  -  [Preceptor's Primer for Data Science](https://ppbds.github.io/primer/index.html)
  
-The project should show: 
+### The project should show: 
 
 - Classical music is not boring
   - On average, it goes faster than Taylor Swift
@@ -31,5 +31,8 @@ The project should show:
   - Both Taylor Swift and Bach have the same elements, tempo, energy, key
   - All music (Contemporary and Classical) is the same!
  
-Contact Me:
+#### Contact Me:
 memerheiss@gmail.com
+
+#### Learn R (for free!)
+[Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/)

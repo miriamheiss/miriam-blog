@@ -15,11 +15,11 @@ Now that we've seen all the graphs, we can come to a conclusion about the questi
 
 ## Conclusion
 
-Classical music is not boring! It may seem long and boring, but it is happier and has a wider range of keys than popular music. Popular music is written very simply, always sticking to the same keys, while classical music has more freedom. Popular music has always catered to listeners and streaming services, but they did not have streaming services when classical music was at it's boom, all they had was live performances. But classical (specifically baroque, which is when Bach was alive) music is more open to improvisation, so you can hear the performer's style of playing in the music. Classical music is interesting!
+Classical music is not boring! It may seem long and boring, but it is happier and has a wider range of keys than popular music. Popular music is written very simply, always sticking to the same keys, while classical music has more freedom. Popular music has always catered to listeners and streaming services, but they did not have streaming services when classical music was at its boom, all they had was live performances. But classical (specifically baroque, which is when Bach was alive) music is more open to improvisation, so you can hear the performer's style of playing in the music. That is why I think that classical music is not boring, it's quite interesting!
 
 ::: {.callout-tip}
 ## Did you know?
-Did you know that there are different types of classical music? They are:
+Did you know that there are 4 different eras of classical music? They are:
 
 - Renaissance 
   – 1400-1600.

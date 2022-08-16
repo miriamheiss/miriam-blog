@@ -22,8 +22,9 @@ website:
         - final-project/energy.qmd
         - final-project/tempo.qmd
         - final-project/interactive.qmd
-        - final-project/sources.qmd 
         - final-project/conclusion.qmd
+        - final-project/sources.qmd 
+        
         
         
         
