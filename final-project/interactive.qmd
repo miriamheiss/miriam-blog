@@ -22,6 +22,12 @@ library(patchwork)
  
 The graph below shows the level of energy in Taylor Swift's songs. The most energetic albums are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. Most songs lie between 0.50 and 0.75. She also tends to stick to major keys that are not sharp or flat, like C major, D major, F major, and G major.
 
+::: {.callout-note icon=false}
+Drag your mouse over the graphs, they show the name of the song!
+You can also double click on the legend, that will isolate the album you clicked on!
+You can also click on the legend to hide the albums
+:::
+
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, out.width = "90%", fig.width = 9}
 ts_audio_clean <- readRDS("data/ts_clean_audio.rds") # D
 ts_albums_clean <- read_rds("data/ts_albums.rds") # V

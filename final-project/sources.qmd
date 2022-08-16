@@ -22,4 +22,4 @@ The resources I used for this project:
  -  [Preceptor's Primer for Data Science](https://ppbds.github.io/primer/index.html)
  
  Contact Me:
- Email: memerheiss@gmail.com
+memerheiss@gmail.com

@@ -13,13 +13,13 @@ website:
   
   sidebar:
     - id: final-project
-      title: "Final project"
+      title: "Bach and Taylor Swift Project"
       style: "docked"
       background: "#ffffff"
       collapse-level: 5
       contents: 
         - final-project/index.qmd
-        - final-project/length.qmd
+        - final-project/energy.qmd
         - final-project/tempo.qmd
         - final-project/interactive.qmd
         - final-project/sources.qmd 

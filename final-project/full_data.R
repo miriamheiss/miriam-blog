@@ -182,6 +182,7 @@ write_rds(bach_graph, "data/bach_energy_plot.rds")
 ts_tempo <- ts_cleaned %>%   
   ggplot(mapping = aes(x = tempo,
                        y = valence))+ 
+  coord_cartesian(ylim = c(0.0, 1))+
   geom_point(aes( color = album_name),size = 2.5)+ 
   geom_smooth(se = FALSE, color = "black", method = "loess", formula = y~x) +
   theme_linedraw(base_size = 12)+

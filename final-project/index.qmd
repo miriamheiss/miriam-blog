@@ -1,5 +1,5 @@
 ---
-title: "Is Classical Music Boring?"
+title: "Is Classical music boring?"
 subtitle: "Taylor Swift and J.S. Bach compared"
 author: "Miriam Heiss"
 sidebar: true
@@ -9,10 +9,17 @@ format:
     code-fold: show
     code-tools: false
 ---
+:::{.callout-tip}
+## Terms you should know
+- Key
+  - The main group of pitches, or notes, that form the harmonic foundation of a piece of music.
+- Tempo
+  - How fast the song goes
+- Valence
+  - How happy the song is
+:::
 
-## Introduction
-
-Taylor Swift and Bach are compared to answer the question 'Is classical music boring?'. The scatterplots below help visualize the answer to that question. The data used for this project was from the [**spotifyr**](lhttps://www.rcharlie.com/spotifyr/) package, and variables like tempo, energy, and length were pulled. Is classical music boring?
+Taylor Swift and Bach are compared to answer the question 'Is classical music boring?'. The data used for this project was from the [**spotifyr**](lhttps://www.rcharlie.com/spotifyr/) package, and variables like tempo, energy, and length were pulled. The scatterplots below help visualize the many answers to that question. Most people think that Classical music is long and boring, but Taylor Swift (on average) is almost 2 minutes longer than Bach.
 
 ```{r setup, include=FALSE} 
 knitr::opts_chunk$set(echo = TRUE)
@@ -33,16 +40,20 @@ ts_audio_clean <- read_rds("data/ts_clean_audio.rds") # D
 bach_audio_clean <- read_rds("data/bach_clean_audio.rds") # D
 ```
 
+The graph below shows the length of songs by Taylor Swift and Bach. As you can see, a lot of Bach's pieces are not the average [three minutes, thirty seconds](https://www.vox.com/2014/8/18/6003271/why-are-songs-3-minutes-long), most being much shorter. Taylor Swift, on the other hand is above the average length.
+
 ::: {.column-page-inset}
 
-```{r plots_energy, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 9}
-bach_energy<- readRDS("data/bach_energy_plot.rds")
-ts_energy<- readRDS("data/ts_energy_plot.rds")
-ts_energy + bach_energy
+```{r plots_length, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 6, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(patchwork)
+bach_length <- readRDS("data/bach_length_plot.rds")
+ts_length<- readRDS("data/ts_length_plot.rds")
+ts_length + bach_length
 ```
+
 :::
 
-The plot above shows the energy level by key. Most of Taylor Swift's songs are above 0.50, and most of Bach's are below. The most common keys for Bach are G major, E major, B minor, and D major, while the most common keys for Taylor Swift are C major, D major, G major, D major, and F major. The most energetic albums for Taylor Swift are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. For Bach, the most energetic albums are ***Innovations: Bach***, and ***J. S. Bach: Cantatas***. The least energetic album is ***Bach on Porthan Organ***. The correlation between the x and the y is that more major keys have higher energy. You can find the interactive plot [here](https://www.miriamheiss.com/final-project/interactive.html), that way you can see the name of the song.
 
 
 
