@@ -30,7 +30,9 @@ format:
 - Music is music!
   - Both Taylor Swift and Bach have the same elements, tempo, energy, key
   - All music (Contemporary and Classical) is the same!
- 
+  
+---
+
 #### Contact Me:
 memerheiss@gmail.com
 

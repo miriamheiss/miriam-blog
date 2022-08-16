@@ -182,7 +182,7 @@ write_rds(bach_graph, "data/bach_energy_plot.rds")
 ts_tempo <- ts_cleaned %>%   
   ggplot(mapping = aes(x = tempo,
                        y = valence))+ 
-  coord_cartesian(ylim = c(0.0, 1))+
+  coord_cartesian(xlim = c(50, 220), ylim = c(0.0, 1))+
   geom_point(aes( color = album_name),size = 2.5)+ 
   geom_smooth(se = FALSE, color = "black", method = "loess", formula = y~x) +
   theme_linedraw(base_size = 12)+
@@ -198,6 +198,7 @@ ts_tempo <- ts_cleaned %>%
                                 "palegreen4"), 
                      guide = guide_legend(ncol = 2,
                                           title.position = "top"))+ 
+  scale_x_continuous(breaks = seq(50, 200, 50))+
   labs(title = "Valence by Tempo (Taylor Swift)", 
        x = "Tempo",
        y = "Valence",
@@ -210,7 +211,7 @@ write_rds(ts_tempo, "data/ts_tempo_plot.rds")
 bach_tempo <- bach_cleaned %>%
   ggplot(mapping = aes(x = tempo,
                        y = valence))+ 
-  coord_cartesian(ylim = c(0.0, 1))+
+  coord_cartesian(xlim = c(50, 220), ylim = c(0.0, 1))+
   geom_point(aes(color = album_name), size = 2.5)+ 
   geom_smooth(se = FALSE, method = "loess", formula = y~x, color = "black")+
   theme_linedraw(base_size = 12)+
@@ -225,8 +226,7 @@ bach_tempo <- bach_cleaned %>%
        x = "Tempo",
        y = "Valence",
        color = "Album",
-       caption = "Source: Spotify") +
-  scale_y_continuous(expand = c(0, 0))
+    caption = "Source: Spotify") 
 
 write_rds(bach_tempo, "data/bach_tempo_plot.rds")
 
@@ -259,16 +259,16 @@ ts_duration <- ts_cleaned %>%
   coord_cartesian(ylim = c(1, 10)) + 
   theme_linedraw(base_size = 12)+
   theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position = "none")+ 
-  labs(title = "Play Time (Taylor Swift) in minutes",
+  labs(title = "Play Time (Swift) in minutes",
        subtitle = "Most songs are between 3 and 5 minutes",
        y = "Length (Minutes)",
        x = NULL)+
   annotate(geom = "segment", x = 3.5, xend = 3.5, y = 1.5, yend = 3.5,
           arrow = arrow(length = unit(0.5, "lines")))+
-  annotate(geom = "label", x = 4, y = 1.5, label = "Average Length of Songs (2022)")+
+  annotate(geom = "label", x = 4, y = 1.5, label = "Average Length of Songs in 2022")+
   annotate(geom = "segment", x = 4.5, xend = 4.5, y = 6.5, yend = 4,
-           arrow = arrow(angle = 15, length = unit(0.5, "lines")))+
-  annotate(geom = "label", x = 5, y = 6.5, label = "Average Length (Taylor Swift)", fill = "cadetblue", color = "white")
+           arrow = arrow(length = unit(0.5, "lines")))+
+  annotate(geom = "label", x = 4.5, y = 6.5, label = "Swift Length", fill = "cadetblue", color = "white")
   
 
 write_rds(ts_duration, "data/ts_length_plot.rds")
@@ -300,7 +300,7 @@ bach_duration <- bach_cleaned %>%
        x = NULL,
        caption = "Source: Spotify")+ 
   annotate(geom = "label", x = 1.1, y = 1.5, 
-           label = "Average Length\n(Bach)", 
+           label = "Bach Length", 
            fill = "darkblue", 
            color = "white")
 
@@ -375,4 +375,55 @@ bach_graph <- bach_audio_clean %>%
 ggplotly(bach_graph, tooltip = "text")
 
 
+##valence ts----
 
+ts_tempo_plotly <- ts_cleaned %>%   
+  ggplot(mapping = aes(x = tempo,
+                       y = valence))+ 
+  coord_cartesian(ylim = c(0.0, 1))+
+  geom_point(aes(color = album_name,
+                 text = track_name),size = 2.5)+ 
+  geom_smooth(se = FALSE, color = "black", method = "loess", formula = y~x) +
+  theme_linedraw(base_size = 12)+
+  theme(legend.position = "bottom")+ 
+  scale_color_manual(values = c("deepskyblue2",
+                                "lightsalmon4",
+                                "goldenrod",
+                                "seashell4",
+                                "palevioletred1",
+                                "darkred",
+                                "grey32",
+                                "orchid4",
+                                "palegreen4"), 
+                     guide = guide_legend(ncol = 2,
+                                          title.position = "top"))+ 
+  labs(title = "Valence by Tempo (Taylor Swift)", 
+       x = "Tempo",
+       y = "Valence",
+       color = "Album")
+
+ggplotly(ts_tempo_plotly, tooltip = "text")
+##bach valence----
+
+bach_tempo_plot <- bach_cleaned %>%
+  ggplot(mapping = aes(x = tempo,
+                       y = valence))+ 
+  coord_cartesian(ylim = c(0.0, 1))+
+  geom_point(aes(color = album_name, text = track_name), size = 2.5)+ 
+  geom_smooth(se = FALSE, method = "loess", formula = y~x, color = "black")+
+  theme_linedraw(base_size = 12)+
+  theme(legend.position = "bottom")+
+  scale_color_manual(values = c("#dbac00",
+                                "#3e8996",
+                                "#913e96",
+                                "#de81a0"), 
+                     guide = guide_legend(ncol = 2, 
+                                          title.position = "top"))+ 
+  labs(title = "Valence by Tempo (J. S. Bach)",
+       x = "Tempo",
+       y = "Valence",
+       color = "Album",
+       caption = "Source: Spotify") +
+  scale_y_continuous(expand = c(0, 0))
+
+ggplotly(bach_tempo_plot, tooltip = "text")

@@ -7,7 +7,7 @@ sidebar: true
 toc: false
 format:
   html:
-    code-fold: show
+    code-fold: false
     code-tools: false
 ---
 
@@ -99,4 +99,86 @@ bach_graph <- bach_audio_clean %>%
 ggplotly(bach_graph, tooltip = "text")
 ```
 
+## Valence by Tempo
+### Taylor Swift
+
+This graph shows the Valence by tempo for Taylor Swift. Her tempo and valence go up, down, up, down, following the curve, but mainly staying in the middle zone, having a somewhat happy mood. For her, there is a correlation between the x and the y.
+
+```{r, echo = FALSE, warning = FALSE}
+ts_audio_raw <- readRDS("data/ts_audio.rds")
+ts_albums_raw <- readRDS("data/ts_albums.rds")
+ts_albums <- read_rds("data/ts_albums_clean.rds") 
+
+ts_cleaned <-  ts_audio_raw %>% 
+  filter(album_name %in% ts_albums) %>% 
+  select(track_name, energy, key_mode, album_name, 
+         duration_ms, time_signature, tempo, valence)
+
+ts_tempo_plotly <- ts_cleaned %>%   
+  ggplot(mapping = aes(x = tempo,
+                       y = valence))+ 
+  coord_cartesian(xlim = c(50, 220), ylim = c(0.0, 1))+
+  geom_point(aes(color = album_name,
+                 text = track_name),size = 2.5)+ 
+  geom_smooth(se = FALSE, color = "black", method = "loess", formula = y~x) +
+  theme_linedraw(base_size = 12)+
+  theme(legend.position = "bottom")+ 
+  scale_color_manual(values = c("deepskyblue2",
+                                "lightsalmon4",
+                                "goldenrod",
+                                "seashell4",
+                                "palevioletred1",
+                                "darkred",
+                                "grey32",
+                                "orchid4",
+                                "palegreen4"), 
+                     guide = guide_legend(ncol = 2,
+                                          title.position = "top"))+ 
+  labs(title = "Valence by Tempo (Taylor Swift)", 
+       x = "Tempo",
+       y = "Valence",
+       color = "Album")
+```
+
+```{r, echo = FALSE, warning = FALSE}
+ggplotly(ts_tempo_plotly, tooltip = "text")
+```
+
+### J. S. Bach
+
+Bach usually stays below 175 bpm and is very happy. There is a lot of over plotting at the very top of Bach's plot, and it does not follow the curve very much. For Bach, there is not much correlation between the x and the y.
+
+```{r, warning = FALSE, echo = FALSE}
+bach_albums <- read_rds("data/bach_albums_clean.rds") 
+bach_audio_raw <- readRDS("data/bach_audio.rds")
+
+bach_cleaned <- bach_audio_raw %>% 
+  filter(album_name %in% bach_albums) %>% 
+  select(key_mode, track_name, energy, album_name, 
+         duration_ms, time_signature, tempo, valence)
+
+bach_tempo_plot <- bach_cleaned %>%
+  ggplot(mapping = aes(x = tempo,
+                       y = valence))+ 
+  coord_cartesian(xlim = c(50, 220), ylim = c(0.0, 1))+
+  geom_point(aes(color = album_name, text = track_name), size = 2.5)+ 
+  geom_smooth(se = FALSE, method = "loess", formula = y~x, color = "black")+
+  theme_linedraw(base_size = 12)+
+  theme(legend.position = "bottom")+
+  scale_color_manual(values = c("#dbac00",
+                                "#3e8996",
+                                "#913e96",
+                                "#de81a0"), 
+                     guide = guide_legend(ncol = 2, 
+                                          title.position = "top"))+ 
+  labs(title = "Valence by Tempo (J. S. Bach)",
+       x = "Tempo",
+       y = "Valence",
+       color = "Album",
+       caption = "Source: Spotify")
+```
+
+```{r, warning = FALSE, echo = FALSE}
+ggplotly(bach_tempo_plot, tooltip = "text")
+```
 
