@@ -11,7 +11,7 @@ format:
 ---
 
 
-Taylor Swift and Bach are compared to answer the question 'Is classical music boring?'. The data used for this project was from the [**spotifyr**](lhttps://www.rcharlie.com/spotifyr/) package, and variables like tempo, energy, and length were pulled. The scatterplots I made help visualize the many answers to that question. Most people think that Classical music is long and boring, but Taylor Swift (on average) is almost 2 minutes longer than Bach.
+Taylor Swift and Bach are compared to answer the question 'Is classical music boring?'. The data used for this project was from the **spotifyr** package, and variables like tempo, energy, and length were pulled. The scatterplots I made help visualize the many answers to that question. Most people think that Classical music is long and boring, but Taylor Swift (on average) is almost 2 minutes longer than Bach.
 
 ```{r setup, include=FALSE} 
 knitr::opts_chunk$set(echo = TRUE)
