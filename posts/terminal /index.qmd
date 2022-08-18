@@ -1,5 +1,9 @@
 ---
 title: "Terminal"
+subtitle: "Conquering the computer"
+date: "2022-08-19"
+categories: [tutorial]
+# image: 
 sidebar: true
 toc: true
 format:
@@ -8,7 +12,11 @@ format:
     code-tools: false
 ---
 
-You're probably thinking, 'What is a terminal?!?'. The terminal is an interface that lets you access the command line. Essentially it lets you make folders and move things, without touching a mouse. If you can't open Finder or Windows Explorer, you can access files in the terminal. You can access the terminal in RStudio, or in your Applications folder.
+You're probably thinking, 'What is a terminal?!?'. 
+
+## What is a terminal?
+
+The terminal is an interface that lets you access the command line. Essentially it lets you make folders and move things, without touching a mouse. If you can't open Finder or Windows Explorer, you can access files in the terminal. You can access the terminal in RStudio, or in your Applications folder.
 
 ## Directories
 ### Where are you?
@@ -72,4 +80,32 @@ The slash is to tell the computer that we want to move the text file into the `p
 ```
 ### Moving Directories
 
-We move directories the same way we move `.txt` files or any other files. We first need to make another directory to put `practice_shell` into. Call it `practice_2`
+We move directories the same way we move `.txt` files or any other files. We first need to make another directory to put `practice_shell` into. Call it `practice2`: 
+
+``` sh
+> mkdir practice2
+```
+
+Now, move the directory `practice_shell` into `practice2` with `mv`:
+
+``` sh
+> mv practice_shell / practice2
+```
+
+## Listing Items
+### Cats
+
+Currently, there is nothing in the `filler.txt`. We will change that now, so we can get used to **grepping**. Navigate to `filler.txt` through the terminal using `cd`:
+
+``` sh
+> cd ... # This one depends on where you made the file
+> cd practice 2
+> cd practice_shell
+```
+Now, type `open filler.txt`. This will open the file. Type filler text into it (include one #, one &, and hi in it). Now, we are going to run cat into the terminal.The name comes from its function to con**cat**enate files, or chain them together, but we are just going to be running it to list things. Put cat into the terminal, like this:
+
+``` sh
+> cat filler.txt
+```
+
+If you typed things into `filler.txt`, it should show them!

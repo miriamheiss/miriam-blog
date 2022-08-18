@@ -1,7 +1,6 @@
 ---
 title: "Is Classical music boring?"
 subtitle: "Taylor Swift and J.S. Bach compared"
-author: "Miriam Heiss"
 sidebar: true
 toc: false
 format:
