@@ -1,0 +1,75 @@
+---
+title: "Terminal"
+sidebar: true
+toc: true
+format:
+  html:
+    code-fold: false
+    code-tools: false
+---
+
+You're probably thinking, 'What is a terminal?!?'. The terminal is an interface that lets you access the command line. Essentially it lets you make folders and move things, without touching a mouse. If you can't open Finder or Windows Explorer, you can access files in the terminal. You can access the terminal in RStudio, or in your Applications folder.
+
+## Directories
+### Where are you?
+
+Let's start by learning the basic commands. First up, **directories**. You need to know how to switch directories, and how to see which directory you are in. You can see your **present working directory** by typing `pwd` in the terminal. Your path may look different:
+
+``` sh
+> pwd
+/Users/yourname/.../...
+```
+`pwd` is useful to make sure you are in the correct directory when you move folders and files.
+
+### How to Change Directories
+
+The command to change directories is `cd`. It is short for **change directories**. Type a tilde (~) into the terminal after `cd`. That will get you to your home directory. After that, type `pwd`, just to see what directory you are in. 
+
+``` sh
+> cd ~
+> pwd
+/Users/yourname
+```
+
+Try and get yourself deeply nested in folders, inside folders, inside folders, inside folders, inside folders, etc. Then try running `cd` with a tilde after. The command `cd ~` is a very useful shortcut.
+
+### What about backwards?
+
+You can always move forward using `cd` (only one directory at a time), but you cannot move backwards. In Finder or Windows Explorer, get deeply nested into folders. Now, we are going to get back to the home directory without a tilde. I nested 6 layers back, but yours may be different. Now, type `cd/ ..` into the terminal. That should have moved you back a layer. But if you are nested far, far, far inside your computer, typing `/ ..` a million times is going to be hard. Don't worry! We can stack the command! Stack `/..` the amount of times you went back a layer. Eventually, you will be at the home directory
+
+``` sh
+> cd /../../../../..
+```
+
+That is basically how you move around in the terminal.
+
+## Files
+### Directoriess
+
+What are directories? Directories are the files on your computer, you can look at them in Finder, the Windows equivalent to Finder, and the terminal. Let's make a new file called `practice_shell` using `mkdir`. That means **m**a**k**e **dir**ectory.
+
+``` sh
+> mkdir practice_shell
+```
+### Text Files
+Great! Now, we are going to make a text file using `.txt` as a suffix, using the command touch, to make the text file. Call the text file `filler.txt`: 
+
+``` sh
+> touch filler.txt
+```
+
+### Moving Files
+
+Now, we have a `.txt` file and a folder to put it in. The `filler.txt` file should not have appeared in the `practice_shell`, if it did, move it somewhere else, preferably back one layer. How do we move files into folders? We do that by using `mv`, or **m**o**v**e, like this:
+
+``` sh
+> mv filler.txt / practice_shell
+```
+The slash is to tell the computer that we want to move the text file into the `practice_shell`. It always goes like this
+
+``` sh
+> mv thing you want to move / place you want to move it
+```
+### Moving Directories
+
+We move directories the same way we move `.txt` files or any other files. We first need to make another directory to put `practice_shell` into. Call it `practice_2`
