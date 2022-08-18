@@ -13,7 +13,7 @@ format:
   - The main group of pitches, or notes, that form the harmonic foundation of a piece of music.
 :::
 
-The plots below show the energy level by key. Most of Taylor Swift's songs are above 0.50, and most of Bach's are below. The most common keys for Bach are G major, E major, B minor, and D major, while the most common keys for Taylor Swift are C major, D major, G major, D major, and F major. The most energetic albums for Taylor Swift are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. For Bach, the most energetic albums are ***Innovations: Bach***, and ***J. S. Bach: Cantatas***. The least energetic album is ***Bach on Porthan Organ***. 
+The plots below show the energy level by key. Most of Taylor Swift's songs are above 0.50, and most of Bach's are below. The most common keys for Bach are G major, E major, B minor, and D major, while the most common keys for Taylor Swift are C major, D major, G major, and F major. The most energetic albums for Taylor Swift are ***1989***, ***Speak Now***, and ***Fearless***. The least energetic albums are ***folklore*** and ***evermore***. For Bach, the most energetic albums are ***Innovations: Bach***, and ***J. S. Bach: Cantatas***. The least energetic album is ***Bach on Porthan Organ***. 
 
 
 ```{r plots_energy, echo = FALSE, out.width = "90%", fig.width = 9, fig.height = 9, message = FALSE, warning = FALSE}

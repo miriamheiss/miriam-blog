@@ -34,7 +34,6 @@ bach_audio_clean <- read_rds("data/bach_clean_audio.rds") # D
 
 ---
 
-The graph below shows the length of songs by Taylor Swift and Bach. As you can see, a lot of Bach's pieces are not the average [three minutes, thirty seconds](https://www.vox.com/2014/8/18/6003271/why-are-songs-3-minutes-long), most being much shorter. Taylor Swift, on the other hand is above the average length.
 
 ::: {.column-page-inset}
 
@@ -48,6 +47,7 @@ ts_length + bach_length
 
 :::
 
+The graph above shows the length of songs by Taylor Swift and Bach. As you can see, a lot of Bach's pieces are not the average [three minutes, thirty seconds](https://www.vox.com/2014/8/18/6003271/why-are-songs-3-minutes-long), most being much shorter. Taylor Swift, on the other hand is above the average length.
 
 
 
