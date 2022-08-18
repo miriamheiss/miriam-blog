@@ -16,7 +16,13 @@ You're probably thinking, 'What is a terminal?!?'.
 
 ## What is a terminal?
 
-The terminal is an interface that lets you access the command line. Essentially it lets you make folders and move things, without touching a mouse. If you can't open Finder or Windows Explorer, you can access files in the terminal. You can access the terminal in RStudio, or in your Applications folder.
+The terminal is an interface that lets you access the command line. Essentially it lets you make folders and move things, without touching a mouse. If you can't open Finder or Windows Explorer, you can access files in the terminal. You can access the terminal in RStudio, or in your Applications folder. In Jurassic Park, when Lex Murphy is hacking the computer to get the park running again, she is using a terminal. All computers up until the mid-nineties used terminals, and terminals alone. Unix systems are still used today, now they are called [Linux](https://www.linux.com/what-is-linux/) (Macs are also Linux/Unix systems).
+
+```{r out.width="75%", fig.align="center", echo=FALSE, fig.cap="Blah"}
+knitr::include_graphics("https://media.giphy.com/media/nhKW2pvXwI8mc/giphy.gif")
+```
+
+
 
 ## Directories
 ### Where are you?
@@ -108,4 +114,12 @@ Now, type `open filler.txt`. This will open the file. Type filler text into it (
 > cat filler.txt
 ```
 
-If you typed things into `filler.txt`, it should show them!
+If you typed something into `filler.txt`, it should show what is in there!
+
+### Listing 
+
+There is another way to show what is in a file. `ls`, or **l**i**s**ting. It the terminal, type `filler.txt` after ls. This will not show the same thing as cat, as it is just listing files. If you type `ls filler.txt`, it will only return `filler.txt`
+
+``` sh
+> ls filler.txt
+```

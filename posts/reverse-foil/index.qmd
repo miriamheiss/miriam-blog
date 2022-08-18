@@ -1,0 +1,12 @@
+---
+title: "Quadratic Shortcuts"
+subtitle: "When **a** equals 1"
+---
+
+Block math:
+
+$$
+x^2 + 15x + 30
+$$
+
+Inline math: $y = mx + b$
