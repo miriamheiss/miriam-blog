@@ -1,12 +1,72 @@
 ---
 title: "Quadratic Shortcuts"
-subtitle: "When **a** equals 1"
+subtitle: "a equals 1"
 ---
 
-Block math:
+This is called the standard form of a quadratic equation.
 
 $$
-x^2 + 15x + 30
+ax^2 + bx + c = 0
+$$
+---- 
+<br />
+
+You can solve this equation with the quadratic formula:
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} 
+$$
+<br />
+
+Or by turning it into something that looks like this:
+
+$$
+(x + ...)(x + ...) = 0
 $$
 
-Inline math: $y = mx + b$
+But how exactly do you turn this: $ax^2 + bx + c = 0$  
+<br />
+into this:$(x + ...)(x + ...) = 0$ ? 
+
+
+
+
+
+
+
+
+
+
+
+
+Here's a thing: $\sqrt{\frac{1}{2}}$
+
+
+
+Here's an aligned environment
+
+$$
+\begin{aligned}
+x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
+&= \frac{-2 \pm \sqrt{-2^2 - (4 \times 5 \times 2)}}{2 \times 5} \\
+&= 6.324 \text{ and } 4.324
+\end{aligned}
+$$
+
+asdfas
+
+$$
+
+
+\end{aligned}
+$$
+
+
+
+
+
+
+
+
+
+
