@@ -1,65 +1,127 @@
 ---
 title: "Quadratic Shortcuts"
-subtitle: "a equals 1"
+subtitle: "When $a$ equals 1"
 ---
+
+## The Equation
+
 
 This is called the standard form of a quadratic equation.
 
 $$
 ax^2 + bx + c = 0
 $$
----- 
-<br />
+
+\ 
 
 You can solve this equation with the quadratic formula:
 
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} 
 $$
-<br />
 
 Or by turning it into something that looks like this:
 
 $$
-(x + ...)(x + ...) = 0
+(x + \dots)(x + \dots) = 0
+$$
+----
+But how exactly do you turn this: $ax^2 + bx + c = 0$ <br /> 
+into this: $(x + ...)(x + ...) = 0$ ? 
+
+
+## Noticing a pattern
+
+The first things I noticed were:
+
+- The equation $ax^2 + bx + c = 0$ was easier to solve in this form: $(x + ...)(x + ...) = 0$
+- Every problem that I was solving was following a pattern: find $x + b$ and $xc$
+
+Every problem was following this pattern, and eventually turned the quadratic equation into a more manageable equation that looked like this: $(x + ...)(x + ...) = 0$. On question 2 or 3 I started to actually notice the pattern, and now, I had a question.
+
+### The Pattern
+
+The pattern was $y * z = c$ and $y + z = bx$. The textbook applied it to almost every question for the quadratic equation
+
+### The Question
+
+My question was if there was a pattern, could I apply it to *all* the problems? Would it work if there was no $c$? Would it work if there was no $bx$ I decided to write my question down in a notebook, and test the theory that I had. Would $y * z = c$ and $y + z = bx$ hold up for all the problems?
+
+## Testing a theory
+
+For the first couple of questions, it worked! Then I came to a very different problem:
+
+$$
+56 - x^2 - x = 0
 $$
 
-But how exactly do you turn this: $ax^2 + bx + c = 0$  
+There was no $b$! It was all mixed around and not in the proper form! Would my theory hold up against this?
 <br />
-into this:$(x + ...)(x + ...) = 0$ ? 
-
-
-
-
-
-
-
-
-
-
-
-
-Here's a thing: $\sqrt{\frac{1}{2}}$
-
-
-
-Here's an aligned environment
+Yes!
 
 $$
 \begin{aligned}
-x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
-&= \frac{-2 \pm \sqrt{-2^2 - (4 \times 5 \times 2)}}{2 \times 5} \\
-&= 6.324 \text{ and } 4.324
+56 - x^2 - x &= 0\\
+x^2 + x - 56 &= 0\\
 \end{aligned}
 $$
 
-asdfas
+I was able to put it into the correct form, but how would I account for the missing *b*? This is essentially what would make or break my theory! Then I remembered that if no coefficient is specified the number is 1! I could now solve the equation! My answer was $x = -7 \text{ and } x = 8$. It had worked!
+
+:::{.callout-tip icon=false}
+## My reasoning
+
+- $8 * -7  = 56$ 
+- $8 -7 = 1$.
+:::
+
+
+## More Testing
+
+Now, it worked for questions with both a $bx$ and $c$, either a $bx$ or $c$, and questions with neither. I started to test with made-up questions, not in the textbook, because maybe the questions in the textbook were made to work. The first one was:
 
 $$
+x^2 + 7x + 12 = 0 
+$$
+That worked.
+<br />
+The next problem was:
 
+$$
+x^2 + 11x + 28 = 0
+$$
+That worked too!
+<br />
+I could not seem to find a problem that disproved my theory!
 
+## Using the theory
+
+Here is the easiest way to solve quadratic equations, without using the quadratic formula.
+
+Here is a problem:
+
+$$
+x^2 + 9x + 8 = 0
+$$
+
+Now, it looks like there is nothing in common between $9x$ and $8$. The numbers that add up to nine are $1 + 8$, $2 + 7$, $3 + 6$, and $5 + 4$. The factors of eight are $2 * 4$ and $1 * 8$. The numbers that 9 and 8 have in common are 1 and 8. Those are our two numbers that we need for our more simplified equation. Our new simplified equation is:
+
+$$
+(x + 9)(x + 8) = 0
+$$
+
+This is much easier to solve than the previous one! Now all we need to do is add the opposite of a positive number, which is a negative number. Our final answer is as such:
+
+$$
+\begin{aligned}
+(x + 9)(x + 8) &= 0\\
+x =& -9\\
+x = &-8
 \end{aligned}
 $$
+## Why does $a$ equal one
+
+If you do not recall, the equation is $ax^2 + bx + c = 0$. There is an $a, b, \text{ and }c$.
 
 
 
