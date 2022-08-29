@@ -1,6 +1,13 @@
 ---
 title: "Quadratic Shortcuts"
 subtitle: "When $a$ equals 1"
+date: "2022-08-20"
+categories: [math]
+image: "equations.png"
+format:
+  html:
+    code-fold: false
+    code-tools: false
 ---
 
 ## The Equation
@@ -25,9 +32,17 @@ Or by turning it into something that looks like this:
 $$
 (x + \dots)(x + \dots) = 0
 $$
-----
-But how exactly do you turn this: $ax^2 + bx + c = 0$ <br /> 
-into this: $(x + ...)(x + ...) = 0$ ? 
+---
+
+But how exactly do you turn this: 
+
+$$
+ax^2 + bx + c = 0
+$$
+
+into this?: 
+
+$$(x + ...)(x + ...) = 0$$ 
 
 
 ## Noticing a pattern
@@ -41,11 +56,11 @@ Every problem was following this pattern, and eventually turned the quadratic eq
 
 ### The Pattern
 
-The pattern was $y * z = c$ and $y + z = bx$. The textbook applied it to almost every question for the quadratic equation
+The pattern was $y \times z = c$ and $y + z = bx$. The textbook applied it to almost every question for the quadratic equation
 
 ### The Question
 
-My question was if there was a pattern, could I apply it to *all* the problems? Would it work if there was no $c$? Would it work if there was no $bx$ I decided to write my question down in a notebook, and test the theory that I had. Would $y * z = c$ and $y + z = bx$ hold up for all the problems?
+My question was if there was a pattern, could I apply it to *all* the problems? Would it work if there was no $c$? Would it work if there was no $bx$ I decided to write my question down in a notebook, and test the theory that I had. Would $y \times z = c$ and $y + z = bx$ hold up for all the problems?
 
 ## Testing a theory
 
@@ -56,7 +71,7 @@ $$
 $$
 
 There was no $b$! It was all mixed around and not in the proper form! Would my theory hold up against this?
-<br />
+
 Yes!
 
 $$
@@ -66,12 +81,12 @@ x^2 + x - 56 &= 0\\
 \end{aligned}
 $$
 
-I was able to put it into the correct form, but how would I account for the missing *b*? This is essentially what would make or break my theory! Then I remembered that if no coefficient is specified the number is 1! I could now solve the equation! My answer was $x = -7 \text{ and } x = 8$. It had worked!
+I was able to put it into the correct form, but how would I account for the missing *b*? This is essentially what would make or break my theory! Then I remembered that if no coefficient is specified the number is 1! I could now solve the equation! My answer was $x = -7$ and $x = 8$. It had worked!
 
 :::{.callout-tip icon=false}
 ## My reasoning
 
-- $8 * -7  = 56$ 
+- $8 \times -7  = 56$ 
 - $8 -7 = 1$.
 :::
 
@@ -83,15 +98,17 @@ Now, it worked for questions with both a $bx$ and $c$, either a $bx$ or $c$, and
 $$
 x^2 + 7x + 12 = 0 
 $$
+
 That worked.
-<br />
+
 The next problem was:
 
 $$
 x^2 + 11x + 28 = 0
 $$
+
 That worked too!
-<br />
+
 I could not seem to find a problem that disproved my theory!
 
 ## Using the theory
@@ -104,7 +121,7 @@ $$
 x^2 + 9x + 8 = 0
 $$
 
-Now, it looks like there is nothing in common between $9x$ and $8$. The numbers that add up to nine are $1 + 8$, $2 + 7$, $3 + 6$, and $5 + 4$. The factors of eight are $2 * 4$ and $1 * 8$. The numbers that 9 and 8 have in common are 1 and 8. Those are our two numbers that we need for our more simplified equation. Our new simplified equation is:
+Now, it looks like there is nothing in common between $9x$ and $8$. The numbers that add up to nine are $1 + 8$, $2 + 7$, $3 + 6$, and $5 + 4$. The factors of eight are $2 \times 4$ and $1 \times 8$. The numbers that 9 and 8 have in common are 1 and 8. Those are our two numbers that we need for our more simplified equation. Our new simplified equation is:
 
 $$
 (x + 9)(x + 8) = 0
@@ -119,16 +136,6 @@ x =& -9\\
 x = &-8
 \end{aligned}
 $$
-## Why does $a$ equal one
+## Why does $a$ *have* to equal one?
 
-If you do not recall, the equation is $ax^2 + bx + c = 0$. There is an $a, b, \text{ and }c$.
-
-
-
-
-
-
-
-
-
-
+If you do not recall, the equation is $ax^2 + bx + c = 0$. There is an $a$, $b$, and $c$. The values for $b$ and $c$ are decided by common numbers between the sum and the product of $y + z$ and $y \times z$. But this theory only works when $a = 1$. What happens when $a = 5$? If that happens, $a$ can be split up in many different ways! The theory only works when $a$ cannot be split up. It is still quite a useful way to solve quadratic equations when $a$ is equal to one without using the quadratic formula.

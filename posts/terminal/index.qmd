@@ -3,9 +3,8 @@ title: "Terminal"
 subtitle: "Conquering the computer"
 date: "2022-08-19"
 categories: [tutorial]
-image: "photo-1608742213509-815b97c30b36.jpg"
-sidebar: true
-toc: true
+image: "Appleterminal2.png"
+draft: true
 format:
   html:
     code-fold: false
@@ -101,7 +100,7 @@ Now, move the directory `practice_shell` into `practice2` with `mv`:
 ## What's in there?
 ### Cats
 
-Currently, there is nothing in the `filler.txt`. We will change that now, so we can get used to **grepping**. Navigate to `filler.txt` through the terminal using `cd`:
+Currently, there is nothing in the `filler.txt`. We will change that now, so we can see items inside of it. Navigate to `filler.txt` through the terminal using `cd`:
 
 ``` sh
 > cd ... # This one depends on where you made the file
@@ -142,3 +141,9 @@ I cannot stress this enough! When you remove a file it is **permanent**. Gone. N
 Be so careful removing files through terminal!!!
 
 We are going to be removing the file `practice2`. I rarely remove things through terminal, as finder is safer, but I know what this file is called and exactly what is in it.
+
+---
+
+
+
+<small class="text-muted">*Header image: <a href="https://commons.wikimedia.org/wiki/File:Appleterminal2.png">Gortu at English Wikipedia</a>, Public domain, via Wikimedia Commons*</small>
