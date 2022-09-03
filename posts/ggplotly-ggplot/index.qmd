@@ -1,7 +1,6 @@
 ---
 title: "Using ggplotly"
 subtitle: "Making interactive plots"
-author: "Miriam Heiss"
 date: "2022-07-31"
 categories: [tutorial]
 image: "life_expectancy.png" 

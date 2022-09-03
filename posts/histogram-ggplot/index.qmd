@@ -1,7 +1,6 @@
 ---
 title: "How to make a Histogram"
 subtitle: "How to use ggplot"
-author: "Miriam Heiss"
 date: "2022-07-30"
 categories: [tutorial]
 image: "nobel-winners.png"
