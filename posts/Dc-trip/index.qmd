@@ -22,46 +22,36 @@ Monday July 11, 2022
 
 Today was all back roads. It was back roads and farms and little houses with the sticky-outy mailboxes. We also saw multiple signs for the Amish, but we did not see any horses or buggies, to our dismay. We went to Appomattox Courthouse Village, where the Civil war ended.
 
-```{r courthouse, echo = FALSE, out.width = 1000}
+```{r courthouse, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [Appomattox Courthouse](https://commons.wikimedia.org/wiki/File:Old_Appomattox_Court_House_reconstructed_2.jpg), by [Doug Coldwell](https://commons.wikimedia.org/wiki/User:Doug_Coldwell)"
 knitr::include_graphics("appomattox_court_house.jpg")
 ```
-
-###### Photo:
-[Appomattox Courthouse](https://commons.wikimedia.org/wiki/File:Old_Appomattox_Court_House_reconstructed_2.jpg), by [Doug Coldwell](https://commons.wikimedia.org/wiki/User:Doug_Coldwell)
 
 They required masks in the museum, and in all the other structures. The village consists of a Courthouse, 3 or 4 "large" houses, multiple slave quarters, a pub, a jail, an general store, and an ice house, and probably a lot more things, but those are the only ones we went to. We learned about a slave named Hannah, who was the only casualty at the signing. A shell was accidentally fired, most likely in celebration, but it blew her arm off and killed her. After that, we went another 2 hours to Richmond. During the drive, Grandpa told us about the 292 day siege of Petersburg, just 90 miles north of Richmond. It starved all the cities around it, because it was a large train hub, and a large part of food and supplies that were sent to Richmond via the James Canal. We had to pay four 70¢ tolls to get to Richmond, all in the span of 10 minutes. When we arrived in Richmond we went to the Tredegar Iron Works Civil War Museum.
 
 ```{r museum, echo = FALSE}
+#| fig-cap: "**Photo:** [Tredagar Iron works Museum](https://en.wikipedia.org/wiki/Tredegar_Iron_Works#/media/File:Pattern_building,_Tredegar_Iron_Works,_Richmond,_Virginia.JPG), by [Morgan Riley](https://commons.wikimedia.org/wiki/User:Morgan_Riley)"
+
 knitr::include_graphics("tredagar_museum.jpg")
 ```
 
-###### Photo:
-[Tredagar Iron works Museum](https://en.wikipedia.org/wiki/Tredegar_Iron_Works#/media/File:Pattern_building,_Tredegar_Iron_Works,_Richmond,_Virginia.JPG), by [Morgan Riley](https://commons.wikimedia.org/wiki/User:Morgan_Riley)
----
-
 There, we learned about a lot of people on both sides of the war, including Francis Clayton, who was one of many female soldiers. She disguised herself as Frances Clalin, and fought alongside her husband, but there are no records of her husband in the same infantry as her. We watched a short film about the timeline of the civil war, but there were two screens, so it confused us a lot. Historic Tredegar was burned by the confederate army, along with most of Richmond, because they found out that the Union Army was coming. They did not want to give the Union any supplies, so they burned almost everything. After the fires were put out by the Union, they discovered that most of the population was evacuated, but the slaves and the "poor whites" were left behind. When President Lincoln visited Richmond, the slaves and the poor people left behind rushed to him instantly. Admiral David D. Porter described it as this: "No electric wire could have carried the news of the President's arrival sooner than it was circulated through Richmond. As far as the eye could see the streets were alive...They all wanted to shake hands with Mr. Lincoln or his coat tail or even to kneel down and kiss his boots!" 
 
-```{r csa_house, echo = FALSE}
+```{r csa_house, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** CSA Whitehouse"
+
 knitr::include_graphics("csa_whitehouse.jpg")
 ```
-
-###### Photo: 
-CSA Whitehouse
----
 
 President Lincoln stayed the night in the CSA Whitehouse, the Davis mansion.
 
 After that, which wasn't incredibly time intensive (We just took pictures) we checked into the hotel, and walked around historic Richmond.
 
-```{r canal, echo = FALSE}
+```{r canal, echo = FALSE, out.width ="100%"}
+#| fig-cap: "**Photo:** [Richmond Canal Walk](https://en.wikipedia.org/wiki/James_River_and_Kanawha_Canal#/media/File:Richmond_Canal_Walk.jpg), by Ben Schumin"
+
 knitr::include_graphics("Richmond_Canal_Walk.jpg")
 ```
-
-###### Photo:
-
-[Richmond Canal Walk](https://en.wikipedia.org/wiki/James_River_and_Kanawha_Canal#/media/File:Richmond_Canal_Walk.jpg), by Ben Schumin
-
----
 
 We finally found the dock where we would go onto the boat and we waited for a while. Once the boat came, we went on board with 4 other families (3 small, 1 big). The boat tour was very interesting. We learned about Henry "Box" Brown, a slave from Richmond who escaped in a wooden crate. He was in the box for 27 hours and shipped himself to a group of abolitionists in Philadelphia, PA. We also learned about Elizabeth Van Lew, one of the elites in Richmond who was secretly an abolitionist. She would go about the docks, muttering to herself, earning herself the nickname 'Crazy Bett' so people would assume she was a crazy woman, but she would be discreetly gathering information about plans from the confederacy. She would meet other spies in a meeting place, an abandoned tobacco shipment building, and give them information to bring to the president and generals of the Union. After reconstruction, Van Lew became increasingly ostracised in Richmond. "No one will walk with us on the street," she wrote, "no one will go with us anywhere; and it grows worse and worse as the years roll on." She reportedly persuaded the United States Department of War to give her all of her records, so she could hide the true extent of her espionage from her neighbours.
 
@@ -73,30 +63,22 @@ Today we left Richmond to go to Spotsylvania. It was a two hour drive, but this 
 
   The architecture of the museum was very interesting, as they have a centre pole that goes all the way up, past the roof, that is the same angle as the Iwo Jima flag raising (second flag). The museum was pro-war, as always. Rachel survived the themed rooms, like the cold one (Korean war), the Jungle one (Vietnam), and the Village one (also Vietnam). When we were done, we piled back into the very hot car and drove to D.C.
   
-```{r quantico, echo = FALSE, out.width = 1000}
+```{r quantico, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [National Museum of the Marine Corps (Quantico)](https://en.wikipedia.org/wiki/National_Museum_of_the_Marine_Corps#/media/File:Museum_of_the_marines_corps.JPG), by [RadioFan](https://en.wikipedia.org/wiki/User:RadioFan)"
+
 knitr::include_graphics("Museum_of_the_marines_corps.jpg")
 ```
-
-###### Photo:
-
-[National Museum of the Marine Corps (Quantico)](https://en.wikipedia.org/wiki/National_Museum_of_the_Marine_Corps#/media/File:Museum_of_the_marines_corps.JPG), by [RadioFan](https://en.wikipedia.org/wiki/User:RadioFan)
-
----  
 
   We parked at a very sketchy looking parking place that was $25 (in cash), and walked to the Smithsonian Art gallery (east building). A lot of the buildings were under construction, like the Capitol building, Air and Space, both art Galleries, among other smaller projects. Grandpa had to stay behind in the east building to try and get the code for the Vrbo that we were staying at, so it was just me and Rachel, exploring the museum. My favourite exhibit was the Symphony in White, which you can find more about [here](https://www.nga.gov/collection/highlights/whistler-symphony-in-white-no-1-the-white-girl.html). After we had explored most of the museum, we went back to Grandpa and made our way to the west building, underground. The west building has more classical paintings, like portraits of presidents and things like that, while the east building has more modern art, like Picasso. The Symphony in White was a temporary exhibit. We had to cut our visit short, because it was nearing five p.m. 
 
   We decided to meander our way to the Capitol Reflecting Pool, but it took us longer than necessary, because we were going so slow and it was nearing 100º. We sat there for a while, but as the clock drew nearer to 5:30, we went all the way to the Washington monument, in a cover of clouds.
   
 ```{r washington, echo = FALSE}
+#| fig-cap: "**Photo:** [Washington Monument (2022)](https://en.wikipedia.org/wiki/Washington_Monument#/media/File:Washington_Monument_2022.jpg), by [Greyfiveys](https://commons.wikimedia.org/wiki/User:Greyfiveys)"
+
 knitr::include_graphics("Washington_Monument_2022.jpg")
 ```
 
-###### Photo:
-
-[Washington Monument (2022)](https://en.wikipedia.org/wiki/Washington_Monument#/media/File:Washington_Monument_2022.jpg), by [Greyfiveys](https://commons.wikimedia.org/wiki/User:Greyfiveys)
-
----    
-  
   Once we made it there, the clouds were starting to darken rapidly, but Grandpa said "They're moving the opposite direction". He was very wrong. 
 
   We were sitting on one of the benches, watching the 'faraway' storm, when suddenly 2 flags got ripped off the poles. That is when I bolted. The door was locked, as it was after 5, so we could not go in the monument, but under the awning was fine for me. Rachel and Grandpa and 25 other tourists joined me when the lightning struck and the thunder was right away. We were under there for what seemed like an eternity. I was next to a screaming French child. About halfway through we were joined by the Andersons. When the thunder subsided, we started to go to the Lincoln memorial, but that is when the second wave of the storm hit. We were soaked! When we finally made it there it was thundering again, so we sheltered in the memorial, away from other people. A couple of teenagers were slipping and sliding on the stairs, so we made our way down very carefully (or at least I did). 
@@ -112,14 +94,10 @@ Wednesday July 13, 2022
   I shoved an entire jumbo pretzel we had gotten earlier from a food truck (I *still* have the songs stuck in my head) into my mouth before we went through security, so I looked a little bit like a chipmunk when we were by the Magna Carta, but I was able to swallow very soon after.
 
 ```{r archive, echo = FALSE, out.width = 1000}
+#| fig-cap: "**Photo:** [The Rotunda in the National Archives Building](https://en.wikipedia.org/wiki/Charters_of_Freedom#/media/File:ArchivesRotunda.jpg)"
+
 knitr::include_graphics("ArchivesRotunda.jpg")
 ```
-
-###### Photo:
-
-[The Rotunda in the National Archives Building](https://en.wikipedia.org/wiki/Charters_of_Freedom#/media/File:ArchivesRotunda.jpg)
-
----
 
   After the Archives we went to "America's Attic" aka the Museum of American History. Sadly the Ruby Slippers and Muppets were not on display (Construction. Argh!), but we heard a quartet play on 400 year old instruments, so I guess that made it better. My favourite was the First Ladies' dresses. 
   
@@ -128,14 +106,10 @@ knitr::include_graphics("ArchivesRotunda.jpg")
   After that we went to the Natural History Museum, but quickly split up from the grown ups, because they wanted to sit down. We spent most of our time in the rocks and gems exhibit, but we also went to an epidemic pop-up exhibit. The rocks and gems were my favourite part, especially the hope diamond. It is the biggest gifted diamond on earth! It is in a necklace, and on display in a spinning case, along with the National Gem Collection. It is apparently cursed, going all the way back to when it was stolen from a statue in India, in the 1400's. The thief was torn apart by dogs, but the people who got the diamond after the thief, were murdered, and it has continued like that for centuries.
 
 ```{r diamond, echo = FALSE}
+#| fig-cap: "**Photo:** [The Hope Diamond](https://en.wikipedia.org/wiki/Hope_Diamond#/media/File:Hope_Diamond_Closeup.jpg), by [Mbalotia](https://commons.wikimedia.org/wiki/User:Mbalotia)"
+
 knitr::include_graphics("Hope_Diamond_Closeup.jpg")
 ```
-
-###### Photo:
-
-[The Hope Diamond](https://en.wikipedia.org/wiki/Hope_Diamond#/media/File:Hope_Diamond_Closeup.jpg), by [Mbalotia](https://commons.wikimedia.org/wiki/User:Mbalotia)
-
---- 
 
   We went back to the Capitol Building with the Andersons but we decided not to take pictures at the front, because it was under construction. We made our way to the Supreme Court, but the fences were too high to take any good pictures. Then we went to the Library of Congress. The main reading room was not open, but it would be open on Thursday, so we went to the observation deck and yearned for the next day to come.
 
@@ -148,27 +122,20 @@ Thursday July 14, 2022
   Today we went to the Spy Museum! I rode in the ~~trunk~~ back of the car to all of our destinations. The spy museum was *very subtle*.
 
 ```{r spy, echo = FALSE}
+#| fig-cap: "**Photo:** [International Spy Museum 2020](https://en.wikipedia.org/wiki/International_Spy_Museum#/media/File:International_Spy_Museum_2020.jpg), by [Itrytohelp](https://commons.wikimedia.org/w/index.php?title=User:Itrytohelp32&action=edit&redlink=1)"
+
 knitr::include_graphics("International_spy.jpg")
 ```
-
-###### Photo:
-
-[International Spy Museum 2020](https://en.wikipedia.org/wiki/International_Spy_Museum#/media/File:International_Spy_Museum_2020.jpg), by [Itrytohelp](https://commons.wikimedia.org/w/index.php?title=User:Itrytohelp32&action=edit&redlink=1)
-
----
 
   We were all assigned code names, backstories and secret missions. Mine was Peyton Davis, a chef from South Africa, who was living in France, checking out a chocolate supplier, when in reality in the game, I was a spy seeing if the "Chocolate" factory was making illegal chemicals. Me and Rachel did not finish our missions, because we had a reservation for the Holocaust Museum. We split from the Andersons, and went on a short walk, only to wait in line for 10 minutes. The Holocaust Museum was really crowded, but once we got past the main hallway, the crowd dispersed. The museum covered how a genocide starts, and how to prevent a genocide.
 
   We met up with the Andersons at the African American Heritage Museum, and explored mainly the sports section, but we also learned about Angola, Louisiana, the worst prison in the United States. We did not spend much time there, because we had to make it to Arlington Cemetery. We were struggling to find the entrance to the cemetery, but we eventually found it. We had to go through a museum and have a bag check, but after that, we started the long walk up. We did not make it all the way to the tomb of the unknown soldier, because Arlington closes at 5 pm.
 
 ```{r cemetery, echo = FALSE}
+#| fig-cap: "**Photo:** [Arlington House](https://en.wikipedia.org/wiki/Arlington_National_Cemetery#/media/File:Arlington_House.jpg)"
+
 knitr::include_graphics("arlington_cemetery.jpg")
 ```
-
-###### Photo: 
-[Arlington House](https://en.wikipedia.org/wiki/Arlington_National_Cemetery#/media/File:Arlington_House.jpg)
-
----
 
 On the way back, we went to the Jefferson Monument and sung the inscriptions on the walls, and various snippets from *Hamilton*. Almost everything was under construction, including the Jefferson Monument, so it was hard to take pictures. 
 
@@ -179,13 +146,10 @@ The Main Reading Room was open, and so was the Asian Reading Room, so we went to
 Then, we discovered that the Main Reading Room was open!
 
 ```{r loc, echo = FALSE}
+#| fig-cap: "**Photo:** Library Of Congress"
+
 knitr::include_graphics("loc_m_m_r.jpg")
 ```
-
-###### Photo:
-Library Of Congress
-
----
 
 All three of us read a hearing from 1947 about Nuclear Plans in the U.S. Most of the middle section was the jury and judges asking this woman the same question over and over again: "Are you a Communist". It was very amusing to read. We made our way back to the car, where I once again rode in the ~~trunk~~ back. This time, there were police out, so I had to be extra careful.
 
