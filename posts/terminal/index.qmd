@@ -1,7 +1,7 @@
 ---
 title: "Terminal"
 subtitle: "Conquering the computer"
-date: "2022-08-19"
+date: "2022-09-05"
 categories: [tutorial]
 image: "Appleterminal2.png"
 format:
