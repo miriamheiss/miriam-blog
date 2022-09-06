@@ -1,0 +1,35 @@
+---
+title: "Plotting Quadratic Equations"
+# subtitle: 
+# date: 
+categories: [math]
+# image: 
+format:
+  html:
+    draft: true
+    code-fold: show
+    code-tools: true
+---
+
+We know what a quadratic equation is:
+
+$$
+ax^2 + bx + c = 0
+$$
+
+But what if we could actually *see* the answers, plotted out in a graph?
+
+\ 
+
+## Some equations
+
+Before we can plot anything, we need an equation.
+
+We will be plotting 4 equations. Here they are:
+
+- $x^2 - 11r + 28$
+- $x^2 - x + 46$
+- $x^2 + 49$
+- $x^2 -4x$
+
+
