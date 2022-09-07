@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Miriam's blog"
+  title: "Miriam's Blog"
   navbar:
     background: secondary
     left:
