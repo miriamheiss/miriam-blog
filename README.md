@@ -17,12 +17,11 @@ I mainly made this blog for my own use just in case I forget something or find s
 ## Challenges
 ###  AKA: YAML is hard
 
-I mainly struggled with the new Quarto YAML settings like `code-fold` and `code-tools` (I get these confused so often), and the spacing (why is it so hard?!). The hardest thing was the dropdown menu for my project, but once I figured it out everything was fine. Learning how to use the terminal was also incredibly difficult.
+I mainly struggled with the new Quarto YAML settings like `code-fold` and `code-tools` (I get these confused so often), and the spacing (why is it so hard?!). 
 
-### Hardest thing
+![Screen Shot 2022-09-07 at 12 00 11 PM](https://user-images.githubusercontent.com/110204835/188925271-b09a8a4a-73ec-431f-8b51-30708426284e.png)
 
-I did accidentally break by blog, because I had a duplicate file. I thought I just deleted everything (I didn't), but that was most likely the hardest thing I've done so far.
-
+The hardest thing was the dropdown menu for my project (once more, in YAML), but once I figured it out everything was fine. Learning how to use the terminal was also incredibly difficult.
 
 ---
 
