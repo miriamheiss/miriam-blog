@@ -19,6 +19,10 @@ I mainly made this blog for my own use just in case I forget something or find s
 
 I mainly struggled with the new Quarto YAML settings like `code-fold` and `code-tools` (I get these confused so often), and the spacing (why is it so hard?!). The hardest thing was the dropdown menu for my project, but once I figured it out everything was fine. Learning how to use the terminal was also incredibly difficult.
 
+### Hardest thing
+
+I did accidentally break by blog, because I had a duplicate file. I thought I just deleted everything (I didn't), but that was most likely the hardest thing I've done so far.
+
 
 ---
 
