@@ -15,13 +15,6 @@ I mainly made this blog for my own use just in case I forget something or find s
 - [Bootswatch](https://bootswatch.com/minty/) (The theme I used and all its cool things)
 - [Netlify](https://www.netlify.com/) (Where I'm hosting the website)
 
-## Challenges
-###  AKA: YAML is hard
-
-I mainly struggled with the new Quarto YAML settings like `code-fold` and `code-tools` (I get these confused so often), and the spacing (why is it so hard?!). 
-
-![Screen Shot 2022-09-07 at 12 00 11 PM](https://user-images.githubusercontent.com/110204835/188925271-b09a8a4a-73ec-431f-8b51-30708426284e.png)
-
 ---
 
 Here is the blog: <https://www.miriamheiss.com/>
