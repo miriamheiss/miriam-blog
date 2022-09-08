@@ -3,16 +3,17 @@
 
 ## Overveiw
 
-I mainly made this blog for my own use just in case I forget something or find something interesting in whatever I am doing at the moment (ie. Math and Coding). This will be a changing and always updating repository, as the blog will keep having new posts.
+I mainly made this blog for my own use just in case I forget something or find something interesting in whatever I am doing at the moment (ie. Math and Coding). This will be a changing and always updating repository, as the blog will keep having new posts. I made it in late July when I was taking a [Data Science Course](https://bootcamp.davidkane.info/), and I have been updating it ever since. I will not be posting every day, as posts take a while, but I will try to post 2-33 times a month.
 
 
 ## Resources
 ### Tabs I have open 24/7
 
-- [Quarto Guide](https://quarto.org/docs/guide/)
-- [MathJax](https://www.mathjax.org/#demo)
-- [Preceptor's Primer for Bayesian Data Science](https://ppbds.github.io/primer/)
-- [Bootswatch](https://bootswatch.com/minty/)
+- [Quarto Guide](https://quarto.org/docs/guide/) (I'm new to Quarto, I literally can't do anything without this)
+- [MathJax](https://www.mathjax.org/#demo) (When I do a math post)
+- [Preceptor's Primer for Bayesian Data Science](https://ppbds.github.io/primer/) (This has a lot of great stuff)
+- [Bootswatch](https://bootswatch.com/minty/) (The theme I used and all its cool things)
+- [Netlify](https://www.netlify.com/) (Where I'm hosting the website)
 
 ## Challenges
 ###  AKA: YAML is hard
@@ -20,8 +21,6 @@ I mainly made this blog for my own use just in case I forget something or find s
 I mainly struggled with the new Quarto YAML settings like `code-fold` and `code-tools` (I get these confused so often), and the spacing (why is it so hard?!). 
 
 ![Screen Shot 2022-09-07 at 12 00 11 PM](https://user-images.githubusercontent.com/110204835/188925271-b09a8a4a-73ec-431f-8b51-30708426284e.png)
-
-The hardest thing was the dropdown menu for my project (once more, in YAML), but once I figured it out everything was fine. Learning how to use the terminal was also incredibly difficult.
 
 ---
 
