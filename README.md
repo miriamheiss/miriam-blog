@@ -12,12 +12,15 @@ I mainly made this blog for my own use just in case I forget something or find s
 -   [Bootswatch](https://bootswatch.com/minty/) (The theme I used and all its cool things)
 -   [Netlify](https://www.netlify.com/) (Where I'm hosting the website)
 
-I used the Bootswatch theme Minty. Bootswatch is built in to Quarto, so in the .yaml you can change the theme to any of the provided bootswatch themes.
+I use the Bootswatch theme Minty. Bootswatch is built in to Quarto, so in the .yaml you can change the theme to any of the provided bootswatch themes.
 
 ![Screen Shot 2022-09-19 at 12 32 12 PM](https://user-images.githubusercontent.com/110204835/191067468-a7038bfd-9319-4940-9cf9-107716b90310.png)
 
-I used the code highlighting style espresso in the dark theme, because the colors were similar to the theme of my blog. Espresso is one of the code highlighting options for Pandoc. You can learn more about code highlighting [here](https://quarto.org/docs/output-formats/html-code.html#highlighting).
+I use the code highlighting style espresso in the dark theme, because the colors were similar to the theme of my blog. Espresso is one of the code highlighting options for Pandoc. You can learn more about code highlighting [here](https://quarto.org/docs/output-formats/html-code.html#highlighting).
 
+I use Netlify for my website hosting and used to manually push, but I've configured it so I can type `quarto publish` into the terminal and it will publish on its own.
+
+I use MathJax for all of my math posts as it is much easier to type a bunch of stuff into the display and see what it looks like instead of typing things into dollar signs and then see what it looks like.
 
 
 ## Posting
