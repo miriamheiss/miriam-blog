@@ -3,7 +3,7 @@
 
 ## Overveiw
 
-I mainly made this blog for my own use just in case I forget something or find something interesting in whatever I am doing at the moment (ie. Math and Coding). This will be a changing and always updating repository, as the blog will keep having new posts. I made it in late July when I was taking a [Data Science Course](https://bootcamp.davidkane.info/), and I have been updating it ever since. I will not be posting every day, as posts take a while, but I will try to post 2-3 times a month.
+I mainly made this blog for my own use just in case I forget something or find something interesting in whatever I am doing at the moment (ie. Math and Coding). This will be a changing and always updating repository, as the blog will keep having new posts. I made it in late July when I was taking a [Data Science Course](https://bootcamp.davidkane.info/), and I have been updating it ever since. 
 
 
 ## Resources
@@ -15,6 +15,18 @@ I mainly made this blog for my own use just in case I forget something or find s
 - [Bootswatch](https://bootswatch.com/minty/) (The theme I used and all its cool things)
 - [Netlify](https://www.netlify.com/) (Where I'm hosting the website)
 
+I used the Bootswatch theme Minty. Bootswatch is built in to Quarto, so in the .yaml you can change the theme to any of the provided bootswatch themes.
+
+![Screen Shot 2022-09-19 at 12 32 12 PM](https://user-images.githubusercontent.com/110204835/191067468-a7038bfd-9319-4940-9cf9-107716b90310.png)
+
+I used the code highlighting style espresso in the dark theme, because the colors were similar to the theme of my blog. Espresso is one of the code highlighting options for Pandoc. You can learn more about code highlighting [here](https://quarto.org/docs/output-formats/html-code.html#highlighting).
+
 ---
 
 Here is the blog: <https://www.miriamheiss.com/>
+
+### Posting
+As you can see, I usually take 3 days to a week to work on a post:
+![Screen Shot 2022-09-19 at 12 26 22 PM](https://user-images.githubusercontent.com/110204835/191066261-3b5a1f8d-a543-4221-aefe-c04398f80abc.png)
+
+That's how spaced out the posts are, so I can do 2-5 posts a month, depending on how busy I am and what kind of post I am doing. Travel usually takes longer to write about, while tutorials for R can take 4 hours to a week depending on the workload. 
