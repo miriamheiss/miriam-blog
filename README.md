@@ -22,12 +22,9 @@ I use Netlify for my website hosting and used to manually push, but I've configu
 
 I use MathJax for all of my math posts as it is much easier to type a bunch of stuff into the display and see what it looks like instead of typing things into dollar signs and then see what it looks like.
 
-
 ## Posting
 
-As you can see, I usually take 3 days to a week to work on a post: ![Screen Shot 2022-09-19 at 12 26 22 PM](https://user-images.githubusercontent.com/110204835/191066261-3b5a1f8d-a543-4221-aefe-c04398f80abc.png)
-
-That's how spaced out the posts are, so I can do 2-5 posts a month, depending on how busy I am and what kind of post I am doing. Travel usually takes longer to write about, while tutorials for R can take 4 hours to a week depending on the workload.
+I usually take 3 days to a week to work on a post, so I can do 2-5 posts a month, depending on how busy I am and what kind of post I am doing. Travel usually takes longer to write about, while tutorials for R can take 4 hours to a week depending on the workload.
 
 ---
 
