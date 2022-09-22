@@ -1,0 +1,66 @@
+---
+title: "Frankenstein"
+subtitle: "The Modern Prometheus"
+# date: 
+categories: [book reviews]
+# image: 
+format:
+  html:
+    code-fold: false
+    code-tools: false
+---
+# Frankenstein: The Modern Prometheus
+
+Today we finished Mary Shelley's *Frankenstein*. She wrote the first draft in 1816 in Geneva, Switzerland in a horror story contest with Lord Byron, Percival Shelley, and others. It was published in 1818.
+
+## Main Themes
+
+Some of the main themes in the book are ambition, revenge, and obsession. 
+
+### Revenge
+
+When the monster starts to strangle his family and friends, Victor becomes full of revenge and is obsessed with avenging his family, swearing on their graves and following the monster. The monster wants revenge on Frankenstein for making him miserable and angry. Because Frankenstein spurned the monster, they both become full of revenge.
+
+### Obsession
+
+Victor Frankenstein is obsessed with building this huge creature in the beginning, fixated on creating life where there was none previously, and Galvanism and things that were related to Galvanism, for more than 2 years. The monster is obsessed with making Frankenstein disconsolate by destroying all he loves.
+
+### Ambition
+
+Frankenstein was incredibly ambitious when he was 18 years old, building a monster in his dorm room, just because of the newest discovery of electricity and reanimation. This ambition led to his downfall. He was just thinking about creating this thing, and did not think of the consequences.
+
+Dr. Ian Malcom put it very nicely:
+
+**Your scientists were so preoccupied with whether they could,**
+\
+**they didn’t stop to think if they should.**
+\
+**~Jurassic Park**
+
+---
+
+19 year-old Frankenstein was so obsessed with the idea that he could create life from nothing but stolen body parts and blood that we do not know the origin of in his college apartment, he didn't think about if he should make a smaller thing, or if he should make anything at all.
+
+## Summary
+
+We are introduced to Sir R. Walton, who is sailing in the Arctic seas after crossing Russia. He is in correspondence with his sister, Margaret. He recounts an interesting event that happened just a few days before. Him and his crew were joined by a mysterious figure floating on a piece of ice. The human then starts to tell his life story:
+
+Frankenstein is born in Italy and his parents adopt a baby, then they return to Switzerland where Victor (Frankenstein) and Elizabeth (the Italian baby) grow up happily in peace. A few years before Frankenstein goes off to college, his mother dies, the first of many tragedies to strike. He heads off to college, where he meets M. Waldman, a chemist who takes Victor under his wing. Frankenstein becomes obsessed with reanimation and electricity, so he decides to start building a body. He gets bones from old catacombs and tissues, organs, and other various materials needed for building a human through body snatching and grave-robbing. He also goes to slaughter houses to collect materials.
+
+Finally, the fateful night comes where Frankenstein animates his monster. The monster starts to move and Frankenstein is scared, so he hides. The next day, he runs into his childhood friend, Henry Clerval, who nurses him back to health and mental stability. He returns to Geneva after receiving a letter that his 5 year-old brother William is dead. He gets there at night, after the gates have closed, and he runs into the monster, who has now been loose for 2 years.
+
+One of their family friends is convicted of Williams murder and is hanged. Frankenstein then backpacks around Geneva and runs into the monster in his ice cave. He is told the monsters story, because everyone is now curious about what the monster has been doing.
+
+The monster learned a lot of things while he was just wandering around for 2 years.
+
+- People do not like him
+- People *really* do not like him
+- Fire is hot
+- French is hard
+- Hiding underneath a chimmney in a cottage full of people is probably not the best idea
+- Blind people exist
+- People *really*, *really*, *really* do not like him **at all**
+
+
+
+
