@@ -35,31 +35,64 @@ Dr. Ian Malcom put it very nicely:
 \
 **they didn’t stop to think if they should.**
 \
-**~Jurassic Park**
+**~ Jurassic Park**
 
 ---
 
 19 year-old Frankenstein was so obsessed with the idea that he could create life from nothing but stolen body parts and blood that we do not know the origin of in his college apartment, he didn't think about if he should make a smaller thing, or if he should make anything at all.
 
-## Summary
+## Story Type
+
+### Genre
+
+*Frankenstein* was the first of many genres. It is considered the first science fiction novel, with its main story steeped heavily with Galvanism, and the ideas that you can build a person (or a person-like monster). It is also regarded as one of the first goth/horror novels in the 1900's.
+
+### Literary Device
+
+Mary Shelley wrote something called a **nested story**. Nested stories got their names from **Matryoshka dolls**, or Russian Nesting Dolls. 
+
+A nested story is one that has a story inside a story, inside a story, etc. In *Frankenstein*, when Victor is at the ice cave with the monster, we switch to the monster's story, then the cottager's story. *Frankenstein* is a very popular example of a nested story, as it is done quite well.
+
+:::{.callout-tip icon=false}
+### Nested Stories
+Other examples of nested stories (also called [frame stories or embedded stories](https://en.wikipedia.org/wiki/Story_within_a_story#Nested_books)) include:
+
+- Shakespeare's *Hamlet*
+- Shakespeare's *Taming of the Shrew*
+- The Bible
+- Raina Telgemeier's *Drama*
+:::
+
+## Analysis of the Story
+
+We had little previous knowledge of Frankenstein, but we still sort of knew the plot, so it was confusing where the book started.
 
 We are introduced to Sir R. Walton, who is sailing in the Arctic seas after crossing Russia. He is in correspondence with his sister, Margaret. He recounts an interesting event that happened just a few days before. Him and his crew were joined by a mysterious figure floating on a piece of ice. The human then starts to tell his life story:
 
-Frankenstein is born in Italy and his parents adopt a baby, then they return to Switzerland where Victor (Frankenstein) and Elizabeth (the Italian baby) grow up happily in peace. A few years before Frankenstein goes off to college, his mother dies, the first of many tragedies to strike. He heads off to college, where he meets M. Waldman, a chemist who takes Victor under his wing. Frankenstein becomes obsessed with reanimation and electricity, so he decides to start building a body. He gets bones from old catacombs and tissues, organs, and other various materials needed for building a human through body snatching and grave-robbing. He also goes to slaughter houses to collect materials.
+Frankenstein is born in Italy and his parents adopt a baby, then they return to Switzerland where Victor (Frankenstein) and Elizabeth (the Italian baby) grow up happily in peace. A few years before Frankenstein goes off to college, his mother dies, the first of many tragedies to strike. He heads off to college, where he meets M. Waldman, a chemist who takes Victor under his wing. Frankenstein becomes obsessed with reanimation and electricity, so he decides to start building a body. 
 
-Finally, the fateful night comes where Frankenstein animates his monster. The monster starts to move and Frankenstein is scared, so he hides. The next day, he runs into his childhood friend, Henry Clerval, who nurses him back to health and mental stability. He returns to Geneva after receiving a letter that his 5 year-old brother William is dead. He gets there at night, after the gates have closed, and he runs into the monster, who has now been loose for 2 years.
+He gets bones from old catacombs and tissues, organs, and other various materials needed for building a human through body snatching and grave-robbing. He also goes to slaughter houses to collect materials. All of those ways of getting materials would not be seen as normal today, but everybody was robbing graves back then, so it was a semi-normal thing to do.
 
-One of their family friends is convicted of Williams murder and is hanged. Frankenstein then backpacks around Geneva and runs into the monster in his ice cave. He is told the monsters story, because everyone is now curious about what the monster has been doing.
+Finally, the fateful night comes where Frankenstein animates his monster. The monster starts to move and Frankenstein is scared, so he hides. The next day, he runs into his childhood friend, Henry Clerval, who nurses him back to health and mental stability over the next year or so. 
 
-The monster learned a lot of things while he was just wandering around for 2 years.
+:::{.callout-tip icon=false}
+## Time is weird
+
+In the book, all dates referring to years are as such: 17--. We know that Victor was building the monster for about two years, after being at school for some time, which means like 2-3 years. We know that Henry stays for a winter and a spring, but we do not know how many. Dates are weird in this book, so it is hard to say exactly how many years this book has spanned.
+:::
+
+
+He returns to Geneva after receiving a letter that his 5 year-old brother William is dead. He gets there at night, after the gates have closed, and he runs into the monster, who has now been loose for 2 years. You do not have to retain that information, as he just forgets about William completely for the rest of the book. 
+
+One of their family friends is convicted of Williams murder and is hanged. Frankenstein then backpacks around Geneva and runs into the monster in his ice cave. He is told the monsters story, because everyone is now curious about what the monster has been doing. The monster learned a lot of things while he was just wandering around for 2 years.
 
 - People do not like him
 - People *really* do not like him
-- Fire is hot
-- French is hard
-- Hiding underneath a chimmney in a cottage full of people is probably not the best idea
-- Blind people exist
 - People *really*, *really*, *really* do not like him **at all**
+
+He eventually ended up trying to kidnap William, but ends up murdering him and framing a close family friend for the murder. He makes his way to the ice cave he is living in and asks Frankenstein to make a female monster for him. Frankenstein agrees, disagrees, has a long think, and agrees, only to disagree later in the book.
+
+
 
 
 
