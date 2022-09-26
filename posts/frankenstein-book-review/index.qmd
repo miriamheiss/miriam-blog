@@ -1,9 +1,9 @@
 ---
 title: "Frankenstein"
 subtitle: "The Modern Prometheus"
-# date: 
+date: "September 26, 2022"
 categories: [book reviews]
-# image: 
+image: "frankenstein-thumbnail.jpg"
 format:
   html:
     code-fold: false
@@ -11,7 +11,7 @@ format:
 ---
 # Frankenstein: The Modern Prometheus
 
-Today we finished Mary Shelley's *Frankenstein*. She wrote the first draft in 1816 in Geneva, Switzerland in a horror story contest with Lord Byron, Percival Shelley, and others. It was published in 1818.
+Last week we finished Mary Shelley's *Frankenstein*. She wrote the first draft in 1816 in Geneva, Switzerland in a horror story contest with Lord Byron (ugh), Percival Shelley, and others. It was published in 1818.
 
 ## Main Themes
 
@@ -47,7 +47,7 @@ Dr. Ian Malcom put it very nicely:
 
 *Frankenstein* was the first of many genres. It is considered the first science fiction novel, with its main story steeped heavily with Galvanism, and the ideas that you can build a person (or a person-like monster). It is also regarded as one of the first goth/horror novels in the 1900's.
 
-### Literary Device
+### Structure
 
 Mary Shelley wrote something called a **nested story**. Nested stories got their names from **Matryoshka dolls**, or Russian Nesting Dolls. 
 
@@ -78,7 +78,7 @@ Finally, the fateful night comes where Frankenstein animates his monster. The mo
 :::{.callout-tip icon=false}
 ## Time is weird
 
-In the book, all dates referring to years are as such: 17--. We know that Victor was building the monster for about two years, after being at school for some time, which means like 2-3 years. We know that Henry stays for a winter and a spring, but we do not know how many. Dates are weird in this book, so it is hard to say exactly how many years this book has spanned.
+In the book, all dates referring to years are as such: 17--. We know that Victor was building the monster for about two years, after being at school for some time, which means like 2-3 years. We know that Henry stays for winter and spring, but we do not know how many. Dates are weird in this book, so it is hard to say exactly how many years this book has spanned.
 :::
 
 
@@ -92,8 +92,35 @@ One of their family friends is convicted of Williams murder and is hanged. Frank
 
 He eventually ended up trying to kidnap William, but ends up murdering him and framing a close family friend for the murder. He makes his way to the ice cave he is living in and asks Frankenstein to make a female monster for him. Frankenstein agrees, disagrees, has a long think, and agrees, only to disagree later in the book.
 
+He returns home, to his fiancée Elizabeth, a.k.a. his sister. He does not want his family to be in danger while he builds the second monster, so he goes on a 2-3 year trip around Scotland, England, and Ireland, after abandoning Henry in London. He finds a small Scottish village where he settles for some amount of years. 
 
+The monster comes to visit to see how the creation process is going along, and at that point Victor decides to destroy the female monster, which was a *great* choice on his part (I say that with sarcasm). The monster flees after saying something very ominous: "I will be with you on your wedding night", and Frankenstein is left alone.
 
+He then continues to break down the half-built female and gathers all the parts into baskets and goes out to a boat at 4:00 am, to not look suspicious. He goes many miles out and dumps them into the ocean and falls asleep (another *great* choice).
 
+He wakes up near a town, in Ireland, where he is immediately taken into custody by angry townspeople. The mayor of the town explains that he is in the exact same boat as the one used by a murderer the night before. He is shown the body so the townspeople can see how he reacts to seeing the body, possibly having something to do with [Cruentation](https://en.wikipedia.org/wiki/Cruentation).
 
+It is the body of Henry Clerval.
 
+Obviously Frankenstein reacts poorly. The body does not start oozing blood, but his reaction was enough for the entire town to convict him of murder. He is tried, found innocent and is visited by his father who says: "Look, we're all worried about you, so go get married to your sister".
+
+Elizabeth and Victor are married and honeymoon to Villa Lavenza, where Frankenstein is on guard all day with a pistol and everything. He sends Elizabeth back inside (what is it with this man and *absolutely wonderful* ideas). He hears screaming, and runs back inside to see his wife's body on the bed, dead. He also sees the monster run away into the lake. His father dies soon after. He then swears on their graves (not Williams though...) that he will try to kill the monster as long as he lives (which won't be for much longer)
+
+We switch back to R. Walton writing a letter to his sister. Frankenstein is on his last legs. He makes Walton promise to kill the monster, which Walton agrees to do. Frankenstein then gives the crew a rousing speech to keep pressing forward (because their ship is stuck in ice), and then dies.
+
+The monster comes back to mourn and is sad that he murdered all of those people (He didn't *mean* to, they just all got strangled), and tells Walton that Frankenstein is his last victim and he will go either incinerate himself or freeze himself.
+
+## Conclusion
+
+It is a very dramatic tale. We learned a lot of new words and compared it to different stories like Wonder (R. J. Palacio) and Notre-Dame de Paris ((Hunchback) Victor Hugo). It was a monumental novel for science fiction and essentially started an entirely new genre. There have been so many movies and parodies relating to *Frankenstein*. 
+
+### Things I learned 
+
+Dr. Frankenstein, unlike the social subconscious stereotype, is not an evil old man with a hunched back, crazy goggles and Einstein hair in a big lab with lots and lots of body parts. He is a stupid 19 year old college drop-out who decided to build a monster in his dorm room with bodies from robbed graves. Also, the monster does not have a name. Society usually calls the monster Frankenstein and, Victor Dr. Frankenstein. The monsters name is Frankenstein's Monster, not Frankenstein.
+
+```{r, out.width=500, echo = FALSE}
+knitr::include_graphics("frankenstein-monster.jpg")
+```
+
+**If I cannot inspire love, I will cause fear**
+*- Frankenstein*

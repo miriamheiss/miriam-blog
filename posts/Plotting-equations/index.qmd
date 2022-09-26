@@ -2,11 +2,11 @@
 title: "Plotting Quadratic Equations"
 # subtitle: 
 # date: 
+draft: true
 categories: [math]
 # image: 
 format:
   html:
-    draft: true
     code-fold: show
     code-tools: true
 ---
