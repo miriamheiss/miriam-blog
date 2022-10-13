@@ -1,5 +1,5 @@
 ---
-title: "About me!"
+title: "About Me"
 image: "miriam-2021.jpg"
 about:
   template: jolla
@@ -9,6 +9,8 @@ about:
       href: https://github.com/miriamheiss
 ---
 
-Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, melt'n'pour soap, and occasionally baking things. [I also play the organ](https://www.youtube.com/watch?v=iKHIrsbubJ8) (that's from 2020!). This is my very first website!
+Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, and sewing. [I also play the organ](https://www.youtube.com/watch?v=iKHIrsbubJ8) (that's from 2020!). She/Her pronouns
+
+\
 
 Contact me: memerheiss@gmail.com 

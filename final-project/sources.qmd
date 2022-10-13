@@ -33,8 +33,5 @@ format:
   
 ---
 
-#### Contact Me:
-memerheiss@gmail.com
-
 #### Learn R (for free!)
 [Kane's Data Science Bootcamp](https://bootcamp.davidkane.info/)
