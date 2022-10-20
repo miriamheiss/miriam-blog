@@ -1,0 +1,15 @@
+---
+title: "Christmas Song"
+resources:
+  - "Christmas_Song.mp3"
+---
+
+
+
+Here's the MuseScore recorded song:
+
+<audio controls>
+<source src="Christmas_Song.mp3" type="audio/mpeg">
+</audio> 
+
+
