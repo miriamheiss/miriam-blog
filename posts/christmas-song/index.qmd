@@ -8,7 +8,7 @@ resources:
   - "Christmas_Song.pdf"
 ---
 
-This short piece is inspired by 3 well-known Christmas songs, Deck the Halls, Angels we Have Heard on High, and Jingle Bells. It is quite a simple piece, only 8 measures long, but it still leaves you with the feeling of Christmas. 
+This short piece is inspired by 3 well-known Christmas songs: Deck the Halls, Angels we Have Heard on High, and Jingle Bells. It is quite a simple piece, only 8 measures long, but it still leaves you with the feeling of Christmas. 
 
 ---
 
@@ -17,12 +17,18 @@ Here's the MuseScore recorded song:
 <audio controls>
 <source src="Christmas_Song.mp3" type="audio/mpeg">
 </audio> 
+\
+Here's me playing it:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/osgc_LBY8BA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+\
+And here's where you can download it:
 
 [![Click on image above to download](Christmas_Song-1.jpeg)](Christmas_Song.pdf)
 
 ---
 
-Our dad does not allow "recreational" Christmas music in our house before Thanksgiving, but I "practice" Christmas songs from mid-August until Thanksgiving, when *finally*, I can play them recreationally. I use the excuse: "My pieces are harder (I play the organ), so I need to practice for longer". I am also my siblings' piano teacher, so I assign them Christmas songs in September so that way they can learn them by Christmas. I love Christmas music so much, it's one of my favorite kinds of music. The whole Christmas season is so happy, and (most) of the music matches my emotions for the entire month of December, which is incredibly elated and excited, almost floating. 
+Our dad does not allow "recreational" Christmas music in our house before Thanksgiving, but I "practice" Christmas songs from mid-August until Thanksgiving, when *finally*, I can play them recreationally. Because I play the organ, I can use the excuse: "My pieces are harder so I need to practice for longer." I am also my siblings' piano teacher, so I assign them Christmas songs in September so that way they can learn them by Christmas. I love Christmas music so much, it's one of my favorite kinds of music. The whole Christmas season is so happy, and (most) of the music matches my emotions for the entire month of December, which is incredibly elated and excited, almost floating. 
 
 Our house is almost always filled with music, especially in the Christmas season. We have Christmas carols in the background of our kids-only sleepover on Christmas Eve, we have Christmas music *blasting* from the piano almost all the time, and Baroque Christmas pieces shaking the house from the organ. Music is an integral part of our Christmas and amplifies the happiness felt in our home during the Christmas season.
 
