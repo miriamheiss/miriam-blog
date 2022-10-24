@@ -32,4 +32,6 @@ We will be plotting 4 equations. Here they are:
 - $x^2 + 49$
 - $x^2 -4x$
 
+need to learn to do graph lol
+
 
