@@ -2,9 +2,9 @@
 title: "Christmas Song"
 resources:
   - "Christmas_Song.mp3"
+  - "Christmas_Song.pdf"
+  - "Christmas_Song.png"
 ---
-
-
 
 Here's the MuseScore recorded song:
 
@@ -12,4 +12,6 @@ Here's the MuseScore recorded song:
 <source src="Christmas_Song.mp3" type="audio/mpeg">
 </audio> 
 
+[![Click on image above to download](Christmas_Song-1.jpeg)](Christmas_Song.pdf)
 
+This short piece is inspired by 3 well-known Christmas songs, Deck the Halls, Angels we Have Heard on High, and Jingle Bells. It is quite a simple piece, only 8 measures long, but it still leaves you with the feeling of Christmas. Even in Autumn, Christmas makes our family excited. We are excited for the first minute after the Thanksgiving pie, when finally, we can officially start playing Christmas songs. We are excited when we can start learning Christmas songs, and when we can start listening to Christmas songs. Music really helps you get into the Christmas spirit.
