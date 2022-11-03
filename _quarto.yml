@@ -31,7 +31,9 @@ website:
 
 format:
   html:
-    theme: minty
+    theme: 
+      light: minty
+      dark: slate
     css: styles.css
     highlight-style: espresso
     toc: true

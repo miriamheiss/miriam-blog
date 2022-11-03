@@ -1,0 +1,30 @@
+
+```{r}
+library(tidyverse)
+library(janitor)
+
+ccbc_raw <- read_csv("CCBC_Diversity_Report.csv")
+
+ccbc_clean <- ccbc_raw %>% 
+  clean_names()
+
+ccbc <- ccbc_clean %>% 
+ select(title, year, genres, primary_character_1, 
+        subject_religion_notes, subject_lgbtq_notes, subject)
+
+
+ccbc_genres <- ccbc %>% 
+  separate(genres, into = c("genre1", "genre2", "genre3"), sep = ", ") %>% 
+  pivot_longer(starts_with("genre"), names_to = "name", values_to = "genre") %>% 
+  drop_na(genre) %>% select(-name)
+
+ccbc_genres %>% 
+  count(genre)
+```
+```{r}
+ggplot(data = ccbc_genres, 
+       mapping = aes(x = title,
+                     y = genre)) +
+  geom_point() 
+```
+
