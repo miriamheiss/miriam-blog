@@ -25,6 +25,5 @@ ccbc_genres %>%
 ggplot(data = ccbc_genres, 
        mapping = aes(x = title,
                      y = genre)) +
-  geom_point() 
 ```
 
