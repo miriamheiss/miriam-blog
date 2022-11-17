@@ -1,8 +1,7 @@
 ---
 title: "Plotting Quadratic Equations"
-# subtitle: 
+subtitle: "Functions"
 # date: 
-draft: true
 categories: [math]
 # image: 
 format:
@@ -27,11 +26,74 @@ Before we can plot anything, we need an equation.
 
 We will be plotting 4 equations. Here they are:
 
-- $x^2 - 11r + 28$
+- $x^2 - 11x + 28$
 - $x^2 - x + 46$
 - $x^2 + 49$
 - $x^2 -4x$
 
-need to learn to do graph lol
+## Making Functions
+
+We need to make a function first. We will use variables f, g, h, and k for our functions. Here's how you make a function:
+
+```{r, function-f}
+f <- function(x) {
+  x^2 - 11*x + 28
+}
+```
+
+### What's going on here?
+
+Let's break down each part of the function. The `function(x)` part is the number we will plug in, it is the same as writing $f(x)$. Now, what does $f(x)$ equal? That is the part that goes in the curly brackets. We also want to save it to an object `f`.
+
+This:
+
+```{r, function}
+f <- function(x) {
+  x^2 - 11*x + 28
+}
+```
+
+Is the same thing as this:
+
+$$
+f(x) = x^2 - 11x + 28
+$$
+
+## All of the other functions
+
+Here's what the rest of the functions are written in code:
+
+``` {r, function-g-h-k}
+g <- function(x) {
+  x^2 - x + 46
+}
+
+h <- function(x) {
+  x^2 + 49
+}
+
+k <- function(x) {
+  x^2 -4*x
+}
+```
+
+And here they are not in code; $g(x) = x^2 - x + 46$, $h(x) = x^2 + 49$, $k(x) = x^2 - 4x$
+
+## Let's graph!
+
+Now that we have all of our functions written out, we can plug any number in for $x$
+
+
+```{r}
+library(tidyverse)
+
+ggplot()+
+  geom_function(fun = f)
+```
+
+
+
+
+
 
 

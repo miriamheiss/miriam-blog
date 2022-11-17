@@ -1,3 +1,15 @@
+---
+title: "books"
+subtitle: "Functions"
+draft: true
+# date: 
+categories: 
+# image: 
+format:
+  html:
+    code-fold: show
+    code-tools: true
+---
 
 ```{r}
 library(tidyverse)
@@ -21,9 +33,5 @@ ccbc_genres <- ccbc %>%
 ccbc_genres %>% 
   count(genre)
 ```
-```{r}
-ggplot(data = ccbc_genres, 
-       mapping = aes(x = title,
-                     y = genre)) +
-```
+
 
