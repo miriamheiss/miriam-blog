@@ -1,0 +1,11 @@
+---
+title: "Trip to Alabama"
+subtitle: "Selma and Montgomery"
+# date: 
+categories: [travel]
+# image: 
+format:
+  html:
+    code-fold: show
+    code-tools: true
+---
