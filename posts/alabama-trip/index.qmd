@@ -9,7 +9,7 @@ format:
     code-fold: show
     code-tools: true
 ---
-## The Trip
+## Day 1
 ### The Drive
 On December 27th-28th, we went to Alabama. It was about 2 and a half hours to get to Montgomery, and I slept for the last hour, so according to me, nothing interesting happened.
 
@@ -48,4 +48,41 @@ knitr::include_graphics("images/Former_House_Chamber.jpg")
 knitr::include_graphics("images/house-chamber-ours-kids.jpg")
 ```
 
-The walls were not 3 dimensional, even though they look like it. It's a painting technique called *trompe-l'œil*.
+The walls were not 3 dimensional, even though they look like it. It's a painting technique called *trompe-l'œil*. This was also the room where the states first seceded from the Union, and where a telegraph was sent to the Confederate troops in South Carolina to attack Fort Sumter.
+
+We also saw the Senate Chamber:
+
+```{r senate-chamber, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [Former Senate Chamber](https://commons.wikimedia.org/wiki/File:Former_Senate_Chamber,_Alabama_State_Capitol,_Montgomery_20160713_1.jpg), by [DXR](https://commons.wikimedia.org/wiki/User:DXR)"
+knitr::include_graphics("images/Former_Senate_Chamber.jpg")
+```
+
+The stairs were very cool, but the railing was only knee-height, so we all stayed close to the walls:
+
+```{r stairs1, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** Capitol Stairs"
+knitr::include_graphics("images/capitol-stairs-ours.jpg")
+```
+
+```{r stairs2, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** Capitol Stairs 2"
+knitr::include_graphics("images/capitol-stairs-ours2.jpg")
+```
+
+### Moon Tree
+
+After the Capitol we meandered our way to a Loblolly pine tree that had been to space. There was a little plaque and everything. You can learn more about it [here](https://nssdc.gsfc.nasa.gov/planetary/lunar/moon_trees/montgomery_al_tree.html)
+
+```{r tree, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** Loblolly Moon Tree"
+knitr::include_graphics("images/moon-tree.jpg")
+```
+
+### CSA Whitehouse
+
+After the Moon Tree, we made our way down to the Avenue of Flags, at the foot of each was the state rock (Wyoming *had* to be different)
+
+```{r flags, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [A southeast view of the Alabama State Capitol, Montgomery, also depicting the Avenue of Flags](https://commons.wikimedia.org/wiki/Category:Uploads_by_User:DXR_in_Alabama#/media/File:Alabama_State_Capitol,_Montgomery,_Southeast_view_20160713_1.jpg), by [DXR](https://commons.wikimedia.org/wiki/User:DXR)"
+knitr::include_graphics("images/avenue-of-flags.jpg")
+```
