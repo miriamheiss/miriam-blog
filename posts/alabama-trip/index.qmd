@@ -9,3 +9,43 @@ format:
     code-fold: show
     code-tools: true
 ---
+## The Trip
+### The Drive
+On December 27th-28th, we went to Alabama. It was about 2 and a half hours to get to Montgomery, and I slept for the last hour, so according to me, nothing interesting happened.
+
+### Rosa Parks Museum
+
+I woke up about 3 minutes before we arrived at the Rosa Parks Museum
+The Rosa Parks Museum was very interesting, but the first half was quite distracting and made it difficult to comprehend anything. We were stuck in rooms for many minutes before the lights would darken and screens would turn on, and then, when it came to the bus reenactment, we could not go into the room until we watched something in the room before, and the doors would not close for at least 5 minutes and would just keep bouncing open and almost shut (they were automatic). It was easier to understand things after that little hiccup though. There were no pictures allowed in the exhibits, but they were allowed in the lobby. Phoebe *loved* the statue of Rosa Parks in the lobby.
+
+```{r phoebe-and-rosa, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** Phoebe and the Statue of Rosa Parks"
+knitr::include_graphics("images/phoebe-and-rosa2.jpg")
+```
+
+There was also a "Time Machine" in the childrens section (which was disappointing, just a bunch of signs for you to read, just like the rest of the museum). The time machine could have been better, there was a guide (on the screens), and the *very loud* bus would start before she was done talking, and there were other things as well.
+
+### The Capitol
+
+After the Rosa Parks Museum, we decided to walk to the Capitol. It was not as far as the Selma - Montgomery march (54 miles!) but it was still cool how there were a lot of memorials for the march, like this cool crosswalk:
+
+```{r crossalk, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [Commemerative Crosswalk in Mongomery Alabama](https://www.flickr.com/photos/string_bass_dave/29016999726), by [David Brossard](https://www.flickr.com/photos/string_bass_dave/)"
+knitr::include_graphics("images/crosswalk.jpg")
+```
+
+When we got to the Capitol, Rachel asked, "Can we just walk in? There isn't a gate or anything!" So, we just walked in!
+
+Our tour guide was a retired news anchor [Tim Lennox](https://www.linkedin.com/in/tim-lennox-ba48728?challengeId=AQEaVZ5Dxom2PQAAAYVzNsM3XCkrR1kh68cnTGnaz6eIX1v1MSRLUhZyREPqIQTNBk2x8EmNnWw2NaWvsZ2DzqKNPpbnGyHU5g&submissionId=6af9d647-4689-3617-2398-58be8ff92c2c&challengeSource=AgFVynu7987hsAAAAYVzNu1bg10V59swuaSzqRGt6svBQwEuc12u1S9wzImmhi4&challegeType=AgFWTDVRBuUjKgAAAYVzNu1eiorKygqkG8uMOSbnOn84mtiCvbfbEzY&memberId=AgGTY38M4XYbzwAAAYVzNu1hfsCNTtPgRu96qnPh4tX5dPs&recognizeDevice=AgE6HHyYqT7gswAAAYVzNu1k1ZGLuwyudNgyK1wXocBK-vdtnoWe). We were able to go into almost every important room, like the chamber for the House of Representatives:
+
+```{r house-chamber, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** [Former House Chamber](https://commons.wikimedia.org/wiki/File:Former_House_Chamber,_Alabama_State_Capitol_20160713_1.jpg), by [DXR](https://commons.wikimedia.org/wiki/User:DXR)"
+knitr::include_graphics("images/Former_House_Chamber.jpg")
+```
+
+```{r house-chamber-balcony, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** House Chamber, Balcony View"
+knitr::include_graphics("images/house-chamber-ours-kids.jpg")
+```
+
+The walls were not 3 dimensional, even though they look like it. It's a painting technique called *trompe-l'œil*.
