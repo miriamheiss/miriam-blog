@@ -1,0 +1,10 @@
+---
+title: "asjdkglajksdg"
+editor: visual
+bibliography: bib/references.yaml
+csl: bib/modern-language-association.csl
+---
+
+kjhgkj ,mnhlkn [@alcott1869]
+
+this is an island [@schmidt1991].
