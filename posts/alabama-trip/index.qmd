@@ -86,3 +86,4 @@ After the Moon Tree, we made our way down to the Avenue of Flags, at the foot of
 #| fig-cap: "**Photo:** [A southeast view of the Alabama State Capitol, Montgomery, also depicting the Avenue of Flags](https://commons.wikimedia.org/wiki/Category:Uploads_by_User:DXR_in_Alabama#/media/File:Alabama_State_Capitol,_Montgomery,_Southeast_view_20160713_1.jpg), by [DXR](https://commons.wikimedia.org/wiki/User:DXR)"
 knitr::include_graphics("images/avenue-of-flags.jpg")
 ```
+
