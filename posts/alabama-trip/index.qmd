@@ -1,6 +1,7 @@
 ---
 title: "Trip to Alabama"
 subtitle: "Selma and Montgomery"
+draft: true
 # date: 
 categories: [travel]
 # image: 

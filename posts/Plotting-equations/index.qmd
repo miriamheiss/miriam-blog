@@ -1,9 +1,9 @@
 ---
 title: "Plotting Quadratic Equations"
 subtitle: "Functions"
-# date: 
+date: "January 23, 2023"
 categories: [math]
-# image: 
+image: "equation.png"
 format:
   html:
     code-fold: show
@@ -79,21 +79,131 @@ k <- function(x) {
 
 And here they are not in code; $g(x) = x^2 - x + 46$, $h(x) = x^2 + 49$, $k(x) = x^2 - 4x$
 
-## Let's graph!
+## Playing around with numbers
 
 Now that we have all of our functions written out, we can plug any number in for $x$
 
 
 ```{r}
-library(tidyverse)
+f(1)
+```
 
-ggplot()+
-  geom_function(fun = f)
+```{r}
+k(3)
+```
+
+```{r}
+g(-7)
+```
+
+```{r}
+h(13)
+```
+
+## Plotting
+
+Now that we have a couple values for x, we can plot. 
+
+First, we need to load in the **tidyverse** package.
+
+```{r warning = FALSE, message = FALSE}
+library(tidyverse)
 ```
 
 
+This will be made with ggplot, just with nothing in the parentheses. We want to use `geom_function` so we can see our function mapped out, and we want function `f`.
 
+```{r eval = FALSE, warning = FALSE, message = FALSE}
+ggplot() +
+  geom_function(fun = f)
+```
 
+The next layer we want to add will be the limits of the Cartesian plane. 
 
+```{r warning = FALSE, message = FALSE}
+ggplot() +
+  geom_function(fun = f) +
+  xlim(-10, 10) +
+  ylim(-10, 10)
+
+```
+
+The plane will span 10 units of measurement on either side of 0.
+
+Now, we can make the graph look fancier. We can add vertical and horizontal lines using `geom_hline()` and `geom_vline()`. For both we need to provide an x and a y intercept which will both be 0.
+
+```{r warning = FALSE, message = FALSE}
+ggplot() +
+  geom_function(fun = f) +
+  xlim(-10, 10) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0)
+```
+
+We can also label the x and y axis using `labs()`:
+
+```{r warning = FALSE, message = FALSE}
+ggplot() +
+  geom_function(fun = f) +
+  xlim(-10, 10) +
+  ylim(-10, 10) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  labs(x = "x",
+       y = "y")
+```
+
+We can also change the color of the line, that way it is easier to see:
+
+```{r warning = FALSE, message = FALSE}
+ggplot() +
+  geom_function(fun = f, color = "red") +
+  xlim(-10, 10) +
+  ylim(-10, 10) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  labs(x = "x",
+       y = "y")
+```
+
+The rest of the graphs are made the same way, just in `geom_function()`, you change what `fun` equals.
+
+```{r warning = FALSE, message = FALSE}
+#| fig-cap: "Graph for function `g`"
+ggplot() +
+  geom_function(fun = g, color = "red") +
+  xlim(-100, 100) +
+  ylim(-100, 100) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  labs(x = "x",
+       y = "y")
+```
+
+```{r warning = FALSE, message = FALSE}
+#| fig-cap: "Graph for function `h`"
+ggplot() +
+  geom_function(fun = h, color = "red") +
+  xlim(-150, 150) +
+  ylim(-150, 150) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  labs(x = "x",
+       y = "y")
+```
+
+```{r, warning = FALSE}
+#| fig-cap: "Graph for function `k`"
+ggplot() +
+  geom_function(fun = k, color = "red") +
+  xlim(-10, 10) +
+  ylim(-10, 10) +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  labs(x = "x",
+       y = "y")
+```
+
+You can use the same approach for any quadratic function!
 
 

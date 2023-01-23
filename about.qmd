@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-image: "miriam-2021.jpg"
+image: "miriam_2022.jpg"
 about:
   template: jolla
   links:
