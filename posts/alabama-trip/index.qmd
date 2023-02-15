@@ -98,4 +98,4 @@ knitr::include_graphics("images/csa_whitehouse-ours.jpg")
 
 We got some free lead bullets there, we didn't take pictures of them, but hopefully we don't die of lead poisoning!(It's February, we seem to be OK.)
 
-After that, we walked to the n
+After that, we walked to the Alabama museeumaedg
