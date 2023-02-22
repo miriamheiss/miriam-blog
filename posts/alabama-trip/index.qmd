@@ -122,3 +122,9 @@ knitr::include_graphics("images/dexter-church.jpg")
 Then we headed to our hotel.
 
 When we got there, we ordered McDonald's, ate a whole bunch of seasonal Hershey's Kisses, like Hot Chocolate and Sugar Cookie, both of which were very good. We also watched Catching Fire and the first Mockingjay movie, and prepared for our trip to Selma the next day.
+
+```{r hotel, echo = FALSE, out.width = "100%"}
+#| fig-cap: "**Photo:** Zoë discovers that the wall of mirrors is actually a closet"
+knitr::include_graphics("images/dexter-church.jpg")
+```
+
