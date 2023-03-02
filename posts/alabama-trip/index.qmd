@@ -95,7 +95,7 @@ knitr::include_graphics("images/csa_whitehouse-ours.jpg")
 ```
 
 
-We got some free lead bullets there, we didn't take pictures of them, but hopefully we don't die of lead poisoning!(It's February, we seem to be OK.)
+We got some free lead bullets there, we didn't take pictures of them, but hopefully we don't die of lead poisoning! (It's February, we seem to be OK.)
 
 ### Alabama Department of Archives & History
 
@@ -125,6 +125,6 @@ When we got there, we ordered McDonald's, ate a whole bunch of seasonal Hershey'
 
 ```{r hotel, echo = FALSE, out.width = "100%"}
 #| fig-cap: "**Photo:** Zoë discovers that the wall of mirrors is actually a closet"
-knitr::include_graphics("images/dexter-church.jpg")
+knitr::include_graphics("images/hotel.jpg")
 ```
 
