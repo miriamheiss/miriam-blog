@@ -7,9 +7,10 @@ about:
     - icon: github
       text: Github
       href: https://github.com/miriamheiss
+
 ---
 
-Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, and sewing. [I also play the organ](https://www.youtube.com/watch?v=iKHIrsbubJ8) (that's from 2020!). She/Her pronouns
+Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, and sewing. [I also play the organ](https://www.youtube.com/watch?v=FXDYUbM_VZc). She/Her pronouns
 
 \
 

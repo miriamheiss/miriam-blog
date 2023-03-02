@@ -10,6 +10,10 @@ website:
       - sidebar:final-project
       - icon: github
         href: https://github.com/miriamheiss/miriam-blog
+      - icon: instagram
+        href: https://www.instagram.com/heiss.miriam/?hl=en
+      - icon: mastodon
+        href: https://zirk.us/@miriam
   
   sidebar:
     - id: final-project
