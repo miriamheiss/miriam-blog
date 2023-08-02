@@ -3,7 +3,7 @@ title: "Trip to Alabama Day 2"
 subtitle: "Selma" 
 date: "February 22, 2023" 
 categories: [travel] 
-image: "images/thumbnail.jpg" 
+image: "images/edmudn-pettus-bridge" 
 format: 
   html: 
     code-fold: show 
@@ -17,4 +17,34 @@ We ate breakfast, packed up the car, and drove to Selma. It was just over 30 min
 
 ### Selma
 
-We had watched the movie Selma the day prior to leaving, but it looked unchanged from 2014, which was essentially unchanged from the 60's. We crossed the 
+We had watched the movie Selma the day prior to leaving, and it looked unchanged from 2014 (when the movie was filmed), which was essentially unchanged from the 60's. We went to the [Selma to Montgomery Interpretive Center](https://www.nps.gov/semo/planyourvisit/visitorcenters.htm), and it was really empty. All of the town was, we saw like, 2 people. Everything in Alabama was eerily empty, now that I think about it. Ben, Zoë, and Alex all got the first Junior Ranger badge of 3 there (one in Montgomery, one in Selma, and one in between). We were the only people in the Museum, but it was really interesting. 
+
+We crossed the Edmund Pettus Bridge afterwards (which required minimal walking, as the museum was right across from the bridge) and walked around for a while. 
+
+```{r}
+#| fig-cap: "**Photo:** Edmund Pettus Bridge"
+knitr::include_graphics("images/edmund-pettus-bridge.jpg")
+```
+
+It was so rundown and overgrown, and pretty far away from everything, our next stop was 30 minutes away. It was also surprisingly cold. Before we took off on our next adventure, we also stopped by the Brown Chapel AME Church.
+
+### Lowndes Interpretive Center
+
+After Selma, we made our way to the Lowndes Interpretive Center. Right in between Selma and Montgomery, it explained what the march was like, and gave context to what things were like back then. It also explained what things were like after the march, like what tent cities are (families who went on the march got kicked out of their homes and would have to live in a "tent city" for months, or even years).
+
+Again, we were the only people there, so the Park Rangers were pretty excited to see people. The kids got not just a badge, but a paper hat, and a goody bag with a Frisbee, and another booklet, among other things.
+
+```{r}
+#| fig-cap: "**Photo:** Alexander sitting in the car after the Lowndes Interpretive Center"
+knitr::include_graphics("images/alex-lowndes.jpg")
+```
+
+### EJI Museum
+
+After earning the final badge of 3, we made our way back to Montgomery, to go to the [Legacy Museum by the EJI](https://museumandmemorial.eji.org/visit#tickets). It was done phenomenally well. It starts with a room with blue light projected in it, to make it look like waves, and it has ocean sounds all around, and it kind of starts off the story. Next is a room with heads and torsos of slaves coming through the sand. It kind of reminded me of the pile of shoes in the Holocaust Museum. After that, the museum is more open, you can walk around instead of having to go room to room. There is a fake prison visiting center, where you can talk to people in prison and listen to how the Equal Justice Initiative worked to free them. So many people were wrongly imprisoned. You also can register to vote, with the quiz with random, impossible questions, like, "How many Jelly Beans are in this Jar?", and "How many bubbles are in this bar of soap". We also went to the lynching exhibit, with the jars of soil and sand from where the lynchings happened. There were rows and rows of jars.
+
+After we walked through (it took us almost 3 hours), we drove to the [National Memorial for Peace and Justice](https://museumandmemorial.eji.org/memorial), which was also really well done (also reminded me of the Holocaust Memorial in Berlin). It had the names of all the people who were lynched, organized by county. It was really large, and hard to imagine that on all of the columns, there is more than one name, and some of them (like Fulton county, Georgia) had almost 40 names, and that each of those names was a person. The sheer amount of people would probably overflow the building. By the time we were done with both of the Museums, the sun was already setting.
+
+### Driving Home
+
+I also don't remember much of the drive home, as I slept again, but we stopped by Wendy's for dinner, and got peppermint frosties. I think we got home around 10 p.m.
