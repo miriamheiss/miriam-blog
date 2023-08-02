@@ -3,7 +3,7 @@ title: "Trip to Alabama Day 2"
 subtitle: "Selma" 
 date: "August 2, 2023" 
 categories: [travel] 
-image: "images/edmund-pettus-bridge" 
+image: "images/edmund-pettus-bridge.jpg" 
 format: 
   html: 
     code-fold: show 
