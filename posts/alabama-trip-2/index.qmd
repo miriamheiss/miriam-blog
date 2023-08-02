@@ -1,0 +1,20 @@
+--- 
+title: "Trip to Alabama Day 2" 
+subtitle: "Selma" 
+date: "February 22, 2023" 
+categories: [travel] 
+image: "images/thumbnail.jpg" 
+format: 
+  html: 
+    code-fold: show 
+    code-tools: true 
+---
+
+## Day 2
+### Off to Selma
+
+We ate breakfast, packed up the car, and drove to Selma. It was just over 30 minutes to get to the museum about the March to Montgomery.
+
+### Selma
+
+We had watched the movie Selma the day prior to leaving, but it looked unchanged from 2014, which was essentially unchanged from the 60's. We crossed the 
