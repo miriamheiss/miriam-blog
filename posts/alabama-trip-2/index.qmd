@@ -21,7 +21,7 @@ We had watched the movie Selma the day prior to leaving, and it looked unchanged
 
 We crossed the Edmund Pettus Bridge afterwards (which required minimal walking, as the museum was right across from the bridge) and walked around for a while. 
 
-```{r, echo = FALSE, out.width = "100%"}
+```{r bridge, echo = FALSE, out.width = "100%"}
 #| fig-cap: "**Photo:** Edmund Pettus Bridge"
 knitr::include_graphics("images/edmund-pettus-bridge.jpg")
 ```
@@ -34,7 +34,7 @@ After Selma, we made our way to the Lowndes Interpretive Center. Right in betwee
 
 Again, we were the only people there, so the Park Rangers were pretty excited to see people. The kids got not just a badge, but a paper hat, and a goody bag with a Frisbee, and another booklet, among other things.
 
-```{r, echo = FALSE, out.width = "100%"}
+```{r alex, echo = FALSE, out.width = "100%"}
 #| fig-cap: "**Photo:** Alexander sitting in the car after the Lowndes Interpretive Center"
 knitr::include_graphics("images/alex-lowndes.jpg")
 ```
