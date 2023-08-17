@@ -53,7 +53,10 @@ north_america_sans_mexico <- member_population_clean |>
 mexico <- member_population_clean |> 
   filter(Area == "Mexico")
 
-north_america <- rbind(mexico, north_america_sans_mexico)
+central_america <- member_population_clean |> 
+  filter(Area == "Central America")
+
+north_america <- rbind(mexico, north_america_sans_mexico, central_america)
 
 asia <- member_population_clean |> 
   filter(Area == "Asia")
@@ -62,8 +65,18 @@ asia_north <- member_population_clean |>
   filter(Area == "Asia North") |> 
   mutate(country_nice = case_match(
     Country,
-    "Federated States of Micronesia" ~ "FSM",
-    "Northern Mariana Islands" ~ "NMI",
+    "Federated States of Micronesia" ~ "FSM; Micronesia",
+    "Northern Mariana Islands" ~ "NMI; Mariana Isl",
+    .default = Country
+  ))
+
+middle_east_na <- member_population_clean |> 
+  filter(Area == "ME/AN") |> 
+   mutate(country_short = case_match(
+    Country,
+    "Saudi Arabia(estimate)" ~ "Saudi Arabia (est.)",
+    "Syria(estimate)" ~ "Syria (est.)",
+    "United Arab Emirates" ~ "UAE",
     .default = Country
   ))
 
@@ -81,7 +94,7 @@ member_percent <- europe |>
              text = Population, 
              words = Members,
              color = `%LDS`,))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
   labs(title = "Population and Membership: Central and East Europe",
@@ -102,7 +115,7 @@ north_europe_percent <- clean_north_europe |>
              text = Population, 
              words = Members, 
              color = `%LDS`))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
   labs(title = "Population and Membership: Northern Europe",
@@ -160,7 +173,7 @@ south_america_plotly <- south_america |>
              text = Population, 
              words = Members,
              color = `%LDS`))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
   labs(title = "Population and Membership: Central and East Europe",
@@ -202,7 +215,7 @@ percent_na <- north_america |>
              text = Population, 
              words = Members,
              color = `%LDS`,))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
   labs(title = "Population and Membership: North America",
@@ -232,6 +245,8 @@ na_plot <- north_america |>
 na_plot
 ```
 
+## Africa
+
 ## Asia
 
 ```{r, echo=FALSE}
@@ -244,9 +259,9 @@ asia_members <- asia_north |>
              text = Population, 
              words = Members,
              color = `%LDS`,))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
   labs(title = "Population and Membership: North Asia",
        x = NULL,
        y = "LDS Percentage of total population",
@@ -263,7 +278,7 @@ asia_members_2 <- asia |>
              text = Population, 
              words = Members,
              color = `%LDS`,))+
-  geom_point()+
+  geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
   labs(title = "Population and Membership: Asia",
@@ -275,9 +290,24 @@ ggplotly(asia_members_2, tooltip = c("text", "words"))
 ```
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-#| fig-width: 8
-#| fig-height: 7
-na_plot <- north_america |> 
+asia_north_plot <- asia_north |> 
+  mutate(country_nice = fct_reorder(country_nice, Members)) |> 
+  ggplot(aes(x = Members, y = country_nice, color = country_nice))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Asia",
+       subtitle = "Plot 1",
+       y = NULL)
+
+asia_north_plot
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+asia_plot <- asia |> 
   mutate(Country = fct_reorder(Country, Members)) |> 
   ggplot(aes(x = Members, y = Country, color = Country))+ 
   geom_point(size = 4)+
@@ -286,8 +316,46 @@ na_plot <- north_america |>
   scale_x_continuous(labels = 
                        scales::label_number())+
   scale_x_continuous(labels = scales::label_comma())+
-  labs(title = "Membership by Country: North America",
+  labs(title = "Membership by Country: Asia",
+       subtitle = "Plot 2",
        y = NULL)
 
-na_plot
+asia_plot
+```
+
+## Middle East and North Africa
+
+```{r, echo=FALSE}
+middle_east_north_africa <- middle_east_na |> 
+  mutate(country_short = fct_reorder(country_short, Members)) |>
+  ggplot(aes(x = country_short, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: Middle East and North Africa",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(middle_east_north_africa, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+name_plot <- middle_east_na |> 
+  mutate(country_short = fct_reorder(country_short, Members)) |> 
+  ggplot(aes(x = Members, y = country_short, color = country_short))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Middle East and North Africa",
+       y = NULL)
+
+name_plot
 ```
