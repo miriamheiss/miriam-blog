@@ -80,6 +80,22 @@ middle_east_na <- member_population_clean |>
     .default = Country
   ))
 
+south_africa <- member_population_clean |> 
+  filter(Area == "Africa South")
+
+west_africa <- member_population_clean |> 
+  filter(Area == "Africa West")
+
+central_africa <- member_population_clean |> 
+  filter(Area == "Africa Central") |> 
+  mutate(country_small = case_match(
+    Country,
+    "Democratic Republic of the Congo" ~ "Dem. Rep. Congo",
+    "Republic of the Congo" ~ "Congo",
+    "Central African Republic" ~ "CAFR",
+    .default = Country
+  ))
+
 ```
 
 ## Europe
@@ -245,8 +261,6 @@ na_plot <- north_america |>
 na_plot
 ```
 
-## Africa
-
 ## Asia
 
 ```{r, echo=FALSE}
@@ -358,4 +372,117 @@ name_plot <- middle_east_na |>
        y = NULL)
 
 name_plot
+```
+
+## Africa
+
+```{r, echo=FALSE}
+africa_west <- west_africa |> 
+  mutate(Country = fct_reorder(Country, Members)) |>
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: West Africa",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(africa_west, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE}
+africa_south <- south_africa |> 
+  mutate(Country = fct_reorder(Country, Members)) |>
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: Southern Africa",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(africa_south, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE}
+africa_central <- central_africa |> 
+  mutate(country_small = fct_reorder(country_small, Members)) |>
+  ggplot(aes(x = country_small, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: Central Africa",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(africa_central, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+west_africa_plot <- west_africa |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: West Africa",
+       y = NULL)
+
+west_africa_plot
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+central_africa_plot <- central_africa |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Central Africa",
+       y = NULL)
+
+central_africa_plot
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+south_africa_plot <- south_africa |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: South Africa",
+       y = NULL)
+
+south_africa_plot
 ```
