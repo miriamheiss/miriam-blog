@@ -1,0 +1,292 @@
+--- 
+title: "Latter Day Saint Membership worldwide" 
+subtitle: "In 2022" 
+date: "August 17, 2023" 
+categories: [church] 
+image: "thumbnail.jpg"
+format: 
+  html: 
+    code-fold: show 
+    code-tools: true 
+---
+
+```{r, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(plotly)
+library(MetBrewer)
+
+country <- read_csv("files/membership_by_country.csv")
+member_population <- read_csv("files/membership_and_population.csv")
+
+member_population_clean <- member_population |>
+  select(Country, Area, Members, Population, `2022`, `%LDS`)
+
+east_europe <- member_population_clean |> 
+  filter(Area == "Europe East")
+
+central_europe <- member_population_clean |> 
+  filter(Area == "Europe Central")
+
+unassigned <- member_population_clean |> 
+  filter(Area == "Unassigned**")
+
+europe <- rbind(east_europe, central_europe, unassigned)
+
+north_europe <- member_population_clean |> 
+  filter(Area == "Europe North")
+
+clean_north_europe <- north_europe |>
+  filter(!row_number() %in% c(1)) 
+
+sa_south <- member_population_clean |> 
+  filter(Area == "SA South")
+
+sa_north <- member_population_clean |> 
+  filter(Area =="SA Northwest")
+
+south_america <- rbind(sa_south, sa_north)
+
+north_america_sans_mexico <- member_population_clean |> 
+  filter(Area == "North America*")
+
+mexico <- member_population_clean |> 
+  filter(Area == "Mexico")
+
+north_america <- rbind(mexico, north_america_sans_mexico)
+
+asia <- member_population_clean |> 
+  filter(Area == "Asia")
+
+asia_north <- member_population_clean |> 
+  filter(Area == "Asia North") |> 
+  mutate(country_nice = case_match(
+    Country,
+    "Federated States of Micronesia" ~ "FSM",
+    "Northern Mariana Islands" ~ "NMI",
+    .default = Country
+  ))
+
+```
+
+## Europe
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+member_percent <- europe |> 
+  mutate(Country = fct_reorder(Country, Population)) |> 
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
+  labs(title = "Population and Membership: Central and East Europe",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(member_percent, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+north_europe_percent <- clean_north_europe |> 
+    mutate(Country = fct_reorder(Country, Population)) |> 
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members, 
+             color = `%LDS`))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
+  labs(title = "Population and Membership: Northern Europe",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+  
+
+ggplotly(north_europe_percent, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+europe_plot <- europe |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Europe",
+       subtitle = "Plot 1",
+       y = NULL)
+
+europe_plot
+```
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+north_europe_plot <- clean_north_europe |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Europe",
+       subtitle = "Plot 2",
+       y = NULL)
+
+north_europe_plot
+```
+
+## South America
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+south_america_plotly <- south_america |> 
+  mutate(Country = fct_reorder(Country, Population)) |> 
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: Central and East Europe",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(south_america_plotly, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+sa_plot <- south_america |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: South America",
+       y = NULL)
+
+sa_plot
+```
+
+
+## North America
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+percent_na <- north_america |> 
+  mutate(Country = fct_reorder(Country, Population)) |> 
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: North America",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(percent_na, tooltip = c("text", "words"))
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+na_plot <- north_america |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: North America",
+       y = NULL)
+
+na_plot
+```
+
+## Asia
+
+```{r, echo=FALSE}
+#| fig-width: 5
+#| fig-height: 5
+asia_members <- asia_north |> 
+  mutate(country_nice = fct_reorder(country_nice, Population)) |> 
+  ggplot(aes(x = country_nice, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
+  labs(title = "Population and Membership: North Asia",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(asia_members, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE}
+asia_members_2 <- asia |> 
+  mutate(Country = fct_reorder(Country, Members)) |>
+  ggplot(aes(x = Country, 
+             y = `%LDS`, 
+             text = Population, 
+             words = Members,
+             color = `%LDS`,))+
+  geom_point()+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
+  labs(title = "Population and Membership: Asia",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(asia_members_2, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+na_plot <- north_america |> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: North America",
+       y = NULL)
+
+na_plot
+```

@@ -2,7 +2,7 @@
 title: "Dungeons and Dragons" 
 subtitle: "With Auntie Josie" 
 date: "August 2, 2023" 
-categories: [games] [travel] 
+categories: [games] 
 image: "images/thumbnail.jpg" 
 format: 
   html: 
