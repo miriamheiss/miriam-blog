@@ -4,7 +4,6 @@ subtitle: "In 2022"
 date: "August 17, 2023" 
 categories: [church] 
 image: "thumbnail.jpg"
-draft: true
 format: 
   html: 
     code-fold: show 
