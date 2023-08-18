@@ -11,16 +11,31 @@ format:
     code-tools: true 
 ---
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning = FALSE}
 library(tidyverse)
 library(plotly)
 library(MetBrewer)
+library(sf)
+library(scales)
+library(countrycode)
 
 country <- read_csv("files/membership_by_country.csv")
 member_population <- read_csv("files/membership_and_population.csv")
 
 member_population_clean <- member_population |>
-  select(Country, Area, Members, Population, `2022`, `%LDS`)
+  select(Country, Area, Members, Population, `2022`, `%LDS`) |> 
+  mutate(ISO_A3 = countrycode(Country, origin = "country.name", destination = "iso3c")) |> 
+  mutate(pct_lds = Members / Population) |> 
+  mutate(label = paste0(Country, "<br>", 
+                        label_percent(accuracy = 0.01)(pct_lds), 
+                       "<br>",
+                       label_comma()(Population)))
+
+world_map <- read_sf("files/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp") |> 
+  filter(ADM0_A3 != "ATA")
+
+map_with_members <- world_map |> 
+  left_join(member_population_clean, by = "ISO_A3")
 
 east_europe <- member_population_clean |> 
   filter(Area == "Europe East")
@@ -45,7 +60,10 @@ sa_south <- member_population_clean |>
 sa_north <- member_population_clean |> 
   filter(Area =="SA Northwest")
 
-south_america <- rbind(sa_south, sa_north)
+brazil <- member_population_clean |> 
+  filter(Area == "Brazil")
+
+south_america <- rbind(sa_south, sa_north, brazil)
 
 north_america_sans_mexico <- member_population_clean |> 
   filter(Area == "North America*")
@@ -96,23 +114,48 @@ central_africa <- member_population_clean |>
     .default = Country
   ))
 
+pacific <- member_population_clean |> 
+  filter(Area == "Pacific")
+
+philippines <- member_population_clean |> 
+  filter(Area == "Philippines")
+
+oceania <- rbind(pacific, philippines)
+
+caribbean <- member_population_clean |> 
+  filter(Area == "Caribbean") |> 
+  mutate(country_shorter = case_match(
+    Country,
+    "Trinidad and Tobago" ~ "T&T",
+    "Saint Vincent and the Grenadines" ~ "SV&G",
+    "Turks and Caicos Islands" ~ "TCA",
+    "Antigua and Barbuda" ~ "AN&B",
+    "British Virgin Islands" ~ "BVI",
+    "Saint Kitts and Nevis" ~ "St. K&N",
+    "United States Virgin Islands" ~ "U.S VI",
+    .default = Country))
+
 ```
 
+##
+
+# Plots
 ## Europe
 
 ```{r, echo=FALSE}
 #| fig-width: 6
 #| fig-height: 6
 member_percent <- europe |> 
-  mutate(Country = fct_reorder(Country, Population)) |> 
+  mutate(Country = fct_reorder(Country, pct_lds)) |> 
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds))+
   geom_point(size = 4)+
+  scale_y_continuous(labels = label_percent()) +
   theme_bw()+
-  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position = "none")+
   labs(title = "Population and Membership: Central and East Europe",
        x = NULL,
        y = "LDS Percentage of total population",
@@ -127,10 +170,10 @@ ggplotly(member_percent, tooltip = c("text", "words"))
 north_europe_percent <- clean_north_europe |> 
     mutate(Country = fct_reorder(Country, Population)) |> 
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members, 
-             color = `%LDS`))+
+             color = pct_lds))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5))+
@@ -185,10 +228,10 @@ north_europe_plot
 south_america_plotly <- south_america |> 
   mutate(Country = fct_reorder(Country, Population)) |> 
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`))+
+             color = pct_lds))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -227,10 +270,10 @@ sa_plot
 percent_na <- north_america |> 
   mutate(Country = fct_reorder(Country, Population)) |> 
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -269,10 +312,10 @@ na_plot
 asia_members <- asia_north |> 
   mutate(country_nice = fct_reorder(country_nice, Population)) |> 
   ggplot(aes(x = country_nice, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -283,15 +326,24 @@ asia_members <- asia_north |>
 
 ggplotly(asia_members, tooltip = c("text", "words"))
 ```
+::: {.column-margin}
+The shortened country names in the plots to the side are as such:
+
+  Federated States of Micronesia 
+  - FSM
+  
+  Northern Mariana Islands 
+  - NMI
+:::
 
 ```{r, echo=FALSE}
 asia_members_2 <- asia |> 
   mutate(Country = fct_reorder(Country, Members)) |>
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -343,10 +395,10 @@ asia_plot
 middle_east_north_africa <- middle_east_na |> 
   mutate(country_short = fct_reorder(country_short, Members)) |>
   ggplot(aes(x = country_short, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -374,16 +426,20 @@ name_plot <- middle_east_na |>
 name_plot
 ```
 
+::: {.column-margin}
+The shortened country name in the plot to the side is the United Arab Emirates (UAE)
+:::
+
 ## Africa
 
 ```{r, echo=FALSE}
 africa_west <- west_africa |> 
   mutate(Country = fct_reorder(Country, Members)) |>
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -399,10 +455,10 @@ ggplotly(africa_west, tooltip = c("text", "words"))
 africa_south <- south_africa |> 
   mutate(Country = fct_reorder(Country, Members)) |>
   ggplot(aes(x = Country, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -418,10 +474,10 @@ ggplotly(africa_south, tooltip = c("text", "words"))
 africa_central <- central_africa |> 
   mutate(country_small = fct_reorder(country_small, Members)) |>
   ggplot(aes(x = country_small, 
-             y = `%LDS`, 
+             y = pct_lds, 
              text = Population, 
              words = Members,
-             color = `%LDS`,))+
+             color = pct_lds,))+
   geom_point(size = 4)+
   theme_bw()+
   theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position="none")+
@@ -486,3 +542,147 @@ south_africa_plot <- south_africa |>
 
 south_africa_plot
 ```
+
+## Oceania
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+oceania_percent <- oceania |> 
+  mutate(Country = fct_reorder(Country, Population)) |> 
+  ggplot(aes(x = Country, 
+             y = pct_lds, 
+             text = Population, 
+             words = Members,
+             color = pct_lds,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position = "none")+
+  labs(title = "Population and Membership: Oceania",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(oceania_percent, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+oceania_plot <- oceania|> 
+  mutate(Country = fct_reorder(Country, Members)) |> 
+  ggplot(aes(x = Members, y = Country, color = Country))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Oceania",
+       y = NULL)
+
+oceania_plot
+```
+
+## Caribbean
+
+```{r, echo=FALSE}
+#| fig-width: 6
+#| fig-height: 6
+caribbean_percent <- caribbean |> 
+  mutate(country_shorter = fct_reorder(country_shorter, Population)) |> 
+  ggplot(aes(x = country_shorter, 
+             y = pct_lds, 
+             text = Population, 
+             words = Members,
+             color = pct_lds,))+
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 0.5, vjust = 0.5), legend.position = "none")+
+  labs(title = "Population and Membership: Caribbean",
+       x = NULL,
+       y = "LDS Percentage of total population",
+       color = "Percent LDS")
+
+ggplotly(caribbean_percent, tooltip = c("text", "words"))
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+#| fig-width: 8
+#| fig-height: 7
+caribbean_plot <- caribbean |> 
+  mutate(country_shorter = fct_reorder(country_shorter, Members)) |> 
+  ggplot(aes(x = Members, y = country_shorter, color = country_shorter))+ 
+  geom_point(size = 4)+
+  theme_bw()+
+  theme(legend.position="none")+
+  scale_x_continuous(labels = 
+                       scales::label_number())+
+  scale_x_continuous(labels = scales::label_comma())+
+  labs(title = "Membership by Country: Caribbean",
+       y = NULL)
+
+caribbean_plot
+```
+
+
+::: {.column-margin}
+The shortened country names in the plots to the side are as such:
+
+  Trinidad and Tobago 
+  -T&T
+  
+  Saint Vincent and 
+  the Grenadines 
+  -SV&G
+  
+  Turks and Caicos Islands  
+  -TCA
+  
+  Antigua and Barbuda  
+  -AN&B
+ 
+  British Virgin Islands  
+  -BVI
+  
+  Saint Kitts and Nevis  
+  -St. K&N
+  
+  US Virgin Islands 
+  -U.S VI
+:::
+
+# Maps
+
+```{r fig.width=9, fig.height=5, echo = FALSE, message = FALSE, warning = FALSE}
+#| column: page
+asdf <- ggplot() +
+  # Plot breaks bc it has a color and a line for every country, which can't be plotted. Using style fixes it and makes it work.
+  # https://github.com/plotly/plotly.R/issues/1641#issuecomment-550477069
+  geom_sf(data = map_with_members,
+          aes(fill = pct_lds, text = label, color = ADMIN), 
+          linewidth = 0.05) +
+  coord_sf(crs = "+proj=robin") +
+  scale_fill_viridis_c(
+    labels = label_percent(), 
+    na.value = "grey90",
+    option = "plasma") +
+  theme_void() +
+  theme(legend.position = "bottom")+
+  labs(fill = "Percent LDS")
+
+interactive_map <- ggplotly(asdf, tooltip = "text")
+
+interactive_map %>%
+  style(
+    hoveron = "fills",
+    # override the color mapping
+    line.color = toRGB("black"),
+    # don't apply these style rules to the first trace, which is the background graticule/grid
+    traces = seq.int(2, length(interactive_map$x$data))
+  ) %>%
+  hide_legend()
+
+```
+
+
