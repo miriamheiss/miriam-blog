@@ -3,7 +3,7 @@ title: "Latter Day Saint Membership worldwide"
 subtitle: "In 2022" 
 date: "August 17, 2023" 
 categories: [church] 
-image: "thumbnail.jpg"
+image: "files/newplot.png"
 format: 
   html: 
     code-fold: show 
@@ -684,4 +684,4 @@ interactive_map %>%
 
 ```
 
-
+*Data Source*: https://en.wikipedia.org/wiki/Membership_statistics_of_the_Church_of_Jesus_Christ_of_Latter-day_Saints
