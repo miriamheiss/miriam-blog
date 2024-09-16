@@ -1,0 +1,26 @@
+--- 
+title: "I'll Go Where You Want Me to Go" 
+subtitle: "Alternative Last Verse" 
+date: "September 16, 2024" 
+categories: [music] 
+image: "images/two-measures.jpeg" 
+resources: 
+  - "third_verse.mp3"
+  - "third_verse.pdf"
+---
+
+I have been very excited about the new [Hymns for Home and Church](https://www.churchofjesuschrist.org/media/music/collections/hymns-for-home-and-church?lang=eng), and so I have been organizing my music that I bring to church differently. I filled a binder with all the new hymns, and will continue to update that as they are released, and I have prelude and postlude music with it as well. Inspired by various [General Conferences](https://www.youtube.com/watch?v=rP6J5UPSalM) and firesides, I decided to create [harmonized last verses](https://en.wikipedia.org/wiki/Last_verse_harmonisation) to add to my mega-binder of music. 
+
+---
+
+This is the MuseScore recording of the alternative verse:
+
+<audio controls>
+<source src="third_verse.mp3" type="audio/mpeg">
+</audio> 
+\
+
+You can download it here:
+
+[![Click on image above to download](images/two-measures.jpeg)](third_verse.pdf)
+
