@@ -13,7 +13,7 @@ I have been very excited about the new [Hymns for Home and Church](https://www.c
 
 ---
 
-This is the MuseScore recording of the alternative verse:
+This is the MuseScore recording of the alternative verse of #270, I'll Go Where You Want Me to Go:
 
 <audio controls>
 <source src="third_verse.mp3" type="audio/mpeg">
