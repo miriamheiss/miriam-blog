@@ -1,8 +1,8 @@
 ---
 title: "About Me"
-image: "miriam_2022.jpg"
+image: "miriam_2025_.jpg"
 about:
-  template: jolla
+  template: trestles
   links:
     - icon: github
       text: Github
@@ -10,7 +10,7 @@ about:
 
 ---
 
-Hi! I'm Miriam Heiss! I enjoy embroidery, plotting things in RStudio, and sewing. [I also play the organ](https://www.youtube.com/watch?v=FXDYUbM_VZc). She/Her pronouns
+Hello there! I'm Miriam Heiss! I enjoy crocheting, sewing, knitting, and embroidery. I mostly arrange music, but sometimes compose. [I also play the organ](https://www.youtube.com/@MiriamHeiss). 
 
 \
 

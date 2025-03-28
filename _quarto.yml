@@ -7,35 +7,33 @@ website:
     background: secondary
     left:
       - about.qmd
-      - sidebar:final-project
       - icon: github
         href: https://github.com/miriamheiss/miriam-blog
       - icon: instagram
         href: https://www.instagram.com/heiss.miriam/?hl=en
-      - icon: mastodon
-        href: https://zirk.us/@miriam
-  
-  sidebar:
-    - id: final-project
-      title: "Bach and Taylor Swift Project"
-      style: "docked"
-      background: "#ffffff"
-      collapse-level: 6
-      contents: 
-        - final-project/index.qmd
-        - final-project/energy.qmd
-        - final-project/tempo.qmd
-        - final-project/interactive.qmd
-        - final-project/conclusion.qmd
-        - final-project/sources.qmd 
+      
+      
+#  sidebar:
+#    - id: final-project
+#      title: "Bach and Taylor Swift Project"
+#      style: "docked"
+#      background: "#ffffff"
+#     collapse-level: 6
+#      contents: 
+#        - final-project/index.qmd
+#        - final-project/energy.qmd
+#        - final-project/tempo.qmd
+#        - final-project/interactive.qmd
+#        - final-project/conclusion.qmd
+#        - final-project/sources.qmd 
         
         
-    - title: "Empty space lol"
+#    - title: "Empty space lol"
     
 
 format:
   html:
-    theme: minty
+    theme: darkly
     css: styles.css
     highlight-style: espresso
     toc: true
