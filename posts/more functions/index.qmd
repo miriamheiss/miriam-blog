@@ -1,0 +1,59 @@
+--- 
+title: "Plotting Circles and Ellipses" 
+subtitle: "Conics" 
+date: "March 28, 2025" 
+categories: [math] 
+image: "" 
+format: 
+  html: 
+    code-fold: show 
+    code-tools: true 
+---
+
+plotting already but with just quadratic equations. maybe a review
+
+what about multiple variables???
+
+x and y
+
+standard form for a circle is BLAH
+
+we cannot use standard form while making our function. Otherwise the radius is counted as negative. we have to subtract the "constant" term. heres how you make a function that will have an x and a y
+
+```
+library(tidyverse)
+library(ggplot2)
+
+# function for making a circle
+
+f <- function(x, y) {
+  x^2 + y^2 - 4.     
+}
+
+#cannot be standard form x^2+y^7=4 otherwise the radius would be negative which can't happen
+
+
+circle_data <- expand_grid(
+  x = seq(-3, 3, length.out = 100),
+  y = seq(-3, 3, length.out = 100)) |> 
+  mutate(z = f(x, y))
+
+ggplot(circle_data, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "red") +
+  coord_fixed() +
+  scale_x_continuous(breaks = -10:10, limits = -10, 10)+
+  scale_y_continuous(breaks = -10:10, limits = -10, 10)+
+  coord_cartesian(xlim = c(-10, 10), ylim= c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  theme_linedraw()
+
+```
+
+standard circle equation is BLAH. cannot write in standard form here otherwise the radius would be negative, which we don't want and can't have lol
+
+We need to make a mini data set. 
+
+we do this with the expand grid thing, we'll use that and name it.
+
+Now we can start 
