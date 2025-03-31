@@ -14,14 +14,19 @@ A little over 2 years ago, I wrote a post about plotting parabolas and quadratic
 
 ## Conic Sections
 
-There are 4 types of conic sections. An ellipse, a circle, a parabola, and a hyperbola .
+There are 3 types of conic sections. An ellipse, a parabola, and a hyperbola .
 
 ::: {.callout-important icon=false}
 ## Three or Four?
-A circle is technically a special case of an ellipse, but in this case the code is different, so I'm counting it as a separate conic section
+A circle is a special kind of ellipse where $a = b$
 :::
 
 You get a conic section by intersecting 2 cones and a plane in various ways.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE, out.width = "60%"}
+#| fig-cap: "Figure 1"
+knitr::include_graphics("TypesOfConicSections.jpg")
+```
 
 ## Parabolas
 
@@ -31,7 +36,7 @@ The simplest equation for a parabola is a quadratic equation:
 
 $$y = ax^2 + bx + c$$ 
 
-This will be very easy to plot. When making this a function, we can't include the $y$, and will just set the function equal to $$ax^2+bx+c$$ for some $a$, $b$, and $c$.
+This will be very easy to plot. When making this a function, we can't include the $y$, and will just set the function equal to $ax^2+bx+c$ for some $a$, $b$, and $c$.
 
 ### A Function
 
@@ -39,7 +44,7 @@ We will be using the following equation for this example:
 $$x^2-4x+2$$
 This won't require any rearranging of the equation, or any extra steps, so we will be able to turn it into a function.
 
-```{r, function-q}
+```{r warning = FALSE, message = FALSE}
 q <- function(x) {
   x^2 - 4*x + 2
 }
@@ -51,19 +56,20 @@ It only has one variable, so it is a function with $x$.
 
 Now, we need a familiar library, tidyverse.
 
-```{r, function-q}
+```{r warning = FALSE, message = FALSE}
 library(tidyverse)
 ```
 
 We can start plotting with `ggplot()`, and add `geom_function()` as layer. Within `geom_function()`, we need to set the function equal to $q$ so that ggplot can take the right numbers generated.
 
-```{r, function-q}
+```{r, warning = FALSE, message = FALSE}
 ggplot() +
   geom_function(fun = q)
 ```
+
 This makes a **really** zoomed in plot. I want to see the whole parabola though. We can set different limits using `xlim()` and `ylim()`. We will also add some vertical and horizontal lines to make the different quadrants of the Cartesian plane more apparent, and change the color of the parabola to make it more visible.
 
-```{r, function-q}
+```{r warning = FALSE, message = FALSE}
 ggplot() +
   geom_function(fun = q, color = "red") +
   xlim(-10, 10) +
@@ -72,27 +78,9 @@ ggplot() +
   geom_vline(xintercept = 0) 
 ```
 
-## Ellipses
-### Standard form
+Hmm... I don't love where the breaks are, and I don't like how the Cartesian plane is made of rectangles.
 
-The standard form equation for an Ellipse is:
-
-$$ \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2}=1 $$
-If $$a> b$$, the ellipse is horizontal. If $$b>a$$, the ellipse is vertical.
-
-
-
-x and y
-
-standard form for a circle is BLAH
-
-we cannot use standard form while making our function. Otherwise the radius is counted as negative. we have to subtract the "constant" term. here's how you make a function that will have an x and a y
-
-
-
-Hmmmmm... I don't love where the breaks are, and I don't like how the Cartesian plane is made of rectangles.
-
-```{r}
+```{r warning = FALSE, message = FALSE}
 ggplot() +
   geom_function(fun = q, color = "red") +
   geom_hline(yintercept = 0) +
@@ -106,7 +94,7 @@ We can fix that with `coord_fixed` and `scale_x/y_continuous`. We also no longer
 
 Let's add labels and a theme to finish up.
 
-```{r}
+```{r warning = FALSE, message = FALSE}
 ggplot() +
   geom_function(fun = q, color = "red") +
   geom_hline(yintercept = 0) +
@@ -121,10 +109,48 @@ ggplot() +
     panel.grid.minor = element_blank()
   )
 ```
+
 That was pretty easy, because we only had one variable to contend with. From now on, things will get a little bit trickier.
 
-## Circles
+## Circles and Ellipses
 
+### Circles centered at the origin
+
+Circle equations centered at the origin ($0$, $0$) are pretty simple:
+
+$$x^2 + y^2 = r^2$$
+#### Rearranging (just a little)
+
+In functions, we can't have an equals sign, so we'll need to move the $r^2$ to the other side. The equation then becomes:
+
+$$x^2 + y^2 - r^2 = 0$$
+#### Y in the function
+
+If we assign this equation with any $r$ to a function like last time, it will not work. We need to add a `y` to the argument, like this:
+
+```{r}
+h <- function(x, y) {
+  x^2 + y^2 - 4.     
+}
+```
+
+::: {.callout-important icon=false}
+The equation above is $x^2 + y^2 = 4$
+:::
+
+But we still can't plug this function in to ggplot. Something that's more complicated with multiple variables (that I've found, if there are easier ways *please* let me know) is that you have to make your own data for any extra variables.
+
+#### Making a Y
+
+### Circles not centered at the origin
+
+Making a circle
+
+The standard form equation for an Ellipse is:
+
+$$ \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2}=1 $$
+
+If $a> b$, the ellipse is horizontal. If $b>a$, the ellipse is vertical.
 
 
 ```
@@ -164,3 +190,5 @@ We need to make a mini data set.
 we do this with the expand grid thing, we'll use that and name it.
 
 Now we can start
+
+<small class="text-muted">*Figure 1:* Jens Vyff,  <a href="https://commons.wikimedia.org/wiki/File:TypesOfConicSections.jpg">  Types Of Conic Sections </a>, via Wikimedia Commons, February 2021 </small>
