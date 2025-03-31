@@ -2,15 +2,17 @@ project:
   type: website
 
 website:
-  title: "Miriam's Blog"
+  title: "Blog"
   navbar:
-    background: secondary
+    background: primary
     left:
       - about.qmd
       - icon: github
         href: https://github.com/miriamheiss/miriam-blog
       - icon: instagram
         href: https://www.instagram.com/heiss.miriam/?hl=en
+      - icon: youtube
+        href: https://www.youtube.com/@MiriamHeiss
       
       
 #  sidebar:
@@ -33,9 +35,10 @@ website:
 
 format:
   html:
-    theme: darkly
-    css: styles.css
-    highlight-style: espresso
+    theme: 
+      - flatly
+      - styles.scss
+    highlight-style: breezedark
     toc: true
-    title-block-banner-color: "#ffffff"
+    #title-block-banner-color: "#ffffff"
   

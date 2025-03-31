@@ -1,6 +1,6 @@
 ---
 title: "Plotting Quadratic Equations"
-subtitle: "Functions"
+subtitle: "Parabolas"
 date: "January 23, 2023"
 categories: [math]
 image: "equation.png"

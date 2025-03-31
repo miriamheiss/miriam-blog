@@ -1,6 +1,6 @@
 --- 
-title: "Plotting Circles and Ellipses" 
-subtitle: "Conics" 
+title: "Conic Sections" 
+subtitle: "Circles, Ellipses, and Hyperbolas" 
 date: "March 28, 2025" 
 categories: [math] 
 image: "" 
@@ -10,15 +10,122 @@ format:
     code-tools: true 
 ---
 
-plotting already but with just quadratic equations. maybe a review
+A little over 2 years ago, I wrote a post about plotting parabolas and quadratic equations, because I was learning quadratics that year in my math work. Now that I'm almost 2 years through high school, I've moved on to more complicated things.
 
-what about multiple variables???
+## Conic Sections
+
+There are 4 types of conic sections. An ellipse, a circle, a parabola, and a hyperbola .
+
+::: {.callout-important icon=false}
+## Three or Four?
+A circle is technically a special case of an ellipse, but in this case the code is different, so I'm counting it as a separate conic section
+:::
+
+You get a conic section by intersecting 2 cones and a plane in various ways.
+
+## Parabolas
+
+I covered parabolas in a [previous post](https://www.miriamheiss.com/posts/Plotting-equations/), but I'll do a quick review in this post as well. Parabolas are the curve formed when the plane is at the same angle as the side of the cone.
+
+The simplest equation for a parabola is a quadratic equation:
+
+$$y = ax^2 + bx + c$$ 
+
+This will be very easy to plot. When making this a function, we can't include the $y$, and will just set the function equal to $$ax^2+bx+c$$ for some $a$, $b$, and $c$.
+
+### A Function
+
+We will be using the following equation for this example:
+$$x^2-4x+2$$
+This won't require any rearranging of the equation, or any extra steps, so we will be able to turn it into a function.
+
+```{r, function-q}
+q <- function(x) {
+  x^2 - 4*x + 2
+}
+```
+
+It only has one variable, so it is a function with $x$.
+
+### Plotting
+
+Now, we need a familiar library, tidyverse.
+
+```{r, function-q}
+library(tidyverse)
+```
+
+We can start plotting with `ggplot()`, and add `geom_function()` as layer. Within `geom_function()`, we need to set the function equal to $q$ so that ggplot can take the right numbers generated.
+
+```{r, function-q}
+ggplot() +
+  geom_function(fun = q)
+```
+This makes a **really** zoomed in plot. I want to see the whole parabola though. We can set different limits using `xlim()` and `ylim()`. We will also add some vertical and horizontal lines to make the different quadrants of the Cartesian plane more apparent, and change the color of the parabola to make it more visible.
+
+```{r, function-q}
+ggplot() +
+  geom_function(fun = q, color = "red") +
+  xlim(-10, 10) +
+  ylim(-10, 10) + 
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) 
+```
+
+## Ellipses
+### Standard form
+
+The standard form equation for an Ellipse is:
+
+$$ \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2}=1 $$
+If $$a> b$$, the ellipse is horizontal. If $$b>a$$, the ellipse is vertical.
+
+
 
 x and y
 
 standard form for a circle is BLAH
 
-we cannot use standard form while making our function. Otherwise the radius is counted as negative. we have to subtract the "constant" term. heres how you make a function that will have an x and a y
+we cannot use standard form while making our function. Otherwise the radius is counted as negative. we have to subtract the "constant" term. here's how you make a function that will have an x and a y
+
+
+
+Hmmmmm... I don't love where the breaks are, and I don't like how the Cartesian plane is made of rectangles.
+
+```{r}
+ggplot() +
+  geom_function(fun = q, color = "red") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))
+```
+
+We can fix that with `coord_fixed` and `scale_x/y_continuous`. We also no longer need the `x/ylim` layers after the `geom`
+
+Let's add labels and a theme to finish up.
+
+```{r}
+ggplot() +
+  geom_function(fun = q, color = "red") +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  labs(x = "X",
+       y = "Y")+
+  theme_linedraw()+
+  theme(
+    panel.grid.minor = element_blank()
+  )
+```
+That was pretty easy, because we only had one variable to contend with. From now on, things will get a little bit trickier.
+
+## Circles
+
+
 
 ```
 library(tidyverse)
@@ -56,4 +163,4 @@ We need to make a mini data set.
 
 we do this with the expand grid thing, we'll use that and name it.
 
-Now we can start 
+Now we can start

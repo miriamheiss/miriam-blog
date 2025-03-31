@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+$grey:   #2C3E51 !default;
+$ltgrey: #D4DEE8 !default;
+$pink:   #FAC5BC !default;
+$red:    #EC5245 !default;
+$orange: #f5843d !default;
+$yellow: #EDE94A !default;
+$green:  #1C7139 !default;
+$ltblue: #5790CC !default;
+$teal:   #005E84 !default;
+
+
+$primary:       $grey !default;
+$secondary:     $ltgrey !default;
+$success:       $green !default;
+$info:          $ltblue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+
+$link-color: $red;
+$link-hover-color: $orange;
+
+
+/*-- scss:rules --*/
+
+.quarto-title-block.default .quarto-title .title {
+    color: $grey;
+}
+
+.quarto-title-banner {
+    background-color: $orange;
+    color: $grey;
+}
+
+.quarto-title-banner .code-tools-button {
+    color: $grey;
+}
+
+.quarto-title-banner .code-tools-button .quarto-code-tools-source {
+  color: $grey;
+}
+
+.quarto-title-banner .code-tools-button:hover {
+  color: $pink;
+}
+
+
+.quarto-title-banner .code-tools-button>.bi::before {
+background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(44, 62, 81)" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/></svg>');
+}
