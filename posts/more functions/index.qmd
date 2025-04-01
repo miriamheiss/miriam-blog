@@ -10,7 +10,7 @@ format:
     code-tools: true 
 ---
 
-A little over 2 years ago, I wrote a post about plotting parabolas and quadratic equations, because I was learning quadratics that year in my math work. Now that I'm almost 2 years through high school, I've moved on to more complicated things.
+About 2 years ago, I wrote a post about plotting parabolas and quadratic equations, because I was learning quadratics that year in my math work. Now that I'm almost 2 years through high school, I've moved on to more complicated things.
 
 ## Conic Sections
 
@@ -18,7 +18,7 @@ There are 3 types of conic sections. An ellipse, a parabola, and a hyperbola .
 
 ::: {.callout-important icon=false}
 ## Three or Four?
-A circle is a special kind of ellipse where $a = b$
+Eh. It depends. There are technically 3, but circles and ellipses are sometimes counted as separate conic sections. In here, I count them as one (ish)
 :::
 
 You get a conic section by intersecting 2 cones and a plane in various ways.
@@ -30,7 +30,7 @@ knitr::include_graphics("TypesOfConicSections.jpg")
 
 ## Parabolas
 
-I covered parabolas in a [previous post](https://www.miriamheiss.com/posts/Plotting-equations/), but I'll do a quick review in this post as well. Parabolas are the curve formed when the plane is at the same angle as the side of the cone.
+I covered parabolas in a [previous post](https://www.miriamheiss.com/posts/Plotting-equations/), but I'll do a quick review in this post as well. Parabolas are the curve formed when the plane is at the same angle as the side of the cone. It is #3 in the Figure 1
 
 The simplest equation for a parabola is a quadratic equation:
 
@@ -67,24 +67,24 @@ ggplot() +
   geom_function(fun = q)
 ```
 
-This makes a **really** zoomed in plot. I want to see the whole parabola though. We can set different limits using `xlim()` and `ylim()`. We will also add some vertical and horizontal lines to make the different quadrants of the Cartesian plane more apparent, and change the color of the parabola to make it more visible.
+This makes a **really** zoomed in plot. I want to see the whole parabola though. We can set different limits using `xlim()` and `ylim()`. We will also add some vertical and horizontal lines to make the different quadrants of the Cartesian plane more apparent, and change the color of the parabola to make it more visible. I'm also going to switch the order so the parabola shows up on top.
 
 ```{r warning = FALSE, message = FALSE}
 ggplot() +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
   geom_function(fun = q, color = "red") +
   xlim(-10, 10) +
-  ylim(-10, 10) + 
-  geom_hline(yintercept = 0) +
-  geom_vline(xintercept = 0) 
+  ylim(-10, 10) 
 ```
 
 Hmm... I don't love where the breaks are, and I don't like how the Cartesian plane is made of rectangles.
 
 ```{r warning = FALSE, message = FALSE}
 ggplot() +
-  geom_function(fun = q, color = "red") +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0) +
+  geom_function(fun = q, color = "red") +
   coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
   scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
   scale_y_continuous(breaks = -10:10, limits = c(-10, 10))
@@ -96,9 +96,9 @@ Let's add labels and a theme to finish up.
 
 ```{r warning = FALSE, message = FALSE}
 ggplot() +
-  geom_function(fun = q, color = "red") +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0) +
+  geom_function(fun = q, color = "red") +
   coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
   scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
   scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
@@ -114,17 +114,19 @@ That was pretty easy, because we only had one variable to contend with. From now
 
 ## Circles and Ellipses
 
+In Figure 1, the circle is #1 and the ellipse is #2
+
 ### Circles centered at the origin
 
 Circle equations centered at the origin ($0$, $0$) are pretty simple:
 
 $$x^2 + y^2 = r^2$$
-#### Rearranging (just a little)
+**Rearranging (just a little)**
 
 In functions, we can't have an equals sign, so we'll need to move the $r^2$ to the other side. The equation then becomes:
 
 $$x^2 + y^2 - r^2 = 0$$
-#### Y in the function
+**Y in the function**
 
 If we assign this equation with any $r$ to a function like last time, it will not work. We need to add a `y` to the argument, like this:
 
@@ -134,61 +136,297 @@ h <- function(x, y) {
 }
 ```
 
-::: {.callout-important icon=false}
+::: {.callout-note}
 The equation above is $x^2 + y^2 = 4$
 :::
 
 But we still can't plug this function in to ggplot. Something that's more complicated with multiple variables (that I've found, if there are easier ways *please* let me know) is that you have to make your own data for any extra variables.
 
-#### Making a Y
+**Making a Y**
+
+Thankfully, making a $y$ is not a lot of work. We don't have to type in every single number from $-∞$ to $+∞$. We just have to give a range of numbers. We could use a variety of commands, like `tibble`, but I found that `expand_grid` works best. We don't need very many numbers, so $-7$ to $7$ will work just fine for our purposes. We will also have to do this for the rest of the conic sections.
+
+The way we make our $y$ should look something like this:
+
+```{r}
+circle_data <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100))
+```
+
+Make sure you save it to an object, otherwise all the numbers won't be easily viewable, and will get lost. We are technically making a dataset (though we are really just reminding R to list a bunch of numbers), so we need an `x` and a `y`. We also need a `z`, which will be the product of the `x` and `y` in the function $h$ we defined earlier. We can do this with `mutate`
+
+```{r}
+circle_data <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = h(x, y))
+```
+
+**Plot at the origin**
+
+We can finally plot this circle! We can start like we normally do, with `ggplot` and a `geom`.
+
+```{r}
+ggplot(circle_data, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "purple")
+```
+Wait a minute. That's... not a circle? Don't worry, it is actually a circle, we just need to add a few more things to the graph to make it be extra circle-y. We will also fix what the limits are and make it look just a little bit nicer.
+
+Inside `geom_contour` there is something called `breaks`. What exactly is that for? There are 10,000 observations in `circle_data` and we don't use all of them for this graph. We actually only use the observations where `z` is closest to 0. If the `breaks` was set to 1, for example, it would take all observations where `z` is close to/equal to 1. That's kind of like adding a number to the radius. It's a similar equation, but won't produce the circle we are looking for.
+
+```{r}
+ggplot(circle_data, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "purple") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  labs(x = "X",
+         y = "Y") +
+  theme_linedraw() +
+  theme(panel.grid.minor = element_blank())
+```
+
+Awesome!!! We made a circle with radius 4, centered around the origin, which is what our original equation was!
 
 ### Circles not centered at the origin
 
-Making a circle
+So, the standard equation for a circle is:
+
+$$x^2 + y^2 = r^2$$
+But that is only centered around $0, 0$. To make a circle centered...not...there, we need to use a slightly different equation. 
+
+When a circle, ellipse, or hyperbola is not centered around the origin, we simply shift the $x$ and $y$ by adding, subtracting, and multiplying.
+
+The new circle equation is 
+
+$$
+(x - h)^2 + (y - k)^2 = r^2
+$$
+
+For some $h$, $k$, and $r$. The center of the circle is $h, k$ and the radius is $r$.
+
+Let's take the same equation from the last graph, and change some things about it.
+
+$$x^2 + y^2 = 4$$
+
+I want this new circle to be 4 over and 3 down from the original circle.
+
+$$(x - 4)^2 + (y + 3)^2 - 4$$
+
+::: {.callout-important icon=false}
+## Rearranging for Functions
+Remember, we need to subtract the radius and move it to the other side of the equation in order to turn it into a function
+:::
+
+We can turn this into a function $t$
+
+```{r}
+t <- function(x, y) {
+  (x - 4)^2 + (y + 3)^2 - 4
+}
+```
+
+We need to make our $y$, so we'll do that the same way as before
+
+```{r}
+circle_data2 <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = t(x, y))
+```
+
+::: {.callout-warning icon=false}
+## Be careful!
+We need to use our function $t$ when making the `z` column in `circle_data_2`
+:::
+
+Now we can plot it the same exact way as before. It should be the same size, but in a different place.
+
+```{r}
+ggplot(circle_data2, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "blue") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  labs(x = "X",
+       y = "Y") +
+  theme_linedraw() +
+  theme(panel.grid.minor = element_blank())
+```
+Now that we've done 2 circles, we should be getting into a bit of a rhythm. All we really need to change is what the function is!
+
+### Ellipses
 
 The standard form equation for an Ellipse is:
 
 $$ \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2}=1 $$
 
-If $a> b$, the ellipse is horizontal. If $b>a$, the ellipse is vertical.
+This should look really similar to the circle equation:
 
+$$(x - h)^2 + (y - k)^2$$
+As I mentioned at the very very beginning, circles are a special form of ellipse. An ellipse becomes a circle when $a = b$. If $a>b$, the ellipse is horizontal. If $b>a$, the ellipse is vertical.
 
-```
-library(tidyverse)
-library(ggplot2)
+### Vertical Ellipse
 
-# function for making a circle
+We will be using the equation
 
-f <- function(x, y) {
-  x^2 + y^2 - 4.     
+$$\frac{(2x - 2)^2}{4^2} + \frac{(3y + 3)^2}{8^2} - 1$$
+
+```{r}
+p <- function(x, y) {
+  (2*x - 2)^2/4^2 + (3*y + 3)^2/8^2 - 1     
 }
+```
 
-#cannot be standard form x^2+y^7=4 otherwise the radius would be negative which can't happen
+Now, we go through the same process of making our $y$ and $z$.
 
+```{r}
+ellipse_data <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = p(x, y))
+```
 
-circle_data <- expand_grid(
-  x = seq(-3, 3, length.out = 100),
-  y = seq(-3, 3, length.out = 100)) |> 
-  mutate(z = f(x, y))
+And we graph the same way:
 
-ggplot(circle_data, aes(x = x, y = y)) +
-  geom_contour(aes(z = z), breaks = 0, color = "red") +
-  coord_fixed() +
-  scale_x_continuous(breaks = -10:10, limits = -10, 10)+
-  scale_y_continuous(breaks = -10:10, limits = -10, 10)+
-  coord_cartesian(xlim = c(-10, 10), ylim= c(-10, 10))+
+```{r}
+ggplot(ellipse_data, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "violetred2") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
   geom_hline(yintercept = 0)+
   geom_vline(xintercept = 0)+
-  theme_linedraw()
+  labs(x = "X",
+         y = "Y") +
+  theme_linedraw() +
+  theme(panel.grid.minor = element_blank())
+```
+### Horizontal Ellipse
 
+See if you can graph this equation:
+
+$$\frac{(3x + 5)^2}{8^2} + \frac{(3y - 2)^2}{4^2} = 1$$
+
+
+::: {.callout-note collapse=true}
+## Solution
+Here's the solution!
+
+```{r}
+v <- function(x, y) {
+  (3*x + 5)^2/8^2 + (3*y - 2)^2/4^2 - 1     
+}
+
+ellipse_data2 <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = v(x, y))
+
+ggplot(ellipse_data, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "springgreen3") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank()
+  )
+```
+:::
+
+## Hyperbolas
+
+This is the last kind of conic section. It is #4 in Figure 1, a plane that cuts through 2 cones.
+
+### Standard Equation
+
+A hyperbola is kind of like an opposite ellipse. The standard equation is:
+
+$$\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$$
+Remember, in order to turn it into a function, we have to move all terms to the same side, so it will look like:
+
+$$\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} - 1$$
+And now we can start graphing. It's the same process as ellipses and circles, so we need to get an equation for some $h$, $k$, $a$ and $b$.
+
+### Graphing a Hyperbola
+
+Here's the equation:
+
+$$\frac{(x+4)^2}{1^2}-\frac{y^2}{2^2} -1$$
+Assign it to a function and make the $y$ and $z$, just like all the previous times. 
+
+```{r}
+m <- function(x, y) {
+  (x + 4)^2/1^2 - y^2/2^2 - 1     
+}
+
+hyperbola1 <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = m(x, y))
 ```
 
-standard circle equation is BLAH. cannot write in standard form here otherwise the radius would be negative, which we don't want and can't have lol
+And we can even use the same template for the plot!
 
-We need to make a mini data set. 
+```{r}
+ggplot(hyperbola1, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "orange1") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank()
+  )
+```
+Uh-oh...
 
-we do this with the expand grid thing, we'll use that and name it.
+Why are we running out of lines? They're supposed to go on for infinity!
 
-Now we can start
+Making the $y$ and $z$ data takes a bit of trial and error. Once you have an equation, you should be able to get a rough idea of what your range should be. The first part of the equation $\frac{(x+4)^2}{1^2}$ should have been my first clue. $4$ squared is $16$, and divided by $1$ is still $16$! That's bigger than $7$! I should adjust my range to fit that a little better.
+
+```{r}
+m <- function(x, y) {
+  (x + 4)^2/1^2 - y^2/2^2 - 1     
+}
+
+hyperbola2 <- expand_grid(
+  x = seq(-10, 10, length.out = 100),
+  y = seq(-10, 10, length.out = 100)) |> 
+  mutate(z = m(x, y))
+```
+
+I only moved it to $-10$ and $10$ because that's the limit of the Cartesian plane I currently have.
+
+```{r}
+ggplot(hyperbola2, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  geom_contour(aes(z = z), breaks = 0, color = "orange1") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank()
+  )
+```
+That's much better! You can make an up and down opening hyperbola the same way.
 
 <small class="text-muted">*Figure 1:* Jens Vyff,  <a href="https://commons.wikimedia.org/wiki/File:TypesOfConicSections.jpg">  Types Of Conic Sections </a>, via Wikimedia Commons, February 2021 </small>
