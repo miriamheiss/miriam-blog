@@ -3,7 +3,7 @@ title: "The Fundamental Theorem of Algebra"
 subtitle: "Polynomial Degrees and Roots" 
 date: "April 2025" 
 categories: [math]
-image: "" 
+image: "zoomed_in_parabola.png" 
 format: 
   html: 
     code-fold: show 
