@@ -2,7 +2,7 @@
 title: "How to make a Histogram"
 subtitle: "How to use ggplot"
 date: "2022-07-30"
-categories: [tutorial][R]
+categories: [tutorial]
 image: "nobel-winners.png"
 format:
   html:

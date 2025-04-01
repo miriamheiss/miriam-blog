@@ -2,7 +2,7 @@
 title: "Plotting Quadratic Equations"
 subtitle: "Parabolas"
 date: "January 23, 2023"
-categories: [math][R]
+categories: [math]
 image: "equation.png"
 format:
   html:

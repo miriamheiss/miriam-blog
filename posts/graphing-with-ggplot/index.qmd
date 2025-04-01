@@ -2,7 +2,7 @@
 title: "Graphing with ggplot"
 subtitle: "How to use ggplot"
 date: "2022-07-29"
-categories: [tutorial][R]
+categories: [tutorial]
 image: "nhanes_thing.png"
 format:
   html:

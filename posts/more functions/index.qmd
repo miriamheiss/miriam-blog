@@ -2,7 +2,7 @@
 title: "Conic Sections" 
 subtitle: "Circles, Ellipses, and Hyperbolas" 
 date: "March 31, 2025" 
-categories: [math][R] 
+categories: [math]
 image: "hyperbola.png" 
 format: 
   html: 
