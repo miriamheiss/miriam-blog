@@ -375,7 +375,7 @@ ggplot() +
     axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 ```
-In this graph, the first "down-up" doesn't technically intersect the x axis, but it's also not floating around elsewhere. This is a **double root**.
+In this graph, the first "down-up" doesn't technically intersect the x axis, but it's also not floating around elsewhere. This is a **double root**. Double roots are pretty much the same things as multiplicity.
 
 ### Double Roots
 
@@ -445,9 +445,13 @@ f(x) =
 x^4+3x^3-17x^2-39x-20 = 
 (x+1)^2(x-4)(x+5)
 $$
+The double root is $(x+1)$, or $-1$.
 
+This means that all of the roots are $-1$, $-1$, $4$, and $-5$.
 
-You can do it by hand with synthetic division. Or you can make your life just a little bit easier and make the computer do it:
+## Faster way to get the roots
+
+You can do the factoring and simplification by hand with synthetic division. Or you can make your life just a little bit easier and make the computer do it:
 
 ```{r warning=FALSE, message=FALSE}
 k <- function(x) {x^4+3*x^3-17*x^2-39*x-20}
@@ -458,11 +462,41 @@ k(4)
 k(-5)
 k(-1)
 ```
+And here's the graph!
 
+```{r warning = FALSE, message = FALSE, echo = FALSE}
+k <- function(x) {x^4+3*x^3-17*x^2-39*x-20}
 
+ggplot() +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  geom_function(fun = k, color = "red") +
+  coord_cartesian(xlim = c(-10, 10), ylim= c(-50, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -50:10, limits = c(-50, 10))+
+  labs(x = "X",
+       y = "Y")+
+  theme_linedraw()+
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
 
+This is a very large quartic polynomial, and goes all the way down to -135, which is why it cuts off in some places. The only place that really matters for our purposes today is the x axis, and you are able to see where the line crosses and bounces off the x axis.
 
+## Review
 
+Here are key points about the Fundamental Theorem of Algebra
+
+* If the degree is $n$ there will be exactly $n$ roots
+* All real roots are complex roots, all real numbers are complex numbers
+* Nonreal roots come in pairs
+* Polynomials with an odd degree **must** have at least 1 real root
+* If the root crosses over or bounces off the x (or y) axis, it is real
+* If the root is elsewhere, it is nonreal
 
 
 
