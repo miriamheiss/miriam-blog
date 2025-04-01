@@ -106,7 +106,8 @@ ggplot() +
        y = "Y")+
   theme_linedraw()+
   theme(
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 ```
 
@@ -132,11 +133,11 @@ If we assign this equation with any $r$ to a function like last time, it will no
 
 ```{r}
 h <- function(x, y) {
-  x^2 + y^2 - 4.     
+  x^2 + y^2 - 4     
 }
 ```
 
-::: {.callout-note}
+::: {.callout-note icon=false}
 The equation above is $x^2 + y^2 = 4$
 :::
 
@@ -186,7 +187,8 @@ ggplot(circle_data, aes(x = x, y = y)) +
   labs(x = "X",
          y = "Y") +
   theme_linedraw() +
-  theme(panel.grid.minor = element_blank())
+  theme(panel.grid.minor = element_blank(),
+        axis.title.y = element_text(angle = 0, vjust = 0.5))
 ```
 
 Awesome!!! We made a circle with radius 4, centered around the origin, which is what our original equation was!
@@ -256,7 +258,8 @@ ggplot(circle_data2, aes(x = x, y = y)) +
   labs(x = "X",
        y = "Y") +
   theme_linedraw() +
-  theme(panel.grid.minor = element_blank())
+  theme(panel.grid.minor = element_blank(),
+        axis.title.y = element_text(angle = 0, vjust = 0.5))
 ```
 Now that we've done 2 circles, we should be getting into a bit of a rhythm. All we really need to change is what the function is!
 
@@ -305,7 +308,8 @@ ggplot(ellipse_data, aes(x = x, y = y)) +
   labs(x = "X",
          y = "Y") +
   theme_linedraw() +
-  theme(panel.grid.minor = element_blank())
+  theme(panel.grid.minor = element_blank(),
+        axis.title.y = element_text(angle = 0, vjust = 0.5))
 ```
 ### Horizontal Ellipse
 
@@ -314,11 +318,11 @@ See if you can graph this equation:
 $$\frac{(3x + 5)^2}{8^2} + \frac{(3y - 2)^2}{4^2} = 1$$
 
 
-::: {.callout-note collapse=true}
+::: {.callout-note collapse=true icon=false}
 ## Solution
 Here's the solution!
 
-```{r}
+```{r warning = FALSE message = FALSE}
 v <- function(x, y) {
   (3*x + 5)^2/8^2 + (3*y - 2)^2/4^2 - 1     
 }
@@ -339,7 +343,8 @@ ggplot(ellipse_data, aes(x = x, y = y)) +
   labs(x = "X",
        y = "Y") +
   theme(
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 ```
 :::
@@ -358,14 +363,14 @@ Remember, in order to turn it into a function, we have to move all terms to the 
 $$\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} - 1$$
 And now we can start graphing. It's the same process as ellipses and circles, so we need to get an equation for some $h$, $k$, $a$ and $b$.
 
-### Graphing a Hyperbola
+### Horizontal Hyperbola
 
 Here's the equation:
 
 $$\frac{(x+4)^2}{1^2}-\frac{y^2}{2^2} -1$$
 Assign it to a function and make the $y$ and $z$, just like all the previous times. 
 
-```{r}
+```{r warning = FALSE message = FALSE}
 m <- function(x, y) {
   (x + 4)^2/1^2 - y^2/2^2 - 1     
 }
@@ -390,16 +395,17 @@ ggplot(hyperbola1, aes(x = x, y = y)) +
   labs(x = "X",
        y = "Y") +
   theme(
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 ```
 Uh-oh...
 
-Why are we running out of lines? They're supposed to go on for infinity!
+Why are we running out of lines? They're supposed to go on infinitely!
 
 Making the $y$ and $z$ data takes a bit of trial and error. Once you have an equation, you should be able to get a rough idea of what your range should be. The first part of the equation $\frac{(x+4)^2}{1^2}$ should have been my first clue. $4$ squared is $16$, and divided by $1$ is still $16$! That's bigger than $7$! I should adjust my range to fit that a little better.
 
-```{r}
+```{r warning = FALSE message = FALSE}
 m <- function(x, y) {
   (x + 4)^2/1^2 - y^2/2^2 - 1     
 }
@@ -412,7 +418,7 @@ hyperbola2 <- expand_grid(
 
 I only moved it to $-10$ and $10$ because that's the limit of the Cartesian plane I currently have.
 
-```{r}
+```{r warning = FALSE message = FALSE}
 ggplot(hyperbola2, aes(x = x, y = y)) +
   geom_hline(yintercept = 0)+
   geom_vline(xintercept = 0)+
@@ -424,9 +430,180 @@ ggplot(hyperbola2, aes(x = x, y = y)) +
   labs(x = "X",
        y = "Y") +
   theme(
-    panel.grid.minor = element_blank()
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
   )
 ```
-That's much better! You can make an up and down opening hyperbola the same way.
+That's much better! You can make an up and down opening hyperbola pretty much the same way.
+
+### Vertical Hyperbola
+
+Same process as last time, we need to start out with an equation. The $x$ and the $y$ terms switch places.
+
+$$\frac{y^2}{2^2}-\frac{(x-4)^2}{1^2} =1$$
+We will write this equation as a function, and make data for an $x$ and a $z$ this time, with a range of $10$ to $-10$.
+
+```{r warning = FALSE message = FALSE}
+b <- function(y, x) {
+  y^2/2^2 - (x-4)^2/1^2 - 1    
+}
+
+hyperbola3 <- expand_grid(
+  y = seq(-10, 10, length.out = 100),
+  x = seq(-10, 10, length.out = 100)) |> 
+  mutate(z = b(y, x))
+```
+
+And we follow the same procedure as last time for the graph as well.
+
+```{r warning = FALSE message = FALSE}
+ggplot(hyperbola3, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  geom_contour(aes(z = z), breaks = 0, color = "deeppink") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
+  )
+```
+## Review
+
+The process is quite similar for all of the conic sections (except for parabola, which is easier). Take your equation with some $h$, $k$ $a$, and $b$ and create a function by moving all terms to the same side. With that function, create a $y$ and a $z$. With that finished data, you can then graph. For parabolas, you don't necessarily have to move all terms to the same side, and don't need to make a $y$ or $z$.
+
+
+### Circle
+
+$$(x-2)^2+(y-1)^2=9$$
+
+```{r warning = FALSE message = FALSE}
+a <- function(x, y) {
+  (x-2)^2 + (y-1)^2 - 9    
+}
+
+example_circle <- expand_grid(
+  x = seq(-7, 7, length.out = 100),
+  y = seq(-7, 7, length.out = 100)) |> 
+  mutate(z = a(x, y))
+
+ggplot(example_circle, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "blue") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  labs(x = "X",
+       y = "Y") +
+  theme_linedraw() +
+  theme(panel.grid.minor = element_blank(),
+        axis.title.y = element_text(angle = 0, vjust = 0.5))
+```
+
+### Ellipse
+
+$$\frac{(x-3)^{2}}{8^{2}}+\frac{(y+3)^{2}}{4^{2}} = 1$$
+
+```{r warning = FALSE message = FALSE}
+j <- function(x, y) {
+  (x-3)^2/6^2 + (y+3)^2/4^2 - 1     
+}
+
+example_ellipse <- expand_grid(
+  x = seq(-15, 15, length.out = 100),
+  y = seq(-15, 15, length.out = 100)) |> 
+  mutate(z = j(x, y))
+
+ggplot(example_ellipse, aes(x = x, y = y)) +
+  geom_contour(aes(z = z), breaks = 0, color = "springgreen3") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
+  )
+```
+
+### Parabola
+
+$$ x^2+5x + 3$$
+
+```{r warning = FALSE, message = FALSE}
+k <- function(x, y) {
+   x^2+5*x + 3  
+}     
+
+
+ggplot() +
+  geom_hline(yintercept = 0) +
+  geom_vline(xintercept = 0) +
+  geom_function(fun = k, color = "red") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  labs(x = "X",
+       y = "Y")+
+  theme_linedraw()+
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
+  )
+```
+
+### Hyperbola
+
+$$\frac{3y^2}{4^2}-\frac{(2x-7)^2}{3^2}=1$$
+
+```{r warning = FALSE message = FALSE}
+l <- function(x, y) {
+  3*y^2/4^2-(2*x-7)^2/3^2-1    
+}
+
+example_hyperbola <- expand_grid(
+  x = seq(-15, 15, length.out = 100),
+  y = seq(-15, 15, length.out = 100)) |> 
+  mutate(z = l(x, y))
+
+ggplot(example_hyperbola, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0)+
+  geom_vline(xintercept = 0)+
+  geom_contour(aes(z = z), breaks = 0, color = "deeppink") +
+  coord_fixed(xlim = c(-10, 10), ylim= c(-10, 10)) +
+  scale_x_continuous(breaks = -10:10, limits = c(-10, 10))+
+  scale_y_continuous(breaks = -10:10, limits = c(-10, 10))+
+  theme_linedraw()+
+  labs(x = "X",
+       y = "Y") +
+  theme(
+    panel.grid.minor = element_blank(),
+    axis.title.y = element_text(angle = 0, vjust = 0.5)
+  )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <small class="text-muted">*Figure 1:* Jens Vyff,  <a href="https://commons.wikimedia.org/wiki/File:TypesOfConicSections.jpg">  Types Of Conic Sections </a>, via Wikimedia Commons, February 2021 </small>
