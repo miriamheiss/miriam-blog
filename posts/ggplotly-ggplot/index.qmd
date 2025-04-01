@@ -2,7 +2,7 @@
 title: "Using ggplotly"
 subtitle: "Making interactive plots"
 date: "2022-07-31"
-categories: [tutorial]
+categories: [tutorial][R]
 image: "life_expectancy.png" 
 format:
   html:

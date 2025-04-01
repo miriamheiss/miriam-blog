@@ -2,7 +2,7 @@
 title: "Conic Sections" 
 subtitle: "Circles, Ellipses, and Hyperbolas" 
 date: "March 31, 2025" 
-categories: [math] 
+categories: [math][R] 
 image: "hyperbola.png" 
 format: 
   html: 
@@ -10,7 +10,7 @@ format:
     code-tools: true 
 ---
 
-About 2 years ago, I wrote a post about plotting parabolas and quadratic equations, because I was learning quadratics that year in my math work. Now that I'm almost done with my sophomore year of high school, I've moved on to more complicated things.
+About 2 years ago, I wrote a post about [plotting parabolas](https://www.miriamheiss.com/posts/Plotting-equations/) and quadratic equations, because I was learning quadratics that year in my math work. Now that I'm almost done with my sophomore year of high school, I've moved on to more complicated things.
 
 ## Conic Sections
 

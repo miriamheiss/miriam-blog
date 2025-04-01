@@ -4,6 +4,7 @@ subtitle: "Georgia Writers Museum"
 date: "2022-10-31"
 categories: [writing]
 image: "spanish-moss.jpg"
+draft: true
 format:
   html:
     code-fold: show
