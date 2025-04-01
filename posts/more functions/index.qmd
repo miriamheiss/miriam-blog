@@ -23,7 +23,7 @@ Eh. It depends. There are technically 3, but circles and ellipses are sometimes 
 
 You get a conic section by intersecting 2 cones and a plane in various ways.
 
-```{r echo = FALSE, warning = FALSE, message = FALSE, out.width = "60%"}
+```{r echo = FALSE, out.width = "60%"}
 #| fig-cap: "Figure 1"
 knitr::include_graphics("TypesOfConicSections.jpg")
 ```
@@ -208,7 +208,7 @@ $$
 (x - h)^2 + (y - k)^2 = r^2
 $$
 
-For some $h$, $k$, and $r$. The center of the circle is $h, k$ and the radius is $r$.
+For some $h$, $k$, and $r$. The center of the circle is $(h, k)$ and the radius is $r$.
 
 Let's take the same equation from the last graph, and change some things about it.
 
@@ -322,7 +322,7 @@ $$\frac{(3x + 5)^2}{8^2} + \frac{(3y - 2)^2}{4^2} = 1$$
 ## Solution
 Here's the solution!
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 v <- function(x, y) {
   (3*x + 5)^2/8^2 + (3*y - 2)^2/4^2 - 1     
 }
@@ -370,7 +370,7 @@ Here's the equation:
 $$\frac{(x+4)^2}{1^2}-\frac{y^2}{2^2} -1$$
 Assign it to a function and make the $y$ and $z$, just like all the previous times. 
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 m <- function(x, y) {
   (x + 4)^2/1^2 - y^2/2^2 - 1     
 }
@@ -405,7 +405,7 @@ Why are we running out of lines? They're supposed to go on infinitely!
 
 Making the $y$ and $z$ data takes a bit of trial and error. Once you have an equation, you should be able to get a rough idea of what your range should be. The first part of the equation $\frac{(x+4)^2}{1^2}$ should have been my first clue. $4$ squared is $16$, and divided by $1$ is still $16$! That's bigger than $7$! I should adjust my range to fit that a little better.
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 m <- function(x, y) {
   (x + 4)^2/1^2 - y^2/2^2 - 1     
 }
@@ -418,7 +418,7 @@ hyperbola2 <- expand_grid(
 
 I only moved it to $-10$ and $10$ because that's the limit of the Cartesian plane I currently have.
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 ggplot(hyperbola2, aes(x = x, y = y)) +
   geom_hline(yintercept = 0)+
   geom_vline(xintercept = 0)+
@@ -443,7 +443,7 @@ Same process as last time, we need to start out with an equation. The $x$ and th
 $$\frac{y^2}{2^2}-\frac{(x-4)^2}{1^2} =1$$
 We will write this equation as a function, and make data for an $x$ and a $z$ this time, with a range of $10$ to $-10$.
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 b <- function(y, x) {
   y^2/2^2 - (x-4)^2/1^2 - 1    
 }
@@ -456,7 +456,7 @@ hyperbola3 <- expand_grid(
 
 And we follow the same procedure as last time for the graph as well.
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 ggplot(hyperbola3, aes(x = x, y = y)) +
   geom_hline(yintercept = 0)+
   geom_vline(xintercept = 0)+
@@ -481,7 +481,7 @@ The process is quite similar for all of the conic sections (except for parabola,
 
 $$(x-2)^2+(y-1)^2=9$$
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 a <- function(x, y) {
   (x-2)^2 + (y-1)^2 - 9    
 }
@@ -509,7 +509,7 @@ ggplot(example_circle, aes(x = x, y = y)) +
 
 $$\frac{(x-3)^{2}}{8^{2}}+\frac{(y+3)^{2}}{4^{2}} = 1$$
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 j <- function(x, y) {
   (x-3)^2/6^2 + (y+3)^2/4^2 - 1     
 }
@@ -565,7 +565,7 @@ ggplot() +
 
 $$\frac{3y^2}{4^2}-\frac{(2x-7)^2}{3^2}=1$$
 
-```{r warning = FALSE message = FALSE}
+```{r warning = FALSE, message = FALSE}
 l <- function(x, y) {
   3*y^2/4^2-(2*x-7)^2/3^2-1    
 }

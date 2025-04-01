@@ -1,14 +1,15 @@
 ---
 title: "Spooky Story Contest"
 subtitle: "Georgia Writers Museum"
+draft: true
 date: "2022-10-31"
 categories: [writing]
 image: "spanish-moss.jpg"
-draft: true
 format:
   html:
     code-fold: show
     code-tools: true
+    
 ---
 
 I wrote this story for the Spooky Story Contest for the [Georgia Writerrs Museum](https://www.georgiawritersmuseum.org/spooky-story-contest/). I may not have won (for 8th grade), but at least my brother did (for 5th grade). You can check out his story [here](https://www.georgiawritersmuseum.org/the-tybee-island-ghost-ship/).
