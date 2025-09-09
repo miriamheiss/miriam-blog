@@ -1,0 +1,27 @@
+---
+title: "index"
+categories:
+  - Christmas
+  - Children
+  - Piano
+  - Other Language
+format: html
+resources:
+  - "samuel-star.pdf"
+  - "samuel-star.mp3"
+
+---
+
+::: {.callout-note icon=false}
+## Download
+[Samuel Tells of Baby Jesus/Star Bright (English, Spanish, Korean)](samuel-star.pdf)
+:::
+
+This is a Musescore recording, so the words are not available, just vocalization.
+<audio controls>
+<source src="samuel-star.mp3" type="audio/mpeg">
+</audio> 
+
+This arrangement is one of the largest projects I've ever tackled. Around 7 minutes long when performed, there are speaking parts with various scriptures from the Book of Mormon and Bible, two songs included, Star Bright, and Samuel Tells of Baby Jesus. The three repetitions of the chorus are sung in three languages, English, Spanish, and Korean. There is an optional full choir part at the start of the verse with the Korean chorus, with a soprano descant.
+
+This was written in 2024 for my Ward Christmas program, and highlights the diversity within our ward.
