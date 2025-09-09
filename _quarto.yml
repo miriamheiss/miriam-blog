@@ -12,6 +12,8 @@ website:
         href: https://www.instagram.com/heiss.miriam/?hl=en
       - icon: youtube
         href: https://www.youtube.com/@MiriamHeiss
+      - icon: music-note-beamed
+        href: https://musescore.com/user/48858879
     left: 
       - posts.qmd
       - about.qmd
