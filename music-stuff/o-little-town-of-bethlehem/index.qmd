@@ -1,0 +1,25 @@
+---
+title: "O Little Town of Bethlehem"
+categories:
+  - Christmas
+  - Soprano/Alto
+  - Piano
+format: html
+resources:
+  - "o-little-town-of-bethlehem-SAmedley.pdf"
+  - "o-little-town-of-bethlehem.mp3"
+---
+
+I arranged this song for my ward's Christmas program, for the Young Women to sing. It combines 3 hymn tunes, Kingsfold, Forest Green, and St. Louis. It includes piano accompaniment and some reharmonized parts of this well-loved carol.
+
+::: {.callout-note icon=false}
+## Download
+[O Little Town of Bethlehem (Soprano/Alto)](o-little-town-of-bethlehem-SAmedley.pdf)
+:::
+
+This is a Musescore recording, so the words are not available, just vocalization.
+<audio controls>
+<source src="o-little-town-of-bethlehem.mp3" type="audio/mpeg">
+</audio> 
+
+

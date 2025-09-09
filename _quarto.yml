@@ -2,36 +2,21 @@ project:
   type: website
 
 website:
-  title: "Blog"
+  title: "Music"
   navbar:
     background: primary
-    left:
-      - about.qmd
+    right:
       - icon: github
         href: https://github.com/miriamheiss/miriam-blog
       - icon: instagram
         href: https://www.instagram.com/heiss.miriam/?hl=en
       - icon: youtube
         href: https://www.youtube.com/@MiriamHeiss
+    left: 
+      - posts.qmd
+      - about.qmd
+   
       
-      
-#  sidebar:
-#    - id: final-project
-#      title: "Bach and Taylor Swift Project"
-#      style: "docked"
-#      background: "#ffffff"
-#     collapse-level: 6
-#      contents: 
-#        - final-project/index.qmd
-#        - final-project/energy.qmd
-#        - final-project/tempo.qmd
-#        - final-project/interactive.qmd
-#        - final-project/conclusion.qmd
-#        - final-project/sources.qmd 
-        
-        
-#    - title: "Empty space lol"
-    
 
 format:
   html:
