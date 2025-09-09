@@ -6,11 +6,9 @@ categories:
   - Piano
 format: html
 resources:
-  - "o-little-town-of-bethlehem-SAmedley.pdf"
+  - "sa-o-little-town-of-bethlehem.pdf"
   - "o-little-town-of-bethlehem.mp3"
 ---
-
-I arranged this song for my ward's Christmas program, for the Young Women to sing. It combines 3 hymn tunes, Kingsfold, Forest Green, and St. Louis. It includes piano accompaniment and some reharmonized parts of this well-loved carol.
 
 ::: {.callout-note icon=false}
 ## Download
@@ -21,5 +19,7 @@ This is a Musescore recording, so the words are not available, just vocalization
 <audio controls>
 <source src="o-little-town-of-bethlehem.mp3" type="audio/mpeg">
 </audio> 
+
+I arranged this song for my ward's Christmas program in 2023, for the Young Women to sing. It combines 3 hymn tunes, Kingsfold, Forest Green, and St. Louis. It includes piano accompaniment and some reharmonized parts of this well-loved carol.
 
 

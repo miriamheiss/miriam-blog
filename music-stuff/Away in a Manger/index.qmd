@@ -1,0 +1,23 @@
+---
+title: "Away in a Manger"
+categories:
+  - Christmas
+  - Soprano/Alto
+  - Piano
+format: html
+resources:
+  - "sa-away-in-a-manger.pdf"
+  - "away-in-a-manger.mp3"
+---
+
+::: {.callout-note icon=false}
+## Download
+[Away in a Manger (Soprano/Alto)](sa-away-in-a-manger.pdf)
+:::
+
+This is a Musescore recording, so the words are not available, just vocalization.
+<audio controls>
+<source src="away-in-a-manger.mp3" type="audio/mpeg">
+</audio> 
+
+This song was written for the Young Women in my ward in 2024, using melodies from the Afton Water and Mueller hymn tunes of Away in a Manger. The final verse (starting at measure 80) uses lyrics found in the 6th verse of [How Firm a Foundation](https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng), using the Mueller tune.
