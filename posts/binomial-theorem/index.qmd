@@ -1,6 +1,9 @@
 ---
 title: "Binomial Theorem"
 format: html
+subtitle: "Quick Explaination"
+date: "2025-09-29"
+categories: [math]
 ---
 
 ## The Equation
@@ -17,7 +20,7 @@ $$\frac{n!}{k!(n-k)!}$$
 
 Ok, so that looks like a lot! Let's take it section by section.
 
-### The Breakdown (to avoid breakdowns)
+### The Breakdown
 
 The binomial is $(a+b)^n$. That's a standard binomial.
 
@@ -237,3 +240,5 @@ $$
 $$
 x^{10}+10x^9y+45x^8y^2+120x^7y^3+210x^6y^4+252x^5y^5+210x^4y^6+120x^3y^7+45x^2y^8+10xy^9+y^{10}
 $$
+
+The Binomial Theorem offers a faster way to expand binomials raised to higher degrees, and is a really important theorem to understand.
