@@ -1,0 +1,56 @@
+---
+title: "Binomial Coefficients"
+format: html
+---
+
+## Binomial Theorem
+
+For a refresher on how the Binomial Theorem works, you can look at my [post](https://www.miriamheiss.com/posts/binomial-theorem/) about it. This is what the theorem looks like:
+
+$$
+(a+b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k
+$$
+Today, we will mostly be focusing on the first half of the right side, the $\sum_{k=0}^{n}\binom{n}{k}$, which gives us our coefficients in the expansion. In my last post, I didn't mention this, but coefficients of binomials actually follow Pascal's triangle, and when we just focus on this first half of the right side, the coefficients can be really easy to compute. 
+
+## Pascal's Triangle
+
+
+
+
+
+
+
+
+
+```
+library(tidyverse)
+
+
+# One thing
+n <- 2
+map_int(0:n, \(k) choose(n, k))
+
+# Lotsa things
+binom_coefs <- tibble(n = 2:4) |> 
+  mutate(coef = map(n, \(.n) {
+    map_int(0:.n, \(k) choose(.n, k))
+  }))
+
+to_plot <- binom_coefs |> 
+  unnest(coef) |> 
+  group_by(n) |> 
+  mutate(k = 1:n())
+
+ggplot(to_plot, aes(x = factor(k), y = coef, fill = factor(n))) +
+  geom_col(position = position_dodge(preserve = "single")) +
+  labs(title = "Binomial Coefficients found using N choose K", 
+  x = "k", 
+  y = "Resulting binomial coefficient") +
+  scale_y_continuous(breaks = 0:6) +
+  scale_fill_viridis_d(option = "magma", end = 0.9, guide = "none") +
+  facet_wrap(vars(n)) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+  ```
+  
+  asdf
