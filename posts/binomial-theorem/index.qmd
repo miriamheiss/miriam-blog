@@ -30,7 +30,7 @@ The numbers $\binom{n}{k}$ are also called binomial coefficients, and we will se
 We're going to keep the theorem in this broken up state for the post, because I find it easier to work with that way. You can use the whole theorem at once if you want, this is just what I do.
 
 ## Solving Problems
-### Binomial to the 2nd degree
+### 2nd degree binomial
 
 We are going to start with a standard binomial, so you can see the theorem in action. We'll also expand using FOIL, just to double check that it's correct.
 
@@ -93,7 +93,7 @@ a^2+2ab+b^2
 $$
 While both ways seem about the same when raised to the 2nd power, when we started raising more and more, the binomial theorem method will become a very useful tool. Even for powers of 3 or 4, FOIL-ing can get a little bit annoying.
 
-### 3rd degree
+### 3rd degree binomial
 
 When higher degrees and more coefficients were introduced, I very possibly cried, so I hope to avoid that here!
 
@@ -159,7 +159,7 @@ $$
 
 Now, it may look like FOIL is faster, but this is FOIL typed out, *after* I did it entirely by hand! Even for binomials raised to the third degree, the binomial theorem makes it much faster.
 
-### 10th degree
+### 10th degree binomial
 
 This is the last example problem for the more algebraic side of things, and I will not be FOIL-ing at the end for obvious reasons (I'm not about to do that much multiplication).
 
