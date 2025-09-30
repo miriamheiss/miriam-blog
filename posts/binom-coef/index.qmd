@@ -1,6 +1,13 @@
 ---
-title: "Binomial Coefficients"
-format: html
+title: "Binomial Coefficients and Pascal's Triangle"
+subtitle: "Stuff I Probably Should Have Already Known"
+date: "2025-10-5"
+categories: [math]
+image: "equations.png"
+format:
+  html:
+    code-fold: true
+    code-tools: true
 ---
 
 ## Binomial Theorem
@@ -10,15 +17,48 @@ For a refresher on how the Binomial Theorem works, you can look at my [post](htt
 $$
 (a+b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k
 $$
-Today, we will mostly be focusing on the first half of the right side, the $\sum_{k=0}^{n}\binom{n}{k}$, which gives us our coefficients in the expansion. In my last post, I didn't mention this, but coefficients of binomials actually follow Pascal's triangle, and when we just focus on this first half of the right side, the coefficients can be really easy to compute. 
+Today, we will mostly be focusing on the first half of the right side, the $\sum_{k=0}^{n}\binom{n}{k}$, which gives us our coefficients in the expansion. 
 
 ## Pascal's Triangle
 
+Pascal's Triangle is an infinite array of binomial coefficients and looks like this:
+
+$$
+\;1
+$$
 
 
+$$
+1\quad1
+$$
 
+$$
+1\quad2\quad1
+$$
 
+$$
+1\quad3\quad3\quad1
+$$
 
+$$
+1\quad4\quad6\quad4\quad1
+$$
+
+$$
+1\quad5\quad10\quad10\quad5\quad1
+$$
+
+$$
+1\quad6\quad15\quad20\quad15\quad6\quad1
+$$
+
+$$
+1\quad7\quad21\quad35\quad35\quad21\quad7\quad1
+$$
+I actually didn't know that it was an array of binomial coefficients until just a little bit ago, I mostly learned about it in the context of addition, and learned that each number is the sum of the numbers above it. Pascal's triangle is infinite, so the above figure is only the first 8 rows. The first one is raised to the 0th power, and the second to the 1st, the third raised to the 2nd, and so on and so forth. Now, what I'm about to say may be very obvious for some people, but it's very new to me, and I think it's one of the coolest things in existence. Every single binomial coefficient is in this triangle. Every single one! $(x+y)^{458}$, $(4a+b)^7$, literally every binomial you can think of. 
+## Putting it in a graph
+
+Now that we know all coefficients can be found in this infinite triangle, we don't have to spend all our time working on the first part of the theorem—$\sum_{k=0}^{n}\binom{n}{k}$—because now we know it will correspond to the $n+1$ row, with $n$ being the degree the binomial is raised to. 
 
 
 
