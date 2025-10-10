@@ -1,6 +1,7 @@
 ---
 title: "Binomial Coefficients and Pascal's Triangle"
 subtitle: "Stuff I Probably Should Have Already Known"
+draft: true
 date: "2025-10-5"
 categories: [math]
 image: "equations.png"
