@@ -4,3 +4,16 @@ format: html
 ---
 
 ## Course Information
+This course is Discovery and Discernment Through the Arts, offered at Brigham Young University Idaho. 
+
+### Projects
+#### Greek Creation Story
+
+I made a piece of art summarizing the Ancient Greek creation story, wrote a summary, and compared it to other creation stories, and how the story was affected by the environment and customs in Ancient Greece.
+
+<!-- [![Click on image above to download](hum110/greek-creation.jpeg)](hum110/Assignment_ Creation Story.pdf) #replace with more official looking scan haha -->
+
+#### Midterm Portfolio
+
+#### Final Portfolio
+

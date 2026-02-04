@@ -4,7 +4,7 @@ format: html
 ---
 
 ## Course Information
-This course is American History to 1865, offered by Arizona State University. 
+This course is American History to 1865, offered by Arizona State University. I learned more about how to understand the complexity of American history on a global level.
 
 ### Projects
 The projects in this class were "Museum Exhibits", where I would research a topic in great depth and choose 3 artifacts to present in a short slideshow.
