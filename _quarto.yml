@@ -17,9 +17,16 @@ website:
     left: 
       - posts.qmd
       - about.qmd
-   
+      - text: "Digital Portfolio"
+        menu: 
+          - digital-portfolio/FCS208-byui.qmd
+          - digital-portfolio/HUM110-byui.qmd
+          - digital-portfolio/ENG102-asu.qmd
+          - digital-portfolio/HST109-asu.qmd
       
-
+  
+          
+    
 format:
   html:
     theme: 
