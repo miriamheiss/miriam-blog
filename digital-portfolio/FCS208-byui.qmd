@@ -6,3 +6,16 @@ format: html
 ## Course Information
 
 ### Projects
+#### Textile Reference Guide Parts 1 & 2
+
+In weeks 3 and 4 of the semester I learned about Textile fibers and weaving, and did a Burn Test and a Weaving project. The Burn Test project can be viewed below.
+
+{{< pdf fcs208/burn-lab-worksheet-fcs208.pdf width=600 height=600 >}}
+
+I discussed the findings of my burn test with my mom. She actually helped me with photographing the fabric during the burn test, so I explained things to her during that. I explained why the man-made fabric melted, and why the natural fabric didn’t. She had a few questions about burn tests and fabric in general:
+Why do you need to test what kind of fabric is what? 
+Why do we make so many things out of plastic, if it’ll just melt when exposed to fire?
+What material are fire-resistant pajamas made out of? Are they a special fabric, or is it just because they’re tight-fitting?
+I was able to explain the first one to her, that it’s mostly to figure out how to wash the fabric, but that it’s also important for garments like underwear, which needs to be mostly cotton—100% is ideal. But the last two really stumped me, because they were questions I have, too! I was also curious as to why Rayon can’t be identified by a burn test. My plan to find answers to my mom’s questions is to go to various fabric websites (like Mood Sewciety) and search for articles about synthetic fabrics specifically. Then, I can find an answer to the question regarding flame-resistant pajamas by comparing my pajamas with my sibling’s, seeing what the fiber content is on the care tag. I’m thinking most of them are either Polyester or Nylon, because on the Burn Test Chart, those two are the ones that put themselves out rather quickly, or struggle to burn.
+
+
