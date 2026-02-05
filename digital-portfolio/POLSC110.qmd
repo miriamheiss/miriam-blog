@@ -4,7 +4,7 @@ format: html
 ---
 
 # Course Information
-In this course I learned about the importance of politics in American life, how the 3 branches work together to make to government function, and how the media can effect politics (and vice versa).
+In this BYU-I course I learned about the importance of politics in American life, how the 3 branches work together to make to government function, and how the media can effect politics (and vice versa).
 
 ## Projects
 ### Social Media and Stochastic Terrorism

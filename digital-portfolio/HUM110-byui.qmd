@@ -12,8 +12,3 @@ This course is Discovery and Discernment Through the Arts, offered at Brigham Yo
 I made a piece of art summarizing the Ancient Greek creation story, wrote a summary, and compared it to other creation stories, and how the story was affected by the environment and customs in Ancient Greece.
 
 {{< pdf hum110/AssignmentCreationStory.pdf width=600 height=600 >}}
-
-### Midterm Portfolio
-
-### Final Portfolio
-

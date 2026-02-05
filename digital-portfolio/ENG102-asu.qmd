@@ -8,6 +8,6 @@ This was the second part of the First-year English writing course offered at Ari
 
 ## Community Advocacy and Palestine: Written Advocacy in Literature and Online
 
-The final project was a research paper wherein I had to interview an advocate. I interviewed [Nora Lester Murad](https://noralestermurad.com/about/), an author and advocate for Palestine. I compared her work to Bisan Owda and Plestia Alaqad, two Palestinian advocates active on social media, another form of written advocacy. 
+The final project was a research paper wherein I had to interview an advocate. I interviewed [Nora Lester Murad](https://noralestermurad.com/about/), an author and advocate for Palestine. I compared her work to Bisan Owda and Plestia Alaqad, two Palestinian advocates active on social media, who both engage in multiple forms of written advocacy. 
 
 {{< pdf eng102/Heiss_Miriam_community-advocacy-eng102.pdf width=100% height=800 >}}

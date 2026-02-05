@@ -1,0 +1,22 @@
+---
+title: "Humoresque No. 1 - E-Dur"
+categories:
+  - Instrumental
+  - Piano
+  - Original Composition
+format: html
+resources:
+  - "humoresque-no-1-miriam-heiss.pdf"
+  - "humoresque-no-1-miriam-heiss.custom_score.mp3"
+---
+
+::: {.callout-note icon=false}
+## Download
+[Humoresque No. 1 (E-Dur)](humoresque-no-1-miriam-heiss.pdf)
+:::
+
+<audio controls>
+<source src="humoresque-no-1-miriam-heiss.custom_score.mp3" type="audio/mpeg">
+</audio> 
+
+I wrote this piece shortly after completing my AP Music Theory course. It is one of my first multi-instrument pieces, and emulates the Humoresques by Antonín Dvořák, with a light sound and quick pace. It uses piano, violin, flute, and glockenspiel. This piece has not been recorded by any actual musicians, the recording produced is the automatic Musescore audio. 
