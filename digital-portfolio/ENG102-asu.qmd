@@ -1,12 +1,12 @@
 ---
-title: "English Composition II"
+title: "English Composition II - ENG102"
 format: html
 ---
-## Course Information
+# Course Information
 This was the second part of the First-year English writing course offered at Arizona State University. In this course, I learned how to write and research in a more academic environment, how to evaluate different sources, and how to utilize more modern writing technologies in academic writing situations.
 
 
-### Community Advocacy and Palestine: Written Advocacy in Literature and Online
+## Community Advocacy and Palestine: Written Advocacy in Literature and Online
 
 The final project was a research paper wherein I had to interview an advocate. I interviewed [Nora Lester Murad](https://noralestermurad.com/about/), an author and advocate for Palestine. I compared her work to Bisan Owda and Plestia Alaqad, two Palestinian advocates active on social media, another form of written advocacy. 
 

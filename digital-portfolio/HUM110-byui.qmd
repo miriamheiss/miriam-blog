@@ -1,19 +1,19 @@
 ---
-title: "Discovery Through the Arts"
+title: "Discovery Through the Arts - HUM110"
 format: html
 ---
 
-## Course Information
-This course is Discovery and Discernment Through the Arts, offered at Brigham Young University Idaho. 
+# Course Information
+This course is Discovery and Discernment Through the Arts, offered at Brigham Young University Idaho. In the course I learned about the basic elements of visual art, music, literature, theatre, and film.
 
-### Projects
-#### Greek Creation Story
+## Projects
+### Greek Creation Story
 
 I made a piece of art summarizing the Ancient Greek creation story, wrote a summary, and compared it to other creation stories, and how the story was affected by the environment and customs in Ancient Greece.
 
-<!-- [![Click on image above to download](hum110/greek-creation.jpeg)](hum110/Assignment_ Creation Story.pdf) #replace with more official looking scan haha -->
+{{< pdf hum110/AssignmentCreationStory.pdf width=600 height=600 >}}
 
-#### Midterm Portfolio
+### Midterm Portfolio
 
-#### Final Portfolio
+### Final Portfolio
 
