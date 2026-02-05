@@ -10,11 +10,12 @@ This course is American History to 1865, offered by Arizona State University. I 
 The projects in this class were "Museum Exhibits", where I would research a topic in great depth and choose 3 artifacts to present in a short slideshow.
 
 #### 17th and 18th Century Cartography
-In this project I explored different globes and maps that documented the how the British Empire was viewed in their own society, and how the Founders of the United States wanted to be different than Europe, and how they wanted to be percieved in the world.
+In this project I explored different globes and maps that documented the how the British Empire was viewed in their own society, and how the Founders of the United States wanted to be different than Europe, and how they wanted to be perceived in the world.
 
-[![Click on image above to download](hst109/cartography.png)](hst109/Heiss_Miriam_community-advocacy_hst109.pdf)
+{{< pdf hst109/Heiss_Miriam_Cartography_HST109.pdf width=600 height=370 >}}
 
 #### Women's Liberation 1830-1850
 In this project I researched women's history in the Antebellum period. There was an large industrialization of the country, and women started to turn away from the outdated ideals of earlier years. I also explore how women's fashion reflected and introduced the ideas of freedom in this era.
 
-[![Click on image above to download](hst109/womensliberation.png)](hst109/Heiss_Miriam_WomensLiberation_hst109.pdf)
+{{< pdf hst109/Heiss_Miriam_WomensLiberation_hst109.pdf width=600 height=370 >}}
+
