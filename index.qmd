@@ -1,5 +1,5 @@
 ---
-title: "Music"
+title: "Compositions and Arrangements"
 listing:
   contents: music-stuff
   sort: "date desc"
@@ -11,3 +11,10 @@ page-layout: full
 title-block-banner: true
 ---
 
+This website is a showcase of my student work as a dual enrollment student at BYU-I. It's also where I catalog my Compositions and Arrangements, to make them easier to download. You can also access them through my [MuseScore](https://musescore.com/user/48858879). 
+
+I also [write blog posts](https://www.miriamheiss.com/posts.html) about various topics, like book reviews, coding problems, and mathematical concepts. That part of my website is an informal archive of my super-curricular activities, where I dive deeper into a topic I'm learning about.
+
+The main page contains my compositions and arrangements. I've been composing for 8 years (before I knew anything about music theory, so many of those will not be making it to my professional website), however, I recently received a 5 on the AP Music Theory exam, so I know a little more than I did when I was 8. More recently, I have arranged various hymn tunes into medleys for church programs, but I also compose original works for instruments. 
+
+***

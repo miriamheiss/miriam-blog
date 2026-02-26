@@ -1,5 +1,6 @@
 ---
 title: "Discovery Through the Arts - HUM110"
+subtitle: "Winter 2026"
 format: html
 ---
 
@@ -12,3 +13,9 @@ This course is Discovery and Discernment Through the Arts, offered at Brigham Yo
 I made a piece of art summarizing the Ancient Greek creation story, wrote a summary, and compared it to other creation stories, and how the story was affected by the environment and customs in Ancient Greece.
 
 {{< pdf hum110/AssignmentCreationStory.pdf width=600 height=600 >}}
+
+### Midterm Portfolio
+
+In week 6 of the semester, I made a presentation analyzing various works of art, and debating whether or not they could be defined as beautiful. I analyzed 4 pieces of visual art, as well as 4 songs.
+
+{{< pdf hum110/W06-Midterm-PortfolioHUM110.pdf width=600 height=370 >}}

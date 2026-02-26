@@ -1,5 +1,6 @@
 ---
 title: "US History to 1865 - HST109"
+subtitle: "Fall 2024"
 format: html
 ---
 

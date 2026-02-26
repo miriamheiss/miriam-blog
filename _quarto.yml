@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Music"
+  title: "Home"
   favicon: ltblue-circle.png
   navbar:
     background: primary
@@ -15,9 +15,9 @@ website:
         href: https://www.youtube.com/@MiriamHeiss
       - icon: music-note-beamed
         href: https://musescore.com/user/48858879
+      - icon: linkedin
+        href: https://www.linkedin.com/in/miriam-heiss-6b172037b/
     left: 
-      - posts.qmd
-      - about.qmd
       - text: "Student Portfolio"
         menu: 
           - digital-portfolio/FCS208-byui.qmd
@@ -25,6 +25,9 @@ website:
           - digital-portfolio/ENG102-asu.qmd
           - digital-portfolio/HST109-asu.qmd
           - digital-portfolio/POLSC110.qmd
+      - posts.qmd
+      - about.qmd
+      
       
   
           

@@ -1,6 +1,6 @@
 ---
-title: "About me!"
-image: "miriam_2025_.jpg"
+title: "About Me!"
+image: "miriam2025organChCh.jpeg"
 about:
   template: trestles
   links:
@@ -18,8 +18,6 @@ about:
 
 Hello there! 
 
-I'm Miriam Heiss! I'm 16 years old and live in Georgia. I'm homeschooled and attending Brigham Young University Idaho as a concurrent enrollment student. I'm also a member of the Church of Jesus Christ of Latter-day Saints. 
+I'm Miriam Heiss! I'm 16 years old and live in Georgia. I'm homeschooled and attending Brigham Young University Idaho as a concurrent enrollment student. I'm also a member of the Church of Jesus Christ of Latter-day Saints. I enjoy crocheting, sewing, knitting, reading and general craft-y things. I also play the organ (which you can see on my YouTube channel), and I have played the organ since 2018. When I have time, I compose and arrange as well. 
 
-I enjoy crocheting, sewing, knitting, reading and general craft-y things. 
-
-I also play the organ (which you can see on my YouTube channel), and I have played the organ for over 7 years. When I have time, I compose and arrange! 
+I began my organ journey when I was 8 years old at Brigham Young University, participating in the ["Organ First!"](https://organ.byu.edu/organ-first/) program, and then started private lessons when I moved to Georgia. I've played for my local LDS congregation since early 2022. While I haven't substituted or played for any other congregation, I have had experience playing many different kinds of organs at various churches—most notably a Flentrop tracker-action at Rivercliff Lutheran, a Rieger tracker-action at Christ Church cathedral in Oxford, and the Aeolian-Skinner at Johns Creek UMC.

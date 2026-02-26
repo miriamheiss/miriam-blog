@@ -1,5 +1,6 @@
 ---
 title: "American Government - POLSC110"
+subtitle: "Fall 2025"
 format: html
 ---
 

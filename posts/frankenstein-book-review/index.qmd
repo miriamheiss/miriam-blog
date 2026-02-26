@@ -2,7 +2,7 @@
 title: "Frankenstein"
 subtitle: "The Modern Prometheus"
 date: "September 26, 2022"
-categories: [book reviews]
+categories: [books]
 image: "frankenstein-thumbnail.jpg"
 format:
   html:

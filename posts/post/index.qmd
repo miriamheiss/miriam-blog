@@ -1,0 +1,13 @@
+---
+title: "Les Misérables"
+format: html
+subtitle: "Victor Hugo"
+image: "b"
+date: "b"
+categories: [books]
+---
+
+# Les Misérables: The Wretched Ones
+## Unabridged
+
+## Abridged (James K. Robinson)

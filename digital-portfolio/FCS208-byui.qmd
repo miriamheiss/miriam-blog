@@ -1,5 +1,6 @@
 ---
 title: "Intro to Fashion Design and Merchandising - FCS208"
+subtitle: "Winter 2026"
 format: html
 ---
 
@@ -9,7 +10,7 @@ This course is an introduction to the fashion industry. This includes learning a
 ## Projects
 ### Textile Reference Guide Part 1
 
-In weeks 3 and 4 of the semester I learned about Textile fibers and weaving, and did a Burn Test and a Weaving project. The Burn Test project can be viewed below.
+In weeks 3 and 4 of the semester I learned about Textile fibers and weaving, and did a Burn Test to figure out what kind of fiber a textile is made out of, and a Weaving project to learn how textiles are made. The Burn Test project can be viewed below.
 
 {{< pdf fcs208/burn-lab-worksheet-fcs208.pdf width=600 height=600 >}}
 
@@ -25,6 +26,12 @@ The second part of the guide focused on learning about how the textile was made.
 
 {{< pdf fcs208/fcs208_document_weaving2.pdf width=600 height=600 >}}
 
-I also identified different types of fabrics around my house, like a twill weave bag strap, or a plain-woven pillow.
+Using my new knowledge, I identified different types of fabrics around my house.
 
 {{< pdf fcs208/TextileReferenceGuidepart2.pdf width=600 height=600 >}}
+
+### Color Wheel
+
+During our study of color, I made a color wheel and a tint/shade/tone chart, to better see how color worked within textiles and design.
+
+{{< pdf fcs208/Career-Kit-ColorWheelw06.pdf width=600 height=600 >}}
