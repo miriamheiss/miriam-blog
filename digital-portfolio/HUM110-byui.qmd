@@ -22,6 +22,6 @@ In week 6 of the semester, I made a presentation analyzing various works of art,
 
 ### Final Portfolio
 
-As the semester came to a close, I finished my biggest project yet. It was a summary of everything learned over the semester. I presented 2 works of art and why I found them beautiful, 5 pieces of classical music, 3 books, and I included future plans and a reflection of what beauty means in the humanities.
+As the semester came to a close, I finished my biggest project yet. It was a summary of everything learned over the semester. I presented 2 works of art and why I found them beautiful, 5 pieces of classical music, 3 books, and I included future life plans and a reflection of what beauty means in the humanities.
 
 {{< pdf hum110/W13-Portfolio-HUM110.pdf width=600 height=370 >}}

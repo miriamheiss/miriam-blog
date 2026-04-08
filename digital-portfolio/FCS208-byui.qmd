@@ -47,8 +47,21 @@ In week 12, I finally got to the design portion of the class! I made 5 different
 
 {{< pdf fcs208/fcs208_document_Design-A-LineW12.pdf width=600 height=600 >}}
 
+During this project, I went through many phases of sketching and refining. These are some of my original sketches. 
+
+::: {layout-ncol=3}
+
+![Sketches for the Asymmetrical Balance and Structural Lines designs](fcs208/sketches1.png)
+
+![Sketches for the Focal Point design](fcs208/sketches2.png)
+
+![Refining Sketches for the Rhythm design](fcs208/sketches3.png)
+:::
+
+The process of design was really interesting because I chose natural inspiration. I spent a lot of time outside looking at different flowers and leaves, and you can see some of my thought process in these preliminary sketches. It's where I wrote down different fabric options, different color options, and all the design details I wanted to include (sleeves, necklines, dress length, etc.).
+
 ### Fashion Merchandising
 
-With my newly designed line, I had to make a merchandising plan. The store layout, how prices were chosen, and our target customer. 
+With my newly designed line, I had to make a merchandising plan. This included the store layout, how prices were chosen, and our target customer. 
 
 {{< pdf fcs208/W13FashionMerchandising.pdf width=600 height=600 >}}
