@@ -1,0 +1,23 @@
+---
+title: "Fashion History - APD325"
+subtitle: "Fall 2026"
+format: html
+---
+# Course Information
+
+## Picture Glossary
+### Week 2
+#### Folk Costume
+![Upplandsräkt Swedish Folk Costume ca. 1830](apd325/w02folk-costume.jpg)
+#### Ancient Middle East
+### Week 3
+### Week 4
+### Week 5
+### Week 6
+### Week 7
+### Week 8
+### Week 9
+### Week 10
+### Week 11
+### Week 12
+### Week 13

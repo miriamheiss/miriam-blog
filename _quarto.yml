@@ -20,6 +20,7 @@ website:
     left: 
       - text: "Student Portfolio"
         menu: 
+          - ditial-portfolio/APD325-byui.qmd
           - digital-portfolio/FCS208-byui.qmd
           - digital-portfolio/HUM110-byui.qmd
           - digital-portfolio/POLSC110.qmd
