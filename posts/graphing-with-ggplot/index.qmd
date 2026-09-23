@@ -45,13 +45,13 @@ ggplot(data = nhanes,
        mapping = aes())
 ```
 
-Let's start graphing! In `aes()`, choose your x, your y, and your color. I am going to be using height for x, weight for y, and gender for color.
+Let's start graphing! In `aes()`, choose your x, your y, and your color. I am going to be using height for x, weight for y, and sex for color.
 
 ```{r x_y_color}
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender))
+                     color = sex))
 ```
 
 Now it has an empty graph, instead of just blank because we added the axes. But there is still nothing on the graph!
@@ -64,7 +64,7 @@ We need to add a `geom` to the graph! A `geom` is what shows us the data. We add
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender))+
+                     color = sex))+
   geom_point()
 ```
 
@@ -74,22 +74,22 @@ Hmmmm. Our graph doesn't look quite right. There's a lot of overplotting! We can
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.3, size =  0.5)
 ```
-That looks much nicer. But what if we want to separate the gender so they don't touch? 
+That looks much nicer. But what if we want to separate the sex so they don't touch? 
 
 ## Faceting
 
 We are going to add another layer called `facet_wrap`. This will separate the graph and make a Female graph and a Male graph.
 
-```{r facet_wrap_gender, warning = FALSE}
+```{r facet_wrap_sex, warning = FALSE}
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.3, size =  0.5) +
-  facet_wrap(~gender)
+  facet_wrap(~sex)
 ```
 
 Now we have two separate graphs! 
@@ -102,10 +102,10 @@ Now we're going to add a trend line. Let's add `geom_smooth` to the graph. We ar
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth() +
-  facet_wrap(~gender)
+  facet_wrap(~sex)
 ```
 Now, I want a smoother curve. In geom_smooth, we are going to set the method to `"loess"`, and the formula to `y~x`. The method `"loess"` makes a smoother curve, and formula `y~x` means that y has something to do with x.
 
@@ -113,10 +113,10 @@ Now, I want a smoother curve. In geom_smooth, we are going to set the method to 
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
-  facet_wrap(~gender)
+  facet_wrap(~sex)
 ```
 Now it's looking pretty neat!
 
@@ -128,10 +128,10 @@ Here, we are going to start adding labels. Add another layer with '+', and then 
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women")
 ```
@@ -141,32 +141,32 @@ Now we have a title and subtitle, but the x and y axes labels don't look very ni
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)")
 ```
-Awesome! But what about the "gender" above the legend? 
+Awesome! But what about the "sex" above the legend? 
 
-In the `aes()` we set x equal to height, y equal to weight, and color equal to gender. We changed x and y, and we can change "gender" the same way! We can set color equal to "Gender", and that will fix the lowercase "gender" on the legend.
+In the `aes()` we set x equal to height, y equal to weight, and color equal to sex. We changed x and y, and we can change "sex" the same way! We can set color equal to "sex", and that will fix the lowercase "sex" on the legend.
 
 ```{r legend_lab, warning = FALSE}
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)",
-       color = "Gender")
+       color = "sex")
 ```
 What if we want to give credit to the source of the data?
 
@@ -176,15 +176,15 @@ This data came from NHANES, the [National Health and Nutrition Examination Surve
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)",
-       color = "Gender",
+       color = "sex",
        caption = "Source: National Health and Nutrition Examination Survey")
 
 ```
@@ -199,17 +199,17 @@ There are two ways to solve this problem. One way is to hand pick the built in c
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
   scale_color_manual(values = c("magenta",
                                 "blue"))+
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)",
-       color = "Gender",
+       color = "sex",
        caption = "Source: National Health and Nutrition Examination Survey")
 
 ```
@@ -220,17 +220,17 @@ But what if we don't want the built in R colors? You can also use HEX codes for 
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) +
   geom_smooth(method = "loess", formula = y~x) +
   scale_color_manual(values = c("#ba4c85",
                                 "#5f4cba"))+
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.",
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)",
-       color = "Gender",
+       color = "sex",
        caption = "Source: National Health and Nutrition Examination Survey")
 
 
@@ -247,17 +247,17 @@ This is where comments come in. They are really easy to add to your code, all it
 ggplot(data = nhanes,
        mapping = aes(x = height,
                      y = weight,
-                     color = gender)) +
+                     color = sex)) +
   geom_point(alpha = 0.1, size =  0.5) + # Alpha changes the opacity
   geom_smooth(method = "loess", formula = y~x) +
   scale_color_manual(values = c("#ba4c85", # Pink
                                 "#5f4cba"))+ # Blue
-  facet_wrap(~gender) +
+  facet_wrap(~sex) +
   labs(title = "Heights in the U.S.", # Children are included in the data too
        subtitle = "On average, men weigh more and are taller than women",
        x = "Height (cm)",
        y = "Weight (kg)",
-       color = "Gender",
+       color = "sex",
        caption = "Source: National Health and Nutrition Examination Survey")
 ```
 
