@@ -9,6 +9,8 @@ format: html
 ## Week 2
 ### Folk Costume
 
+{{< pdf apd325/glossary-folk-costume.pdf width=600 height=600 >}}
 
 ### Ancient Middle East
 
+{{< pdf apd325/glossary-ancient-middle-east.pdf width=600 height=600 >}}
