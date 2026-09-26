@@ -7,6 +7,7 @@ format: html
 
 # Picture Glossary
 ## Week 2
+During week 2 we learned about early clothing from Mesopotamia, Ancient Egypt, Greece, and Rome.
 ### Folk Costume
 
 {{< pdf apd325/glossary-folk-costume.pdf width=600 height=600 >}}
