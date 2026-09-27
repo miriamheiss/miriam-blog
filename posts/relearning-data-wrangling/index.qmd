@@ -147,7 +147,7 @@ Now, the NAs are filled (in theory) and the error message should be inaccurate a
 
 I'm not going to explain how I made this graph because I just used my own [ggplot tutorial](https://www.miriamheiss.com/posts/graphing-with-ggplot/) and [ggplotly tutorial](https://www.miriamheiss.com/posts/ggplotly-ggplot/). But there are two important things to note. `scale_x/y_continuous` is used for numeric data, and `scale_x/y_discrete` is used for character data. It's important to know what kind of data you have in your datasets because otherwise you will be sad (I don't acutally know how you'll feel, but *I* was sad)
 
-```{r}
+```{r warning = FALSE, message = FALSE}
 library(plotly)
 graph1 <- mcl_quali_race |> 
   ggplot(aes(x = grid,
