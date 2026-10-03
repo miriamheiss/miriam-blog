@@ -7,7 +7,8 @@ format: html
 
 # Picture Glossary
 ## Week 2
-During week 2 we learned about early clothing from Mesopotamia, Ancient Egypt, Greece, and Rome.
+During week 2 we learned about early clothing from Mesopotamia, Ancient Egypt, Greece, and Rome. During week 1, we discussed Folk Costume, and I chose Sweden as my country. The sketch was submitted in week 2 though.
+
 ### Folk Costume
 
 {{< pdf apd325/glossary-folk-costume.pdf width=600 height=600 >}}
@@ -15,3 +16,11 @@ During week 2 we learned about early clothing from Mesopotamia, Ancient Egypt, G
 ### Ancient Middle East
 
 {{< pdf apd325/glossary-ancient-middle-east.pdf width=600 height=600 >}}
+
+## Week 3
+### Middle Ages
+
+During week 3 we learned about the Byzantine Empire and the Middle Ages. I chose to design a typical male outfit, for the late 1300s, and then a noble woman's outfit (in the 15th century).
+
+{{< pdf apd325/glossary-middle-ages.pdf width=600 height=600 >}}
+
