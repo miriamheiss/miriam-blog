@@ -5,6 +5,8 @@ format: html
 ---
 # Course Information
 
+This course is an introduction to Fashion History. In the course, I gained an understanding of the origins of fashion by examining the social, economic, political and religious forces which have influenced the manner and style of dress throughout the centuries. I also learned how historic clothing can serve as a basis for understanding the art, psychology, and moral attitudes in a historic context.
+
 # Picture Glossary
 ## W02
 During week 2 we learned about early clothing from Mesopotamia, Ancient Egypt, Greece, and Rome. During week 1, we discussed Folk Costume, and I chose Sweden as my country. The sketch was submitted in week 2 though.
@@ -34,8 +36,10 @@ During week 3 we learned about the Italian and the Northern Renaissance, as well
 ## W05
 ### Baroque and Rococo 
 
-<!-- ## W06  -->
-<!-- ### Directoire, Empire, and Romantic -->
+{{< pdf apd325/glossary-rococo.pdf width=600 height=600 >}}
+
+## W06
+### Directoire, Empire, and Romantic 
 
 <!-- ## W07 -->
 <!-- ### Crinoline, Bustle, and the Nineties -->
