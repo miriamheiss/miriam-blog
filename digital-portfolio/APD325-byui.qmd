@@ -41,6 +41,8 @@ During week 3 we learned about the Italian and the Northern Renaissance, as well
 ## W06
 ### Directoire, Empire, and Romantic 
 
+{{< pdf apd325/glossary-regency.pdf width=600 height=600 >}}
+
 <!-- ## W07 -->
 <!-- ### Crinoline, Bustle, and the Nineties -->
 
