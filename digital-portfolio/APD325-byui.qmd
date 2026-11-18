@@ -56,7 +56,7 @@ During week 3 we learned about the Italian and the Northern Renaissance, as well
 ## W09
 ### 1930-40
 
-{{< pdf apd325/glossary3040.pdf width=600 height=600 >}}
+{{< pdf apd325/glossary-3040.pdf width=600 height=600 >}}
 
 <!-- ## Week 10 -->
 <!-- ### 1950-60 -->
