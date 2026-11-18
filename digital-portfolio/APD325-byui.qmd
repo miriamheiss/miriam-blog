@@ -43,14 +43,20 @@ During week 3 we learned about the Italian and the Northern Renaissance, as well
 
 {{< pdf apd325/glossary-regency.pdf width=600 height=600 >}}
 
-<!-- ## W07 -->
-<!-- ### Crinoline, Bustle, and the Nineties -->
+## W07
+### Crinoline, Bustle, and the Nineties
 
-<!-- ## W08 -->
-<!-- ### 1900-1920 -->
+{{< pdf apd325/glossary-victorian.pdf width=600 height=600 >}}
 
-<!-- ## W09 -->
-<!-- ### 1930-40 -->
+## W08
+### 1900-1920
+
+{{< pdf apd325/glossary-edwardian.pdf width=600 height=600 >}}
+
+## W09
+### 1930-40
+
+{{< pdf apd325/glossary3040.pdf width=600 height=600 >}}
 
 <!-- ## Week 10 -->
 <!-- ### 1950-60 -->
